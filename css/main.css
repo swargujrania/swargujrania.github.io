@@ -3319,10 +3319,11 @@ textarea {
           max-width: none; } }
 
 .section-item {
-  background: #1d1d1d; }
+  background: #000000; 
+}
 
 .section-gallery {
-  background: #1d1d1d; }
+  background: #000000; }
 
 .fp-scroller {
   display: -webkit-box;
