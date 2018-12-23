@@ -92,7 +92,7 @@ ul, li {
   margin: 0; }
 
 a {
-  color: #D1335B;
+  color: #85befc;
   cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -153,20 +153,20 @@ p {
   width: 100%; }
 
 .btn-primary {
-  color: #ffffff;
+  color: #000000;
   border: 1px solid transparent;
-  background-color: #D1335B; }
+  background-color: #ffffff; }
   .btn-primary.active, .btn-primary:active {
-    color: #ffffff;
-    background-color: #8e233e; }
+    color: #000000;
+    background-color: #ffffff; }
   .btn-primary:hover, .btn-primary:focus {
-    color: #ffffff;
-    background-color: #8e233e;
-    border-color: #8e233e; }
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #ffffff; }
   .btn-primary.disabled, .btn-primary:disabled {
-    color: #ffffff;
+    color: #000000;
     opacity: 0.7;
-    background-color: #8e233e; }
+    background-color: #ffffff; }
 
 .btn-secondary {
   color: #ffffff;
@@ -652,7 +652,7 @@ p {
     -webkit-box-shadow: none;
             box-shadow: none; }
   .btn-transp-arrow .icon {
-    color: #D1335B;
+    color: #ffffff;
     position: absolute;
     left: auto;
     right: 1rem;
@@ -723,8 +723,8 @@ p {
     -webkit-transition: 0.2s;
     transition: 0.2s; }
   .btn-transp-arrow.active, .btn-transp-arrow:active, .btn-transp-arrow:hover {
-    color: #ffffff;
-    background: #b02b4c;
+    color: #000000;
+    background: #ffffff;
     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
             box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
     .btn-transp-arrow.active .icon, .btn-transp-arrow:active .icon, .btn-transp-arrow:hover .icon {
@@ -745,9 +745,9 @@ p {
       -webkit-transform: translateX(8px);
               transform: translateX(8px); }
   .btn-transp-arrow.disabled, .btn-transp-arrow:disabled {
-    color: #ffffff;
+    color: #000000;
     opacity: 0.7;
-    background-color: #D1335B; }
+    background-color: #ffffff; }
   .btn-transp-arrow.btn-outline {
     border: 2px solid currentColor;
     padding-top: 0.65rem; }
@@ -780,11 +780,11 @@ p {
   .btn-transp-arrow.btn-primary .arrow-left:after {
     border-top-color: inherit; }
   .btn-transp-arrow.btn-primary.active, .btn-transp-arrow.btn-primary:active, .btn-transp-arrow.btn-primary:hover {
-    color: #ffffff;
-    background: #b02b4c; }
+    color: #000000;
+    background: #ffffff; }
   .btn-transp-arrow.btn-primary.disabled, .btn-transp-arrow.btn-primary:disabled {
-    color: #ffffff;
-    background-color: #D1335B; }
+    color: #000000;
+    background-color: #ffffff; }
 
 .btn-transp-arrow.btn-secondary {
   color: inherit;
@@ -981,13 +981,13 @@ p {
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-bottom: 2px solid #D1335B;
+  border-bottom: 2px solid rgb(255, 255, 255);
   color: inherit;
   border-radius: 0; }
   .form-control-line:focus {
     color: inherit;
     background: none;
-    border-color: #8e233e;
+    border-color: #7e7e7e;
     -webkit-box-shadow: none;
             box-shadow: none;
     outline: none; }
@@ -1027,7 +1027,7 @@ p {
 .form-control-outline {
   display: block;
   width: 100%;
-  border: 1px solid #D1335B;
+  border: 1px solid rgb(255, 255, 255);
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1036,7 +1036,7 @@ p {
     border-width: 2px; }
   .form-control-outline:focus {
     color: inherit;
-    border-color: #8e233e;
+    border-color: #7e7e7e;
     background: none;
     -webkit-box-shadow: none;
             box-shadow: none;
