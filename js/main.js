@@ -284,6 +284,25 @@ $(document).on('ready', function () {
 		$('.section').addClass('anim');
 	});
 
+	
+	// add event listener to project thumbnails
+	var imageAvatarAlphaList = $('.img-avatar-alpha');
+	
+	for(i=0; i<imageAvatarAlphaList.length; i++)
+	{
+		var currentContainer = imageAvatarAlphaList[i];
 
+		currentContainer.addEventListener('mouseover', function(){
+			$('#' + this.id + 'text').css('opacity', 1);
+			$('#' + this.id + 'image').css('filter', 'brightness(0.5)');
+		}, false);
+
+		currentContainer.addEventListener('mouseout', function(){
+			$('#' + this.id + 'text').css('opacity', 0);
+			$('#' + this.id + 'image').css('filter', 'brightness(1)');
+		}, false);
+
+	}
+	
 });
 
