@@ -13,7 +13,8 @@
   <meta name="description" content="Stories of my work, art and passion">
 
   <!-- Disable screen scaling-->
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
 
   <!-- Twitter Meta -->
   <meta name="twitter:site" content="@thevoidview">
@@ -45,6 +46,12 @@
   <link rel="stylesheet" href="./fonts/ionicons.min.css">
   <link rel="stylesheet" href="./fonts/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+SC:300,400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS style -->
   <link rel="stylesheet" href="./css/pageloader.css">
@@ -178,26 +185,13 @@
   <!-- BEGIN OF page cover -->
   <div class="page-cover">
     <!-- Cover Background -->
-    <div class="cover-bg bg-img" data-image-src="img/bg.png"></div>
-
-    <!--BEGIN OF Static video bg - uncomment below to use Video as Background-->
-    <div id="container" class="video-container d-none d-sm-block">
-      <video autoplay="autoplay" loop="loop" muted="muted" width="640" height="360">
-        <source src="./vid/ballet.mp4" type="video/mp4">
-      </video>
-    </div>
-    <!--END OF Static video bg-->
-
-    <!--BEGIN OF Youtube video bg  - uncomment/comment below to use/or not Youtube Video as Background-->
-    <!--<div class='youtube-container video-container show-for-medium-up'>
-				<iframe frameborder="0"
-				src="https://youtube.com/embed/wqeuYB7KMhY?autoplay=1&controls=0&showinfo=0&autohide=1">
-				</iframe>
-			</div>-->
-    <!--END OF Youtube video bg-->
+    <div class="cover-bg bg-img" data-image-src="./img/title3-1.png"></div>
 
     <!-- Transluscent mask as filter -->
-    <div class="cover-bg-mask bg-color" data-bgcolor="rgba(29, 29, 29, 0.2)"></div>
+    <div class="cover-bg-mask bg-color" data-bgcolor="#000000">
+      <img class="center-v" style='height: 100%; width: 100%; object-fit: contain; opacity:0.2;'
+        src="./img/title3-1.png">
+    </div>
   </div>
   <!--END OF page cover -->
 
@@ -211,18 +205,19 @@
         <!-- content -->
         <div class="section-content anim">
           <div class="row">
-            <div class="col-12 col-md-6 text-left">
-              <!-- title and description -->
+            <!-- <div class="col-12 col-md-6 text-left">
               <div class="title-desc">
                 <h2 class="display-4 display-title home-title bordered anim-1">Swar Gujrania</h2>
                 <h4 class="">Master's of HCI student at Georgia Tech </h4><br>
                 <a class="a-highlight" href="index.html#contact">Seeking user experience design and research
                   internship in summer 2019 </a>
+
               </div>
 
-              
+            </div> -->
+            <div class="center">
+              <img class="center-v" src="./img/title2.png" width="70%">
             </div>
-
           </div>
         </div>
 
@@ -245,25 +240,22 @@
       <div class="section-wrapper center-vh dir-col anim">
         <!-- title -->
         <div class="section-title text-center">
-          <!-- <h5 class="title-bg">About</h5> -->
-          <h2 class=" display-4 display-title anim-2" style="font-weight: 500; font-size: 3rem">Think. Design. Create.</h2>
         </div>
 
         <!-- content -->
         <div class="section-content reduced anim text-center" style="width: 60%;">
           <!-- title and description -->
-          <div class="title-desc anim-3">
-            <p style="text-align: justify;"> Through years of dance, I learnt the concept of Abhinaya - the act of
-              story-telling
-              that warrants an acute understanding of human emotions through empathy. This led me to a deeper
-              understanding
-              of design through Empathy. </p>
-            <p style="text-align: justify;">Why Empathy? Developing a product is no longer limited to a
-              specific sect of people, rather it has to cater to global audience. I believe, for true inclusivity in
-              design, we need a
-              deeper understanding of human makeup and psyche, and empathy is one of the most crucial ways to achieve
-              that. </p>
-              <p class="text-right"><a class="a-highlight" href="https://thevoidview.nyc3.digitaloceanspaces.com/SwarGujraniaCV.pdf"> Resume <i class="icon fa fa-arrow-right"></i></a></p>
+          <div class="title-desc anim-3 font-roboto-300">
+            <img class="center" src="./img/threads.png" width="200"> <br>
+            <p style="text-align:center;"> There is something about us, humans, that simply enthralls me. We are so
+              diverse, so random and unpredictable in our psyche, behaviour and emotions - basically our being. And yet,
+              in spite of this chaotic diversity, there run fine threads of commonality in our behaviour and actions
+              that tie us together. These threads, when tuned the right way, can reshape the very essence of how we
+              experience our physical and digital lives. </p>
+            <p style="text-align: center;">This is what I am passionate about - rummaging through the chaos, finding
+              these threads and weaving them together to make sense of what people do, why they do it, and how we, as
+              researchers, designers and creators, can create fulfilling experiences that truly mean something to them.
+            </p>
           </div>
 
         </div>
@@ -281,21 +273,43 @@
     <!-- End of description section -->
 
     <!-- Begin of description section -->
-    <div class="section section-description fp-auto-height-responsive " data-section="projects" style="background: black;">
+    <div class="section section-description fp-auto-height-responsive " data-section="projects">
       <!-- Begin of section wrapper -->
       <div class="section-wrapper center-vh dir-col anim">
+        <div class="tabset">
+          <!-- Tab 1 -->
+          <input type="radio" name="tabset" id="tab1" aria-controls="all" checked>
+          <label for="tab1">All</label>
+          <!-- Tab 2 -->
+          <input type="radio" name="tabset" id="tab2" aria-controls="ux">
+          <label for="tab2">UX</label>
+          <!-- Tab 3 -->
+          <input type="radio" name="tabset" id="tab3" aria-controls="research">
+          <label for="tab3">Research</label>
 
+          <div class="tab-panels">
+            <section id="all" class="tab-panel">
+            </section>
+            <section id="ux" class="tab-panel">
+            </section>
+            <section id="research" class="tab-panel">
+            </section>
+          </div>
+        </div>
         <!-- content -->
         <div class="section-content anim text-center">
           <!-- text or illustration order are manipulated via Bootstrap order-md-1, order-md-2 class -->
           <!-- begin of item -->
           <div class="item row justify-content-between">
 
-            <div class="col-12 col-sm-6 col-md-4 center-vh">
+            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
               <div class="section-content anim translateUp">
                 <div class="images text-center">
-                  <div id="luminai" class="img-avatar-alpha">
-                    <div class="img-1 shadow">
+                  <div id="luminai" class="img-avatar-beta">
+                    <div hidden class="tags">
+                      All,Research,AI,Creative Computing
+                    </div>
+                    <div class="img-1">
                       <a href="luminai.html">
                         <img id="luminaiimage" class="img container-rel" src="./img/Luminai/l0.png" alt="LuminAI">
                         <div id="luminaitext" style="opacity: 0;" class="img-text">HCI, Creative Computers, AI</div>
@@ -310,14 +324,18 @@
               </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-4 center-vh">
+            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
               <div class="section-content anim">
                 <div class="images text-center">
-                  <div id="emoi" class="img-avatar-alpha">
+                  <div id="emoi" class="img-avatar-beta">
+                    <div hidden class="tags">
+                      All,HCI,UX,Research,Affective-Computing,User-Research
+                    </div>
                     <div class="img-1 shadow">
                       <a href="emoi.html">
                         <img id="emoiimage" class="img container-rel" src="./img/Emoi/e0.png" alt="Emoi">
-                        <div id="emoitext" style="opacity: 0;" class="img-text">UX, HCI research, Affective computing</div>
+                        <div id="emoitext" style="opacity: 0;" class="img-text">UX, HCI research, Affective computing
+                        </div>
                       </a>
                     </div>
                     <div class="legend text-center pos-abs">
@@ -329,13 +347,17 @@
               </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-4 center-vh">
+            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
               <div class="section-content anim translateUp">
                 <div class="images text-center">
-                  <div id="hashtag" class="img-avatar-alpha">
+                  <div id="hashtag" class="img-avatar-beta">
+                    <div hidden class="tags">
+                      All,HCI,UX
+                    </div>
                     <div class="img-1 shadow">
                       <a href="hashtag.html">
-                        <img id="hashtagimage" class="img container-rel" src="./img/HashtagGuru/h0.png" alt="HashtagGuru">
+                        <img id="hashtagimage" class="img container-rel" src="./img/HashtagGuru/h0.png"
+                          alt="HashtagGuru">
                         <div id="hashtagtext" style="opacity: 0;" class="img-text">HCI, UX design, User Research</div>
                       </a>
                     </div>
@@ -350,19 +372,22 @@
 
           </div>
 
-
-
           <div class="item row justify-content-between">
 
             <!-- img-frame-normal demo -->
-            <div class="col-12 col-sm-6 col-md-4 center-vh">
+            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
               <div class="section-content anim translateDown">
                 <div class="images text-center">
-                  <div id="researchrepo" class="img-avatar-alpha">
+                  <div id="researchrepo" class="img-avatar-beta">
+                    <div hidden class="tags">
+                      All,HCI,UX
+                    </div>
                     <div class="img-1 shadow">
                       <a href="researchRepo.html">
-                        <img id="researchrepoimage" class="img container-rel" src="./img/ResearchRepo/r0.png" alt="Research Repository">
-                        <div id="researchrepotext" style="opacity: 0;" class="img-text">HCI, UX design, User Research</div>
+                        <img id="researchrepoimage" class="img container-rel" src="./img/ResearchRepo/r0.png"
+                          alt="Research Repository">
+                        <div id="researchrepotext" style="opacity: 0;" class="img-text">HCI, UX design, User Research
+                        </div>
                       </a>
                     </div>
                     <div class="legend text-center pos-abs">
@@ -375,10 +400,13 @@
             </div>
 
             <!-- img-frame-normal demo -->
-            <div class="col-12 col-sm-6 col-md-4 center-vh">
+            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
               <div class="section-content anim">
                 <div class="images text-center">
-                  <div id="drone" class="img-avatar-alpha">
+                  <div id="drone" class="img-avatar-beta">
+                    <div hidden class="tags">
+                      All,IoT
+                    </div>
                     <div class="img-1 shadow">
                       <a href="drone.html">
                         <img id="droneimage" class="img container-rel" src="./img/drone/d0.png" alt="Drone">
@@ -397,10 +425,13 @@
 
 
             <!-- img-frame-normal demo -->
-            <div class="col-12 col-sm-6 col-md-4 center-vh">
+            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
               <div class="section-content anim translateDown">
                 <div class="images text-center">
-                  <div class="img-avatar-alpha">
+                  <div class="img-avatar-beta">
+                    <div hidden class="tags">
+                      All
+                    </div>
                     <div class="img-1 shadow">
                       <a href="item.html">
                         <img class="img" src="./img/colorGame/c0.png" alt="ColorMemory">
@@ -674,7 +705,7 @@
           </div>
 
           <div class="row">
-            <div >
+            <div>
               <!-- content -->
               <div class="section-content anim text-center">
                 <!-- title and description -->
@@ -813,7 +844,8 @@
   <footer id="site-footer" class="page-footer">
     <!-- Left content -->
     <div class="footer-left">
-      <a class="btn btn-outline-white btn-round btn-faint" href="https://thevoidview.nyc3.digitaloceanspaces.com/SwarGujraniaCV.pdf" style="object-fit: contain">
+      <a class="btn btn-outline-white btn-round btn-faint"
+        href="https://thevoidview.nyc3.digitaloceanspaces.com/SwarGujraniaCV.pdf" style="object-fit: contain">
         <span class="txt"> Download Resume</span>
       </a> <br>
       <a class="social" style="color:black; opacity:0; margin-top:20px;">Placeholder Text</a>
@@ -824,27 +856,28 @@
     <div class="footer-right">
       <ul class="social">
         <li>
-            <li>
-                <a href="https://www.linkedin.com/in/swargujrania/">
-                  <i class="icon fa fa-linkedin icon-highlight"></i>
-                </a>
-              </li>
-          <a href="https://www.facebook.com/swar.gujrania">
-            <i class="icon fa fa-facebook icon-highlight"></i>
+        <li>
+          <a href="https://www.linkedin.com/in/swargujrania/">
+            <i class="icon fa fa-linkedin icon-highlight"></i>
           </a>
+        </li>
+        <a href="https://www.facebook.com/swar.gujrania">
+          <i class="icon fa fa-facebook icon-highlight"></i>
+        </a>
         </li>
         <li>
           <a href="https://twitter.com/thevoidview">
             <i class="icon fa fa-twitter icon-highlight"></i>
           </a>
-        </li>        
+        </li>
         <li>
           <a href="https://www.instagram.com/the.void.view/">
             <i class="icon fa fa-instagram icon-highlight"></i>
           </a>
         </li>
       </ul>
-      <a class="social" style="color:grey; margin-left:60px; margin-top:20px; font-size:70%" href="https://pixabay.com/en/videos/ballet-dancing-woman-elegance-373/">
+      <a class="social" style="color:grey; margin-left:60px; margin-top:20px; font-size:70%"
+        href="https://pixabay.com/en/videos/ballet-dancing-woman-elegance-373/">
         Video Source: Pixabay</a>
 
     </div>

@@ -285,12 +285,12 @@ $(document).on('ready', function () {
 	});
 
 	
-	// add event listener to project thumbnails
-	var imageAvatarAlphaList = $('.img-avatar-alpha');
+	//10. add event listener to project thumbnails
+	var imageAvatarBetaList = $('.img-avatar-beta');
 	
-	for(i=0; i<imageAvatarAlphaList.length; i++)
+	for(i=0; i<imageAvatarBetaList.length; i++)
 	{
-		var currentContainer = imageAvatarAlphaList[i];
+		var currentContainer = imageAvatarBetaList[i];
 
 		currentContainer.addEventListener('mouseover', function(){
 			$('#' + this.id + 'text').css('opacity', 1);
@@ -303,6 +303,12 @@ $(document).on('ready', function () {
 		}, false);
 
 	}
+
+	//11. tagging of project thumbnails
+	var tags = [All, Research, AI, Creative-Computing, HCI, UX, Human-Factors, User-Research, Visual-Design];
+	var taggedProjects = $('.tagged');
+
+	
 	
 });
 
