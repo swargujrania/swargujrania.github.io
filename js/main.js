@@ -305,7 +305,7 @@ $(document).on('ready', function () {
 	}
 
 	//11. tagging of project thumbnails
-	var tags = [All, Research, AI, Creative-Computing, HCI, UX, Human-Factors, User-Research, Visual-Design];
+	var tags = ["All", "Research", "AI", "Creative-Computing", "HCI", "UX", "Human-Factors", "User-Research", "Visual-Design"];
 	var taggedProjects = $('.tagged');
 
 	

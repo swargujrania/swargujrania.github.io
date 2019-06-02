@@ -267,8 +267,13 @@ p {
   left: -200vw;
 }
 
+.padded-tabset{
+  padding-right: 50px;
+}
+
 .tabset .tab-panel {
   display: none;
+  padding: 1vw;
 }
 
 .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
@@ -285,9 +290,12 @@ p {
   display: inline-block;
   padding: 15px 15px 25px;
   border: 1px solid transparent;
-  border-bottom: 0;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 300;
+  margin: 30px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.12vw;
+  font-weight: 300;
 }
 
 .tabset > label::after {
@@ -302,24 +310,12 @@ p {
 
 .tabset > label:hover,
 .tabset > input:focus + label {
-  color: #06c;
+  color: #d03a46;
 }
 
-.tabset > label:hover::after,
-.tabset > input:focus + label::after,
-.tabset > input:checked + label::after {
-  background: #06c;
-}
 
-.tabset > input:checked + label {
-  border-color: #ccc;
-  border-bottom: 1px solid #fff;
-  margin-bottom: -1px;
-}
-
-.tab-panel {
-  padding: 30px 0;
-  border-top: 1px solid #ccc;
+.tabset > input:focus + label::after{
+  background: #d03a46;
 }
 
 /* end of edits by swar */
