@@ -60,7 +60,7 @@ $(document).on('ready', function () {
 	var menuItems = $('.all-menu-wrapper .nav-link');
 	var menuIcon = $('.menu-icon, #navMenuIcon');
 	var menuBlock = $('.all-menu-wrapper');
-	var reactToMenu = $ ('.page-main, .navbar-sidebar, .page-cover')
+	var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover')
 	var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a");
 	// Menu icon clicked
 	menuIcon.on('click', function () {
@@ -124,7 +124,7 @@ $(document).on('ready', function () {
 		slides: imageSlides,
 		animation: ['kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight']
 	});
-	
+
 	// 5. Init video background
 	var videoBg = $('.video-container video, .video-container object');
 
@@ -284,31 +284,140 @@ $(document).on('ready', function () {
 		$('.section').addClass('anim');
 	});
 
-	
+
 	//10. add event listener to project thumbnails
 	var imageAvatarBetaList = $('.img-avatar-beta');
-	
-	for(i=0; i<imageAvatarBetaList.length; i++)
-	{
+
+	for (i = 0; i < imageAvatarBetaList.length; i++) {
 		var currentContainer = imageAvatarBetaList[i];
 
-		currentContainer.addEventListener('mouseover', function(){
+		currentContainer.addEventListener('mouseover', function () {
 			$('#' + this.id + 'text').css('opacity', 1);
-			$('#' + this.id + 'image').css('filter', 'brightness(0.5)');
+			$('#' + this.id + 'image').css('filter', 'brightness(0.4)');
 		}, false);
 
-		currentContainer.addEventListener('mouseout', function(){
+		currentContainer.addEventListener('mouseout', function () {
 			$('#' + this.id + 'text').css('opacity', 0);
 			$('#' + this.id + 'image').css('filter', 'brightness(1)');
 		}, false);
 
 	}
 
-	//11. tagging of project thumbnails
-	var tags = ["All", "Research", "AI", "Creative-Computing", "HCI", "UX", "Human-Factors", "User-Research", "Visual-Design"];
-	var taggedProjects = $('.tagged');
+	//11. Dynamic loading of projects
+	window.currentTag = "All";
+	var tags = ["All", "R&D", "UXD", "UXR", "VD"];
 
+	window.allProjects = [
+		{
+			"name": "LuminAI",
+			"tags": "All,R&D",
+			"hidden": false,
+			"htmlString": "<div class='col-12 col-sm-6 col-md-4 center-vh tagged' style='margin-bottom: 10px' data-val='All,R&D'><div class='section-content anim translateUp'><div class='images text-center'><div id='luminai' class='img-avatar-beta'> <div class='img-1'> <a href='luminai.html'> <img id='luminaiimage' class='img container-rel' src='./img/Luminai/l0.png' alt='LuminAI' style='margin-bottom: 10px'><div id='luminaitext' style='opacity: 0;' class='img-text'>AI Research, Creative Systems</div> </a> </div><div class='legend text-center pos-abs font-roboto highlight'> <h5 style='line-height: 1'>LuminAI</h5><p class='small' style='letter-spacing: 0.05rem'>Virtual AI agent that can dance with you.</p></div></div></div></div></div>"
+		},
+		{
+			"name": "Emoi",
+			"tags": "All,UXR,R&D",
+			"hidden": false,
+			"htmlString": '<div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,UXR">			<div class="section-content anim translateUp">			  <div class="images text-center">				<div id="emoi" class="img-avatar-beta">				  <div class="img-1 shadow">					<a href="emoi.html">					  <img id="emoiimage" class="img container-rel" src="./img/Emoi/e0.png" alt="Emoi" style="margin-bottom: 10px">					  <div id="emoitext" style="opacity: 0;" class="img-text">HCI, UX research, Affective Computing					  </div>					</a>				  </div>				  <div class="legend text-center pos-abs font-roboto highlight">					<h5 style="line-height: 1" >Emoi</h5> 					<p class="small" style="letter-spacing: 0.05rem">Visualizing user’s emotions in realtime</p> 				  </div>				</div>			  </div>			</div>		</div>'
+		},
+		{
+			"name": "HashtagGuru",
+			"tags": "All,UXD",
+			"hidden": false,
+			"htmlString": '<div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,UXD">                 			<div class="section-content anim translateUp"> 			  <div class="images text-center"> 				<div id="hashtag" class="img-avatar-beta"> 				  <div class="img-1 shadow"> 					<a href="hashtag.html"> 					  <img id="hashtagimage" class="img container-rel" src="./img/HashtagGuru/h0.png" 						alt="HashtagGuru" style="margin-bottom: 10px"> 					  <div id="hashtagtext" style="opacity: 0;" class="img-text">HCI, UX Design</div> 					</a> 				  </div> 				  <div class="legend text-center pos-abs font-roboto highlight"> 					<h5 style="line-height: 1" >Hashtag Guru</h5> 					<p class="small" style="letter-spacing: 0.05rem" >Effective content tagging and publishing</p> 				  </div> 				</div> 			  </div> 			</div> 		  </div>'
+		},
+		{
+			"name": "ResearchRepo",
+			"tags": "All,UXD",
+			"hidden": false,
+			"htmlString": '<div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,UXD"> 			<div class="section-content anim translateDown"> 			  <div class="images text-center"> 				<div id="researchrepo" class="img-avatar-beta"> 				  <div class="img-1 shadow"> 					<a href="researchRepo.html"> 					  <img id="researchrepoimage" class="img container-rel" src="./img/ResearchRepo/r0.png" 						alt="Research Repository" style="margin-bottom: 10px"> 					  <div id="researchrepotext" style="opacity: 0;" class="img-text">HCI, UX Design </div> 					</a> 				  </div> 				  <div class="legend text-center pos-abs font-roboto highlight"> 					<h5 style="line-height: 1" >Research Repository</h5> 					<p class="small" style="letter-spacing: 0.05rem" >Research management system for Focus Brands Inc.</p> 				  </div> 				</div> 			  </div> 			</div> 		  </div>'
+		},
+		{
+			"name": "DIYDrone",
+			"tags": "All,R&D",
+			"hidden": false,
+			"htmlString": '<div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,R&D"> 			<div class="section-content anim"> 			  <div class="images text-center"> 				<div id="drone" class="img-avatar-beta"> 				  <div class="img-1 shadow"> 					<a href="drone.html"> 					  <img id="droneimage" class="img container-rel" src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px"> 					  <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div> 					</a> 				  </div> 				  <div class="legend text-center pos-abs font-roboto highlight"> 					<h5 style="line-height: 1" >DIY drone kit</h5> 					<p class="small" style="letter-spacing: 0.05rem" >Interfacing drones with mobile phones</p>  				  </div> 				</div> 			  </div> 			</div> 		  </div>'
+		}
+	];
+
+	var placeholderProject = {
+		"name": "placeholder",
+		"tags": "",
+		"hidden": false,
+		"htmlString": '<div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 30px" data-val="All,R&D"> 			<div class="section-content anim"> 			  <div class="images text-center"> 				<div id="drone" class="img-avatar-beta"> 				  <div class="img-1 shadow"> 					<a href="drone.html"> 					  <img id="droneimage" class="img container-rel" src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;"> 					  <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div> 					</a> 				  </div> 				  <div class="legend text-center pos-abs font-roboto highlight"> 					<h5 style="line-height: 1; opacity:0;" >DIY drone kit</h5> 					<p class="small" style="letter-spacing: 0.05rem; opacity:0;" >Interfacing drones with mobile phones</p>  				  </div> 				</div> 			  </div> 			</div> 		  </div>'
+	}
+
+	var itemRowString = '<div class="item row justify-content-between"></div>'
+
+	var currentProjects = [];
+
+	var projectSection = $($('div[data-section="projects"]')[0]);
+
+	//load all projects in start
+	window.onload = function() {
+		// LoadProjects('All');
+	}
+
+	//reloading on url change
+	window.onhashchange = function () {
+		// if (window.document.URL.indexOf('#projects') > -1) {
+		// 	console.log('Hi');
+		// 	LoadProjects(currentTag);
+		// }
+	}
+
+	// function LoadProjects(currTag) {
+	// 	ClearAllProjects();
+
+	// 	if (!tags.includes(currTag)) {
+	// 		currTag = "All";
+	// 	}
+
+	// 	//populate current projects
+	// 	currentProjects = FindProjectWithTag(currTag);
+
+	// 	//add placeholder projects
+	// 	var placeholderProjectCount = (currentProjects.length <= 3) ? 6 - currentProjects.length : (currentProjects.length % 3 == 0) ? 0 : 3 - (currentProjects.length % 3);
+
+	// 	while(placeholderProjectCount != 0)
+	// 	{
+	// 		currentProjects.push(placeholderProject);
+	// 		placeholderProjectCount--;
+	// 	}
+
+		
+
+	// 	//show projects in a div
+	// 	var projectContainer = $('#projectContainer');
+	// 	for (i = 0; i < currentProjects.length; i++) {
+	// 		if (i % 3 == 0) {
+	// 			projectContainer.append(itemRowString);
+	// 		}
+
+	// 		var currentRow = projectContainer.children().last();
+	// 		currentRow.append(currentProjects[i].htmlString);
+	// 	}
+
+		
+	// }
+
+	// function FindProjectWithTag(tag) {
+	// 	return allProjects.filter(function(project){if(project.tags.indexOf(tag) > -1){ return project; }})
+	// }
+
+	// function ClearAllProjects()
+	// {
+	// 	var projectContainer = $('#projectContainer');
+	// 	projectContainer.children().remove();
+	// }
+
+	//12. tagging of project thumbnails
 	
-	
+	// var taggedProjects = $('.tagged');
+	// $('.tab').on('click', function () {
+	// 	var tag = this.getAttribute('for');
+	// 	LoadProjects(tag);
+	// });
+
 });
 

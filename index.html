@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="./fonts/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cormorant+SC:300,400,500,600,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&display=swap"
@@ -247,12 +247,12 @@
           <!-- title and description -->
           <div class="title-desc anim-3 font-roboto-300">
             <img class="center" src="./img/threads.png" width="200"> <br>
-            <p style="text-align:center;"> There is something about us, humans, that simply enthralls me. We are so
-              diverse, so random and unpredictable in our psyche, behaviour and emotions - basically our being. And yet,
-              in spite of this chaotic diversity, there run fine threads of commonality in our behaviour and actions
-              that tie us together. These threads, when tuned the right way, can reshape the very essence of how we
-              experience our physical and digital lives. </p>
-            <p style="text-align: center;">This is what I am passionate about - rummaging through the chaos, finding
+            <p style="text-align:justify;"> There is something about us, humans, that simply enthralls me. We are so
+              diverse, so random and unpredictable. And yet, there run fine threads of commonality that tie our
+              behaviour and actions
+              together. These threads, when tuned the right way, can reshape the very essence of how we
+              experience our physical and digital beings. </p>
+            <p style="text-align: justify;">This is what I am passionate about - rummaging through the chaos, finding
               these threads and weaving them together to make sense of what people do, why they do it, and how we, as
               researchers, designers and creators, can create fulfilling experiences that truly mean something to them.
             </p>
@@ -276,181 +276,573 @@
     <div class="section section-description fp-auto-height-responsive " data-section="projects">
       <!-- Begin of section wrapper -->
       <div class="section-wrapper center-vh dir-col anim">
+        <div>
+          <input id="tab1" type="radio" name="tabs" checked>
+          <label for="tab1">ALL</label>
 
-        <div class="tabset">
-          <!-- Tab 1 -->
-          <input type="radio" name="tabset" id="tab1" aria-controls="all" checked>
-          <label for="tab1">All</label>
-          <!-- Tab 2 -->
-          <input type="radio" name="tabset" id="tab2" aria-controls="user-experience">
-          <label for="tab2">User-Experience</label>
-          <!-- Tab 3 -->
-          <input type="radio" name="tabset" id="tab3" aria-controls="visual-design">
-          <label for="tab3">Visual-Design</label>
+          <input id="tab2" type="radio" name="tabs">
+          <label for="tab2">UX DESIGN</label>
 
-          <input type="radio" name="tabset" id="tab4" aria-controls="research">
-          <label for="tab4">Research</label>
+          <input id="tab3" type="radio" name="tabs">
+          <label for="tab3">UX RESEARCH</label>
 
-          <input type="radio" name="tabset" id="tab5" aria-controls="human-factors">
-          <label for="tab5">Human-Factors</label>
+          <input id="tab4" type="radio" name="tabs">
+          <label for="tab4">VISUAL DESIGN</label>
 
-          
-        </div>
-
-        <!-- content -->
-        <div class="section-content anim text-center">
-          <!-- text or illustration order are manipulated via Bootstrap order-md-1, order-md-2 class -->
-          <!-- begin of item -->
-          <div class="item row justify-content-between">
-
-            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
-              <div class="section-content anim translateUp">
-                <div class="images text-center">
-                  <div id="luminai" class="img-avatar-beta">
-                    <div hidden class="tags">
-                      All,Research,AI,Creative Computing
+          <input id="tab5" type="radio" name="tabs">
+          <label for="tab5">RESEARCH & DEV</label>
+          <section id="content1">
+            <div class="row">
+              <div class='col-12 col-sm-6 col-md-4 center-vh tagged' style='margin-bottom: 10px' data-val='All,R&D'>
+                <div class='section-content anim translateUp'>
+                  <div class='images text-center'>
+                    <div id='luminai' class='img-avatar-beta'>
+                      <div class='img-1'> <a href='luminai.html'> <img id='luminaiimage' class='img container-rel'
+                            src='./img/Luminai/l0.png' alt='LuminAI' style='margin-bottom: 10px'>
+                          <div id='luminaitext' style='opacity: 0;' class='img-text'>AI Research, Creative Systems
+                          </div>
+                        </a> </div>
+                      <div class='legend text-center pos-abs font-roboto highlight'>
+                        <h5 style='line-height: 1'>LuminAI</h5>
+                        <p class='small' style='letter-spacing: 0.05rem'>Virtual AI agent that can dance with you.</p>
+                      </div>
                     </div>
-                    <div class="img-1">
-                      <a href="luminai.html">
-                        <img id="luminaiimage" class="img container-rel" src="./img/Luminai/l0.png" alt="LuminAI">
-                        <div id="luminaitext" style="opacity: 0;" class="img-text">HCI, Creative Computers, AI</div>
-                      </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,UXR">
+                <div class="section-content anim translateUp">
+                  <div class="images text-center">
+                    <div id="emoi" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="emoi.html"> <img id="emoiimage" class="img container-rel"
+                            src="./img/Emoi/e0.png" alt="Emoi" style="margin-bottom: 10px">
+                          <div id="emoitext" style="opacity: 0;" class="img-text">HCI, UX research, Affective
+                            Computing </div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1">Emoi</h5>
+                        <p class="small" style="letter-spacing: 0.05rem">Visualizing user’s emotions in realtime</p>
+                      </div>
                     </div>
-                    <div class="legend text-center pos-abs">
-                      <h5>LuminAI</h5>
-                      <p class="small">Your virtual dance partner</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,UXD">
+                <div class="section-content anim translateUp">
+                  <div class="images text-center">
+                    <div id="hashtag" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="hashtag.html"> <img id="hashtagimage"
+                            class="img container-rel" src="./img/HashtagGuru/h0.png" alt="HashtagGuru"
+                            style="margin-bottom: 10px">
+                          <div id="hashtagtext" style="opacity: 0;" class="img-text">HCI, UX Design</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1">Hashtag Guru</h5>
+                        <p class="small" style="letter-spacing: 0.05rem">Effective content tagging and publishing</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,UXD">
+                <div class="section-content anim translateDown">
+                  <div class="images text-center">
+                    <div id="researchrepo" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="researchRepo.html"> <img id="researchrepoimage"
+                            class="img container-rel" src="./img/ResearchRepo/r0.png" alt="Research Repository"
+                            style="margin-bottom: 10px">
+                          <div id="researchrepotext" style="opacity: 0;" class="img-text">HCI, UX Design </div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1">Research Repository</h5>
+                        <p class="small" style="letter-spacing: 0.05rem">Research management system for Focus Brands
+                          Inc.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,R&D">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem">Interfacing drones with mobile phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
-              <div class="section-content anim">
-                <div class="images text-center">
-                  <div id="emoi" class="img-avatar-beta">
-                    <div hidden class="tags">
-                      All,HCI,UX,Research,Affective-Computing,User-Research
+          </section>
+
+          <section id="content2">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,UXD">
+                <div class="section-content anim translateUp">
+                  <div class="images text-center">
+                    <div id="hashtag" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="hashtag.html"> <img id="hashtagimage"
+                            class="img container-rel" src="./img/HashtagGuru/h0.png" alt="HashtagGuru"
+                            style="margin-bottom: 10px">
+                          <div id="hashtagtext" style="opacity: 0;" class="img-text">HCI, UX Design</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1">Hashtag Guru</h5>
+                        <p class="small" style="letter-spacing: 0.05rem">Effective content tagging and publishing</p>
+                      </div>
                     </div>
-                    <div class="img-1 shadow">
-                      <a href="emoi.html">
-                        <img id="emoiimage" class="img container-rel" src="./img/Emoi/e0.png" alt="Emoi">
-                        <div id="emoitext" style="opacity: 0;" class="img-text">UX, HCI research, Affective computing
-                        </div>
-                      </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,UXD">
+                <div class="section-content anim translateDown">
+                  <div class="images text-center">
+                    <div id="researchrepo" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="researchRepo.html"> <img id="researchrepoimage"
+                            class="img container-rel" src="./img/ResearchRepo/r0.png" alt="Research Repository"
+                            style="margin-bottom: 10px">
+                          <div id="researchrepotext" style="opacity: 0;" class="img-text">HCI, UX Design </div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1">Research Repository</h5>
+                        <p class="small" style="letter-spacing: 0.05rem">Research management system for Focus Brands
+                          Inc.</p>
+                      </div>
                     </div>
-                    <div class="legend text-center pos-abs">
-                      <h5>Emoi</h5>
-                      <p class="small">Emotion based feedback solicitation</p>
+                  </div>
+                </div>
+              </div>
+              <div cclass="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <section id="content3">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,UXR">
+                <div class="section-content anim translateUp">
+                  <div class="images text-center">
+                    <div id="emoi" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="emoi.html"> <img id="emoiimage" class="img container-rel"
+                            src="./img/Emoi/e0.png" alt="Emoi" style="margin-bottom: 10px">
+                          <div id="emoitext" style="opacity: 0;" class="img-text">HCI, UX research, Affective
+                            Computing </div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1">Emoi</h5>
+                        <p class="small" style="letter-spacing: 0.05rem">Visualizing user’s emotions in realtime</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
-              <div class="section-content anim translateUp">
-                <div class="images text-center">
-                  <div id="hashtag" class="img-avatar-beta">
-                    <div hidden class="tags">
-                      All,HCI,UX
-                    </div>
-                    <div class="img-1 shadow">
-                      <a href="hashtag.html">
-                        <img id="hashtagimage" class="img container-rel" src="./img/HashtagGuru/h0.png"
-                          alt="HashtagGuru">
-                        <div id="hashtagtext" style="opacity: 0;" class="img-text">HCI, UX design, User Research</div>
-                      </a>
-                    </div>
-                    <div class="legend text-center pos-abs">
-                      <h5>Hashtag Guru</h5>
-                      <p class="small">Effective content tagging and publishing</p>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-          </div>
-
-          <div class="item row justify-content-between">
-
-            <!-- img-frame-normal demo -->
-            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
-              <div class="section-content anim translateDown">
-                <div class="images text-center">
-                  <div id="researchrepo" class="img-avatar-beta">
-                    <div hidden class="tags">
-                      All,HCI,UX
-                    </div>
-                    <div class="img-1 shadow">
-                      <a href="researchRepo.html">
-                        <img id="researchrepoimage" class="img container-rel" src="./img/ResearchRepo/r0.png"
-                          alt="Research Repository">
-                        <div id="researchrepotext" style="opacity: 0;" class="img-text">HCI, UX design, User Research
-                        </div>
-                      </a>
-                    </div>
-                    <div class="legend text-center pos-abs">
-                      <h5>Research Repository</h5>
-                      <p class="small">Research management system for Focus Brands Inc.</p>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- img-frame-normal demo -->
-            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
-              <div class="section-content anim">
-                <div class="images text-center">
-                  <div id="drone" class="img-avatar-beta">
-                    <div hidden class="tags">
-                      All,IoT
-                    </div>
-                    <div class="img-1 shadow">
-                      <a href="drone.html">
-                        <img id="droneimage" class="img container-rel" src="./img/drone/d0.png" alt="Drone">
-                        <div id="dronetext" style="opacity: 0;" class="img-text">IoT, Drones</div>
-                      </a>
-                    </div>
-                    <div class="legend text-center pos-abs">
-                      <h5>DIY drone kit</h5>
-                      <p class="small">Interfacing drones with mobile phones</p>
-
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
+          </section>
 
-
-            <!-- img-frame-normal demo -->
-            <div class="col-12 col-sm-6 col-md-4 center-vh tagged">
-              <div class="section-content anim translateDown">
-                <div class="images text-center">
-                  <div class="img-avatar-beta">
-                    <div hidden class="tags">
-                      All
-                    </div>
-                    <div class="img-1 shadow">
-                      <a href="item.html">
-                        <img class="img" src="./img/colorGame/c0.png" alt="ColorMemory">
-                      </a>
-                    </div>
-                    <div class="legend text-center pos-abs">
-                      <h5>The Color Memory Game</h5>
-                      <p class="small">Camera based color hunting game for kids</p>
-
+          <section id="content4">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+            </div>
+          </section>
 
-          </div>
-          <!-- end of item -->
+          <section id="content5">
+            <div class="row">
+              <div class='col-12 col-sm-6 col-md-4 center-vh tagged' style='margin-bottom: 10px' data-val='All,R&D'>
+                <div class='section-content anim translateUp'>
+                  <div class='images text-center'>
+                    <div id='luminai' class='img-avatar-beta'>
+                      <div class='img-1'> <a href='luminai.html'> <img id='luminaiimage' class='img container-rel'
+                            src='./img/Luminai/l0.png' alt='LuminAI' style='margin-bottom: 10px'>
+                          <div id='luminaitext' style='opacity: 0;' class='img-text'>AI Research, Creative Systems
+                          </div>
+                        </a> </div>
+                      <div class='legend text-center pos-abs font-roboto highlight'>
+                        <h5 style='line-height: 1'>LuminAI</h5>
+                        <p class='small' style='letter-spacing: 0.05rem'>Virtual AI agent that can dance with you.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh tagged" style="margin-bottom: 10px" data-val="All,R&D">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem">Interfacing drones with mobile phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 center-vh invisible tagged" style="margin-bottom: 10px;" data-val="">
+                <div class="section-content anim">
+                  <div class="images text-center">
+                    <div id="drone" class="img-avatar-beta">
+                      <div class="img-1 shadow"> <a href="drone.html"> <img id="droneimage" class="img container-rel"
+                            src="./img/drone/d0.png" alt="Drone" style="margin-bottom: 10px; opacity:0;">
+                          <div id="dronetext" style="opacity: 0;" class="img-text">HCI, IoT, Prototyping</div>
+                        </a> </div>
+                      <div class="legend text-center pos-abs font-roboto highlight">
+                        <h5 style="line-height: 1; opacity:0;">DIY drone kit</h5>
+                        <p class="small" style="letter-spacing: 0.05rem; opacity:0;">Interfacing drones with mobile
+                          phones</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
         </div>
       </div>
 
