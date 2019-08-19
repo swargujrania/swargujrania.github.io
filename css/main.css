@@ -135,7 +135,8 @@ p {
   .img-avatar-beta .legend {
     margin-top: 0px; }
   .img-avatar-beta:hover .highlight{
-    color: #ff7e89;
+    /* color: #ff7e89; */
+    color: #fe4252;
     transition: 0.3s;
   }
 
@@ -158,7 +159,7 @@ p {
 }
 
 .big-icon:hover{
-  color: #85befc;
+  color: #fe4252;
 }
 
 .inline {
@@ -170,9 +171,11 @@ p {
 }
 
 .btn-faint:hover {
-  color: #000000 !important;
-  background: white !important;
+  color: #ffffff !important;
+  background: #fe4252 !important;
   opacity: 1 !important;
+  border-color: #fe4252 !important;
+  transition: 0.2s;
 }
 
 .a-highlight{
@@ -180,7 +183,7 @@ p {
 }
 
 .a-highlight:hover{
-  color: #85befc;
+  color: #fe4252;
 }
 
 .icon-highlight{
@@ -339,8 +342,9 @@ section {
   border-top: 1px solid #abc transparent;
 }
 label {
+  letter-spacing: 0.1vw;
   display: inline-block;
-  margin: 2vw 0 1vw 0;
+  margin-inline-start: 3.5vw;
   padding: 15px 25px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
@@ -377,6 +381,13 @@ input:checked + label {
 #tab4:checked ~ #content4, 
 #tab5:checked ~ #content5 {
   display: block;
+}
+
+@media screen and (max-width: 1500px){
+label{
+  font-size: 13px;
+  margin-inline-start: 2vw
+}
 }
 
 @media screen and (max-width: 800px) {
@@ -557,7 +568,8 @@ input:checked + label {
   .btn-outline-white:hover, .btn-outline-white:focus {
     color: rgba(255, 255, 255, 0.5);
     border-color: rgba(255, 255, 255, 0.5);
-    background-color: transparent; }
+    background-color: transparent;
+    }
   .btn-outline-white.disabled, .btn-outline-white:disabled {
     color: #ffffff;
     opacity: 0.7;
