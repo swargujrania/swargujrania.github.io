@@ -353,11 +353,11 @@ label:before {
   font-weight: normal;
   margin-right: 10px;
 }
-label[for*='1']:before { content: '\f1cb'; }
-label[for*='2']:before { content: '\f17d'; }
-label[for*='3']:before { content: '\f16c'; }
+label[for*='1']:before {content: '\f1b3';}
+label[for*='2']:before { content: '\f248'; }
+label[for*='3']:before {content: '\f11a';}
 label[for*='4']:before { content: '\f171'; }
-label[for*='5']:before { content: '\f171'; }
+label[for*='5']:before { content: '\f109'; }
 
 label:hover {
   color: #fe4252;
