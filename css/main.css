@@ -344,9 +344,8 @@ section {
 label {
   letter-spacing: 0.1vw;
   display: inline-block;
-  margin-inline-start: 3.5vw;
+  margin-inline-start: 2vw !important;
   padding: 15px 25px;
-  font-weight: 600;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   color: #abc;
@@ -386,7 +385,7 @@ input:checked + label {
 @media screen and (max-width: 1500px){
 label{
   font-size: 13px;
-  margin-inline-start: 2vw
+  margin-inline-start: 1vw;
 }
 }
 
