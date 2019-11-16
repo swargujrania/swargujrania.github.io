@@ -6,6 +6,7 @@
 
 // Init all plugin when document is ready 
 $(document).on('ready', function () {
+	var scrollingAllowed = true;
 	// 0. Init console to avoid error
 	var method;
 	var noop = function () { };
@@ -62,12 +63,16 @@ $(document).on('ready', function () {
 	var menuBlock = $('.all-menu-wrapper');
 	var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover')
 	var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a");
+
 	// Menu icon clicked
 	menuIcon.on('click', function () {
 		menuIcon.toggleClass('menu-visible');
 		menuBlock.toggleClass('menu-visible');
 		menuItems.toggleClass('menu-visible');
 		reactToMenu.toggleClass('menu-visible');
+		$('#fp-nav').toggleClass('menu-visible');
+
+		toggleScrolling();
 		return false;
 	});
 
@@ -77,8 +82,18 @@ $(document).on('ready', function () {
 		menuBlock.removeClass('menu-visible');
 		menuItems.removeClass('menu-visible');
 		reactToMenu.removeClass('menu-visible');
+		$('#fp-nav').removeClass('menu-visible');
 		return true;
 	});
+
+	var toggleScrolling = function(){
+		scrollingAllowed = !scrollingAllowed;
+
+		if($.fn.fullpage.setAllowScrolling != undefined)
+		{
+			$.fn.fullpage.setAllowScrolling(scrollingAllowed);
+		}
+	}
 
 	// 4 Carousel Slider
 	new Swiper('.carousel-swiper-beta-demo .swiper-container', {
@@ -150,6 +165,7 @@ $(document).on('ready', function () {
 	var sendMessageForm = $('.send_message_form');
 	var scrollOverflow = true;
 	var css3 = true;
+	
 	// disable scroll overflow on small device
 	if (contextWindow.width() < 601) {
 		scrollOverflow = false;
@@ -360,64 +376,7 @@ $(document).on('ready', function () {
 
 	//reloading on url change
 	window.onhashchange = function () {
-		// if (window.document.URL.indexOf('#projects') > -1) {
-		// 	console.log('Hi');
-		// 	LoadProjects(currentTag);
-		// }
 	}
 
-	// function LoadProjects(currTag) {
-	// 	ClearAllProjects();
-
-	// 	if (!tags.includes(currTag)) {
-	// 		currTag = "All";
-	// 	}
-
-	// 	//populate current projects
-	// 	currentProjects = FindProjectWithTag(currTag);
-
-	// 	//add placeholder projects
-	// 	var placeholderProjectCount = (currentProjects.length <= 3) ? 6 - currentProjects.length : (currentProjects.length % 3 == 0) ? 0 : 3 - (currentProjects.length % 3);
-
-	// 	while(placeholderProjectCount != 0)
-	// 	{
-	// 		currentProjects.push(placeholderProject);
-	// 		placeholderProjectCount--;
-	// 	}
-
-		
-
-	// 	//show projects in a div
-	// 	var projectContainer = $('#projectContainer');
-	// 	for (i = 0; i < currentProjects.length; i++) {
-	// 		if (i % 3 == 0) {
-	// 			projectContainer.append(itemRowString);
-	// 		}
-
-	// 		var currentRow = projectContainer.children().last();
-	// 		currentRow.append(currentProjects[i].htmlString);
-	// 	}
-
-		
-	// }
-
-	// function FindProjectWithTag(tag) {
-	// 	return allProjects.filter(function(project){if(project.tags.indexOf(tag) > -1){ return project; }})
-	// }
-
-	// function ClearAllProjects()
-	// {
-	// 	var projectContainer = $('#projectContainer');
-	// 	projectContainer.children().remove();
-	// }
-
-	//12. tagging of project thumbnails
 	
-	// var taggedProjects = $('.tagged');
-	// $('.tab').on('click', function () {
-	// 	var tag = this.getAttribute('for');
-	// 	LoadProjects(tag);
-	// });
-
 });
-
