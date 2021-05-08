@@ -378,5 +378,54 @@ $(document).on('ready', function () {
 	window.onhashchange = function () {
 	}
 
-	
+	var tabbedContent = [
+		{
+			"input": document.getElementById('tab1'),
+			"label": document.getElementById("l1"),
+			"content": document.getElementById('content1')
+		},
+		{
+			"input": document.getElementById('tab2'),
+			"label": document.getElementById("l2"),
+			"content": document.getElementById('content2')
+		},
+		{
+			"input": document.getElementById('tab3'),
+			"label": document.getElementById("l3"),
+			"content": document.getElementById('content3')
+		},
+		{
+			"input": document.getElementById('tab5'),
+			"label": document.getElementById("l5"),
+			"content": document.getElementById('content5')
+		},
+	];
+
+	function toogleContent(idx) {
+		console.log('toggling', idx);
+		for(let [indx, val] of tabbedContent.entries()) {
+			if(indx === idx) {
+				val["content"].style.display = "block";
+				val["label"].classList.add("selectedtab");
+			}
+			else{
+				val["content"].style.display = "none";
+				val["label"].classList.remove("selectedtab");
+			}
+		}
+	}
+
+	for(let [idx, tc] of tabbedContent.entries()) {
+		// tc["input"].onclick = function(ev){
+		// 	console.log('woohoo');
+		// 	toogleContent(idx);
+		// }
+		tc["label"].onclick = function(ev){
+			console.log('woohoolll');
+			toogleContent(idx);
+		}
+	}
+	toogleContent(0);
+	// await sleep(2000);
+	// tabbedContent[0]["input"].click();
 });

@@ -358,36 +358,36 @@ label {
   color: #abc;
   border: 1px solid transparent;
 }
-label:before {
+/* label:before {
   font-family: fontawesome;
   font-weight: normal;
   margin-right: 10px;
-}
-label[for*='1']:before {content: '\f1b3';}
+} */
+/* label[for*='1']:before {content: '\f1b3';}
 label[for*='2']:before { content: '\f248'; }
 label[for*='3']:before {content: '\f11a';}
 label[for*='4']:before { content: '\f171'; }
-label[for*='5']:before { content: '\f109'; }
+label[for*='5']:before { content: '\f109'; } */
 
 label:hover {
   color: #fe4252;
   cursor: pointer;
 }
 
-input:checked + label {
+.selectedtab {
   color: #fe4252;
   border: 1px solid #abc transparent;
   border-bottom: 2px solid #fe4252;
   transition: 0.3s;
 }
 
-#tab1:checked ~ #content1,
+/* #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3,
 #tab4:checked ~ #content4, 
 #tab5:checked ~ #content5 {
   display: block;
-}
+} */
 
 @media screen and (max-width: 1500px){
 label{
@@ -396,7 +396,7 @@ label{
 }
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   label {
     font-size: 0;
   }
@@ -404,7 +404,7 @@ label{
     margin: 0;
     font-size: 18px;
   }
-}
+} */
 
 @media screen and (max-width: 500px) {
   label {
