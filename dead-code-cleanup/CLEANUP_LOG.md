@@ -427,6 +427,28 @@ No application code or dependency files were changed in this step.
 - Remaining decisions require external owner confirmation, hosting-provider access, deployment logs, or staging endpoint tests.
 - No Phase 9 deletion or relocation is authorized from repository evidence alone.
 
+## Phase 10 — Incremental validation
+
+### Step 1 — Static regression suite (completed)
+
+- Scanned 26 HTML files after the Phase 9 commit.
+- Remaining duplicate IDs are the known behavior-affecting findings: Drone placeholders on `index.html` and duplicate `summary` IDs on `wheelchair.html`, `flow.html`, and `infoviz.html`.
+- Remaining missing local `href`: Open Sans specimen stylesheet dependency, tracked as D-007.
+- No new duplicate-ID or missing-link regression was introduced by the approved reference cleanup.
+
+### Step 2 — Full page-request regression (completed)
+
+- Requested all 18 HTML pages, including protected and font specimen pages.
+- All returned HTTP 200; no page-level response regression was found.
+- Console, DOM geometry, computed-style, and interaction checks remain separate pending capabilities documented by the final runtime-validation gate.
+
+### Step 3 — Link, hash, and exact-case regression (completed)
+
+- Remaining missing local href: `fonts/opensans/opensans-regular-demo.html` → `specimen_files/specimen_stylesheet.css`, previously tracked as D-007.
+- No new broken links were introduced by the approved cleanup; removed inherited targets no longer appear in source.
+- The automated case pass produced one result tied to the same missing specimen path, not a confirmed case mismatch.
+- Hash targets and duplicate IDs remain known review items requiring browser interaction validation.
+
 ### Plan update — final orphaned-asset review
 
 - Added a mandatory end-of-plan review step requiring path/history/source searches, direct-entry and deployed-page checks, ownership confirmation, evidence logging, rollback planning, and full post-deletion validation before removing any orphaned asset.
