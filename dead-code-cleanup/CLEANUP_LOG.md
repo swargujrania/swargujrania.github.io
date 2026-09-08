@@ -244,3 +244,23 @@ No application code or dependency files were changed in this step.
 - Validated `img/hyperloop/.DS_Store` as non-application Finder metadata with no runtime or repository references.
 - Confirmed `.gitignore` already excludes `.DS_Store`.
 - Removed only the validated artifact; no application, dependency, link, or package files were changed.
+
+## Phase 5 — Main-page placeholder cleanup
+
+### Step 1 — Structural baseline (completed)
+
+- Confirmed one Projects section, 29 card containers, 11 hidden placeholder cards, and 19 project-page links in `index.html`.
+- Preserved card order, classes, links, and section metadata as the pre-change structural baseline.
+- Numeric geometry and responsive measurements remain pending a browser surface with DOM evaluation; no placeholder markup was changed.
+
+### Step 2 — Conservative layout evaluation (completed)
+
+- Confirmed both Sass and compiled CSS explicitly document `.invisible` as maintaining layout via `visibility: hidden`.
+- Confirmed all 11 hidden cards contain anchor/image markup, so they are not inert empty nodes.
+- Decision: **do not remove or replace** the cards without pixel-level desktop/mobile measurements and before/after interaction checks.
+
+### Step 3 — Replacement feasibility review (completed)
+
+- The cards use Bootstrap column classes, `center-vh`, `tagged`, inline margins, links, images, and hover-target IDs.
+- A generic spacer would not yet be demonstrably equivalent across breakpoints because column width, row wrapping, and vertical centering are inherited from these classes.
+- Decision: retain the original markup until a measurement-capable runtime can compare an equivalent grid-only replacement.
