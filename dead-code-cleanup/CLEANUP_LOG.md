@@ -287,3 +287,18 @@ No application code or dependency files were changed in this step.
 - Confirmed `main.js` exposes no independently callable application functions outside its ready-handler scope; most behavior is selector- and plugin-conditional.
 - The shared import cannot be trimmed globally without splitting page-specific behavior and re-running the full page matrix.
 - Retained script order and all dependencies; no code changes were made.
+
+## Phase 7 — Page-import cleanup
+
+### Step 1 — Import inventory (completed)
+
+- Confirmed all 14 primary portfolio pages load the same 11 stylesheets and 8 scripts.
+- Auxiliary specimen pages have separate legacy import sets; directory indexes and protected/password pages intentionally load no shared assets.
+- No page-specific import was removed because feature absence, indirect dependencies, console behavior, and responsive equivalence still require runtime checks.
+
+### Step 2 — Import dependency evaluation (completed)
+
+- Confirmed the primary pages use shared navigation, FullPage, loader, typography, icon, and responsive framework surfaces even when individual feature selectors are absent.
+- Swiper, Vegas, and FullPage styles/scripts remain indirect dependencies of the shared initializer and page structure; static selector absence is not removal evidence.
+- The commented Major Mono stylesheet is not an active import and was left untouched.
+- No stylesheet or script import met the plan's removal threshold; all imports and ordering were preserved.
