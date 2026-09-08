@@ -264,3 +264,26 @@ No application code or dependency files were changed in this step.
 - The cards use Bootstrap column classes, `center-vh`, `tagged`, inline margins, links, images, and hover-target IDs.
 - A generic spacer would not yet be demonstrably equivalent across breakpoints because column width, row wrapping, and vertical centering are inherited from these classes.
 - Decision: retain the original markup until a measurement-capable runtime can compare an equivalent grid-only replacement.
+
+## Phase 6 — Shared JavaScript cleanup
+
+### Step 1 — Initializer inventory (completed)
+
+- Audited `js/main.js` feature blocks: console shim, background data attributes, countdown, menu behavior, carousel/slideshow, video background, animation wrapping, FullPage/normal scrolling, form setup, scroll controls, loader, thumbnail hover behavior, dynamic project data, and tab initialization.
+- Each block has page-level selectors or plugin side effects; no initializer was approved for removal from static inspection alone.
+- The project-page tab exception remains the highest-risk shared-handler issue and requires a guarded fix plus cross-page regression testing before cleanup.
+
+### Step 2 — Page/feature activation mapping (completed)
+
+- Mapped shared initializers against page markup and confirmed FullPage, menu, loader, and shared navigation surfaces span the primary portfolio pages.
+- Confirmed thumbnail hover markup is concentrated on the homepage, while the shared handler still executes on every page and must tolerate zero matches.
+- Tab markup is present on selected pages, but the current unguarded lookup is not safe on pages without all tab elements; this remains a defect remediation candidate rather than dead-code deletion.
+- Plugin initializers and form/video/countdown branches remain conditional and require runtime coverage before import or initializer changes.
+- No JavaScript was removed or reordered.
+
+### Step 3 — Shared script loading consistency (completed)
+
+- Confirmed `js/main.js`, the jQuery dependency, and `jquery.downCount.js` are loaded by all 14 primary portfolio pages.
+- Confirmed `main.js` exposes no independently callable application functions outside its ready-handler scope; most behavior is selector- and plugin-conditional.
+- The shared import cannot be trimmed globally without splitting page-specific behavior and re-running the full page matrix.
+- Retained script order and all dependencies; no code changes were made.
