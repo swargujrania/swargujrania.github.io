@@ -468,6 +468,10 @@ No application code or dependency files were changed in this step.
 
 - Added an eight-item checklist covering preview access, production comparison, complete runtime matrix, unresolved defects, owner decisions, rollback-safe approved removals, final documentation, and commit/dependency review.
 
+### Plan update — expert next-steps execution plan
+
+- Added owner-input requirements, reproducible preview-validation instructions, candidate decision gates, and a final guardrail audit covering dependencies, direct-entry resources, rollback evidence, runtime pass/fail results, and scope control.
+
 ### Plan update — final orphaned-asset review
 
 - Added a mandatory end-of-plan review step requiring path/history/source searches, direct-entry and deployed-page checks, ownership confirmation, evidence logging, rollback planning, and full post-deletion validation before removing any orphaned asset.
