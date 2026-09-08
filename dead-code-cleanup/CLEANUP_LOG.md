@@ -159,3 +159,34 @@ No application code was changed in this step. A temporary local HTTP server and 
 #### Defect register
 
 - Baseline defects have been assigned stable identifiers and documented separately in `DEFECTS.md` for future remediation.
+
+## Phase 2 — Build the repository reference graph
+
+### Step 1 — Extract and resolve references
+
+Status: Completed on 2026-09-07.
+
+No application code or dependency files were changed in this step.
+
+- A structured reference report was added at `REFERENCE_GRAPH.md`.
+- The scan covered 241 HTML/HTM, CSS, Sass, JavaScript, and PHP source files.
+- It extracted 1,008 local-looking reference occurrences; 749 resolved to existing local targets.
+- The remaining 259 occurrences include confirmed missing routes plus expected parser false positives from Sass extensionless imports, minified vendor internals, dynamic JavaScript strings, and illustrative specimen snippets.
+- High-confidence missing targets include `img/bg-default.jpg`, inherited `gallery.html`/`item.html`/`demo.html` links, missing Open Sans specimen files, and inherited `img/items/` sample images.
+- No candidate was approved for deletion from this scan alone.
+- External, direct-entry, protected, dynamic, and server-side references were retained as manual-review categories.
+
+### Step 2 — Local-link and hash audit
+
+- Moved all cleanup Markdown documents into `dead-code-cleanup/`.
+- Scanned 26 HTML files and checked 683 local references, including `href`, `src`, `poster`, `action`, and `srcset` values.
+- Found 51 missing-target occurrences, grouped as inherited template links, missing sample images, and Open Sans specimen assets.
+- Found 0 filename-case mismatches.
+- Reviewed 96 homepage hash links; their targets use fullPage section metadata, so static id-only checks are false positives.
+- No application code or dependency files were changed.
+
+### Step 3 — External-reference inventory
+
+- Inventoried external URLs without modifying or dereferencing them.
+- Recorded major external groups (GitHub, Adobe XD, Figma, Google Fonts, social links, documentation, embeds, and form services) in `REFERENCE_GRAPH.md`.
+- Preserved every external reference pending dedicated availability and ownership checks.

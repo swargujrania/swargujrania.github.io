@@ -80,3 +80,38 @@ This file records defects discovered during the dead-code cleanup baseline on 20
 - **Future fix direction:** Do not change without confirming the intended project-page scrolling model.
 - **Verification:** If retained, document normal scrolling as intentional. If changed, perform full desktop, mobile, keyboard, wheel, touch, and hash-navigation regression testing.
 
+## D-009 — Broken inherited template navigation links
+
+- **Severity:** Medium
+- **Affected files:** 13 project-detail pages
+- **Observed behavior:** Links to `gallery.html`, `item.html`, and `demo.html` resolve to files that are absent from the repository.
+- **Impact:** Activating these inherited template links produces 404 navigation.
+- **Future fix direction:** Confirm whether the links are obsolete template chrome. Remove or replace only after checking direct URLs and intended portfolio navigation.
+- **Verification:** Exercise every affected link and confirm no intended route is lost.
+
+## D-010 — Missing inherited sample images
+
+- **Severity:** Low
+- **Affected files:** Five project-detail pages
+- **Observed behavior:** References to `img/items/img-portrait.jpg` and `img/items/img-sample7.jpg` do not resolve.
+- **Impact:** Affected template/demo content can show broken-image placeholders.
+- **Future fix direction:** Determine whether these images are visible or reachable content; restore approved assets or remove the obsolete references.
+- **Verification:** Review affected pages at desktop and mobile sizes and confirm no broken-image requests.
+
+## D-011 — External references require availability review
+
+- **Severity:** Informational
+- **Affected scope:** External links, embeds, fonts, documentation, social links, and form integrations
+- **Observed behavior:** External URLs were inventoried but not dereferenced during cleanup.
+- **Impact:** A URL may be retired, redirected, access-restricted, or temporarily unavailable; static analysis cannot distinguish these cases.
+- **Future fix direction:** Check high-value user-facing and integration URLs separately. Do not remove or rewrite them based solely on a transient failure.
+- **Verification:** Record status, redirect behavior, and ownership for each changed external reference.
+
+## D-012 — Static hash audit cannot prove fullPage section targets
+
+- **Severity:** Informational
+- **Affected files:** Project-page links to `index.html#home`, `#about`, `#projects`, `#art-intro`, and `#contact`
+- **Observed behavior:** Conventional `id` lookup reports 96 broken hash references, while the homepage uses fullPage `data-section` and `data-menuanchor` metadata for those sections.
+- **Impact:** A simplistic cleanup tool could incorrectly remove valid navigation.
+- **Future fix direction:** Keep these links and validate them through browser navigation and the fullPage runtime configuration.
+- **Verification:** Open each section link from a project page and confirm the expected homepage section is selected.
