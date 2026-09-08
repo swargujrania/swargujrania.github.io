@@ -302,3 +302,19 @@ No application code or dependency files were changed in this step.
 - Swiper, Vegas, and FullPage styles/scripts remain indirect dependencies of the shared initializer and page structure; static selector absence is not removal evidence.
 - The commented Major Mono stylesheet is not an active import and was left untouched.
 - No stylesheet or script import met the plan's removal threshold; all imports and ordering were preserved.
+
+## Phase 8 — CSS and Sass cleanup
+
+### Step 1 — Selector and source-authority audit (completed)
+
+- Candidate selectors (`.invisible`, `.tagged`, `.center-vh`, `.img-avatar-beta`) are actively used by homepage markup and shared JavaScript behavior.
+- No build configuration or reproducible Sass compilation workflow was found; committed compiled CSS remains the active runtime stylesheet.
+- Sass contains corresponding source rules and must be preserved for maintainability until a build workflow is established.
+- No selector or stylesheet rule was removed.
+
+### Step 2 — Reachability check (completed)
+
+- Verified candidate selectors against HTML, CSS, Sass, and JavaScript references.
+- `.invisible`, `.tagged`, `.center-vh`, `.img-avatar-beta`, and animation classes all have active markup or JavaScript consumers.
+- JavaScript adds/removes state classes such as `menu-visible`, `gone`, `transition`, `scrolled`, and `p-hidden`; static CSS matching alone cannot identify them as unused.
+- No selector met the safe-removal threshold; no CSS or Sass was changed.
