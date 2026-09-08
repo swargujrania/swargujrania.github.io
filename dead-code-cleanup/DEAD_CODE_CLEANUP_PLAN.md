@@ -179,6 +179,17 @@ Before closing any Phase 3–8 cleanup group, perform and record a dedicated val
 - Do not combine accessibility redesign, content changes, or visual redesign with dead-code cleanup.
 - Every deletion must have cataloged evidence and an explicit verification result.
 
+## Remaining work before merge
+
+1. Obtain preview deployment permission or a deployed preview URL for this branch.
+2. Confirm the production URL and approval to inspect it; preserve a production baseline for comparison.
+3. Run the full Phase 10/11 matrix on preview and production: desktop/tablet/mobile layouts, console output, network requests, DOM geometry, computed styles, keyboard/pointer/touch interactions, menus, tabs, FullPage and normal scrolling, forms, hashes, Back/Forward, and direct-entry pages.
+4. Resolve or explicitly accept the remaining known issues: duplicate Drone IDs/placeholders, duplicate `summary` IDs, the Open Sans specimen dependency, and unavailable browser geometry/console checks.
+5. Obtain owner decisions for the 32 orphaned asset candidates, unlinked direct-entry pages, protected/demo resources, and MailChimp endpoint/library.
+6. If any asset/page/endpoint is approved for deletion or relocation, perform an item-level change with rollback evidence and rerun all affected runtime, link, asset, and server-side checks.
+7. Update `DEFECTS.md`, `ORPHAN_ASSET_REPORT.md`, and `CLEANUP_LOG.md` with final pass/fail outcomes and reviewer decisions.
+8. Review the complete commit series, verify no dependency/package/vendor changes were introduced, and merge only when no unexplained production differences remain.
+
 ## Final end-of-plan review gates
 
 The orphaned-asset review and direct-entry review are final gates and must be completed after implementation and deployment verification, immediately before merge:

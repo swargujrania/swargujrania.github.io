@@ -464,6 +464,10 @@ No application code or dependency files were changed in this step.
 - Repository-side validation is complete through local HTTP, static reference, direct-entry, ownership-provenance, and server-side tracing checks.
 - No merge recommendation is made until the external preview is compared against production with no unexplained differences.
 
+### Plan update — remaining work before merge
+
+- Added an eight-item checklist covering preview access, production comparison, complete runtime matrix, unresolved defects, owner decisions, rollback-safe approved removals, final documentation, and commit/dependency review.
+
 ### Plan update — final orphaned-asset review
 
 - Added a mandatory end-of-plan review step requiring path/history/source searches, direct-entry and deployed-page checks, ownership confirmation, evidence logging, rollback planning, and full post-deletion validation before removing any orphaned asset.
