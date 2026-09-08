@@ -449,6 +449,15 @@ No application code or dependency files were changed in this step.
 - The automated case pass produced one result tied to the same missing specimen path, not a confirmed case mismatch.
 - Hash targets and duplicate IDs remain known review items requiring browser interaction validation.
 
+## Phase 11 — Deployment verification
+
+### Step 1 — Deployment metadata and preview readiness (completed)
+
+- Confirmed the cleanup branch is `portfolio-revision/sep2026` with GitHub remote `swargujrania/swargujrania.github.io`.
+- Confirmed custom domain metadata remains `swargujrania.com` in `CNAME`.
+- No repository deployment workflow or preview configuration is present.
+- GitHub Pages preview deployment, HTTPS/custom-domain routing, caching, and production comparison remain pending external deployment access.
+
 ### Plan update — final orphaned-asset review
 
 - Added a mandatory end-of-plan review step requiring path/history/source searches, direct-entry and deployed-page checks, ownership confirmation, evidence logging, rollback planning, and full post-deletion validation before removing any orphaned asset.
