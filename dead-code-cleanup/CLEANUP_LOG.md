@@ -318,3 +318,123 @@ No application code or dependency files were changed in this step.
 - `.invisible`, `.tagged`, `.center-vh`, `.img-avatar-beta`, and animation classes all have active markup or JavaScript consumers.
 - JavaScript adds/removes state classes such as `menu-visible`, `gone`, `transition`, `scrolled`, and `p-hidden`; static CSS matching alone cannot identify them as unused.
 - No selector met the safe-removal threshold; no CSS or Sass was changed.
+
+## Phase 9 — Assets and server-side code
+
+### Step 1 — Asset/server inventory (completed)
+
+- Added `ORPHAN_ASSET_REPORT.md` covering 208 image/media files, font families and specimens, PHP endpoints and MailChimp classes, demo/protected pages, and vendor libraries.
+- No asset, page, endpoint, dependency, or vendor file was classified as safe to delete from static reachability alone.
+- Manual ownership, direct-entry, deployment, and server-side checks remain required before any deletion.
+
+### Target cleanup — inherited navigation links (completed)
+
+- Removed dead `gallery.html`, `item.html`, and `demo.html` menu references from 13 project pages.
+- Verified no remaining HTML references to those targets.
+- Verified all 13 affected pages still return HTTP 200 from the local server.
+
+### Target cleanup — missing sample images (completed)
+
+- Removed references to `img/items/img-sample7.jpg` and `img/items/img-portrait.jpg` from five inherited/template sections.
+- Verified no remaining source references to either missing image.
+- Verified all five affected pages still return HTTP 200 from the local server.
+
+### Target cleanup — missing default background (completed)
+
+- Removed `img/bg-default.jpg` references from 14 page metadata blocks, `css/main.css`, and `sass/component/_cover.scss`.
+- Verified no remaining source references to the missing path.
+- Verified representative homepage and project pages return HTTP 200 after the change.
+- Visual appearance must receive deployment screenshot review because the fallback background image was removed rather than replaced.
+
+### Step 2 — Static media/font reference summary (completed)
+
+- Scanned 266 files under `img/` and `fonts/`; 234 had textual references and 32 were unreferenced candidates.
+- Recorded the limitations of basename/path matching in `ORPHAN_ASSET_REPORT.md`.
+- Preserved every candidate pending runtime, direct-entry, and ownership checks.
+
+## Runtime validation — Phases 3–8 initial pass
+
+- Local HTTP requests returned 200 for all 14 primary portfolio pages.
+- Known unresolved targets returned 404 as expected: `img/bg-default.jpg`, inherited `gallery.html`/`item.html`/`demo.html`, and the two inherited sample images.
+- The homepage loaded in the browser at `#projects`; menu, tab labels, visible project cards, section content, footer, and navigation links were present in the accessibility tree.
+- Browser console, DOM geometry, computed-style, and responsive pixel comparisons remain unavailable through the current browser surface; no behavior-affecting candidate was removed.
+
+### Plan update — mandatory Phase 9 runtime validation
+
+- Updated `DEAD_CODE_CLEANUP_PLAN.md` to require desktop/mobile network checks, direct-entry and interaction testing, computed-style/font verification, server-side request tests, ownership confirmation, and recorded evidence before any asset or endpoint deletion.
+
+### Plan update — runtime validation across Phases 3–8
+
+- Added mandatory before/after runtime checks for placeholder markup, shared JavaScript, page imports, CSS/Sass selectors, duplicate IDs, links, hashes, scrolling, menus, forms, and responsive behavior.
+- Required explicit pass/fail evidence in the cleanup log before each deletion or behavior-affecting edit.
+
+### Runtime validation rerun — Phases 3–8 and Phase 9 candidates
+
+- Re-requested all 15 top-level HTML pages; every page returned HTTP 200 after the approved reference removals.
+- Confirmed removed target paths remain 404 but have no remaining source references.
+- No additional Phase 3–8 item was proven safe to remove through available runtime checks.
+- No Phase 9 asset, font, PHP, protected, demo, or vendor item was proven safe to remove; all remain manual-review candidates.
+
+### Phase 9 manual review started
+
+- Listed all 32 unreferenced media/font/specimen candidates in `ORPHAN_ASSET_REPORT.md`.
+- Began direct-entry checks and found four pages without inbound HTML links: two font specimen demos, `honeywell.html`, and `password_template.html`.
+- Reviewed representative Git history; ownership and external-use confirmation remain unresolved.
+- Preserved all candidates; none is approved for removal.
+
+### Defect register update — Phase 9 review queues
+
+- Added D-013 for direct-entry placement review of `honeywell.html` and `password_template.html`.
+- Added D-014 for the 32-item orphaned asset review queue.
+- Added D-015 for the broader direct-entry review queue covering unlinked, specimen, demo, protected, and externally addressable resources.
+
+### Phase 9 direct-entry runtime sample
+
+- Direct local requests for `honeywell.html`, `password_template.html`, both font specimen demos, and four representative orphaned resources returned HTTP 200 with no redirects.
+- Marked local addressability as confirmed; ownership and production-use intent remain unresolved.
+- Preserved all resources.
+
+### Phase 9 ownership review
+
+- Git authorship for sampled assets and direct-entry pages consistently identifies the repository owner.
+- Treated authorship as provenance only; no deletion or relocation was approved without explicit current-intent confirmation.
+
+### Phase 9 server-side review
+
+- Confirmed `js/main.js` actively references `ajaxserver/serverfile.php` for form handling.
+- Confirmed `servermailchimp.php` and bundled MailChimp classes have include/call relationships.
+- Preserved all PHP endpoints and server-side libraries pending staging request tests and credential-safe review.
+
+### Plan/defect update — MailChimp library review
+
+- Added a plan step requiring include/call tracing, form and deployment verification, credential-safe staging tests, owner confirmation, rollback evidence, and post-removal regression checks before removing MailChimp code.
+- Added D-016 to track this review.
+
+### D-016 static trace result
+
+- Found no repository caller for `servermailchimp.php` beyond its own MailChimp include; the bundled classes are internally referenced by that endpoint.
+- Classified the endpoint/library as uncertain and directly addressable, not confirmed dead.
+- Preserved all MailChimp files pending deployment logs, staging endpoint tests, and owner confirmation.
+
+### Phase 9 deployment metadata check
+
+- Found only `CNAME` repository metadata; no in-repository deployment configuration, sitemap, robots file, or workflow references the reviewed resources.
+- Kept all resources preserved because hosting-provider settings and external clients are outside repository visibility.
+
+### Phase 9 repository review status
+
+- Repository-visible direct-entry, ownership provenance, server-side relationships, and deployment metadata checks are complete.
+- Remaining decisions require external owner confirmation, hosting-provider access, deployment logs, or staging endpoint tests.
+- No Phase 9 deletion or relocation is authorized from repository evidence alone.
+
+### Plan update — final orphaned-asset review
+
+- Added a mandatory end-of-plan review step requiring path/history/source searches, direct-entry and deployed-page checks, ownership confirmation, evidence logging, rollback planning, and full post-deletion validation before removing any orphaned asset.
+
+### Plan update — final direct-entry review
+
+- Added a dedicated direct-entry review requiring canonical URL enumeration, deployed direct requests, redirect/console/network/render checks, protected/demo/specimen and hosting review, and owner confirmation before removing unlinked pages or resources.
+
+### Plan update — final review gate placement
+
+- Consolidated orphaned-asset and direct-entry reviews into explicit final end-of-plan gates after deployment verification and before merge.

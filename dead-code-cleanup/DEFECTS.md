@@ -51,6 +51,8 @@ This file records defects discovered during the dead-code cleanup baseline on 20
 - **Future fix direction:** Determine whether the rule is active. If active, restore the intended asset or select an existing equivalent; if dead, remove the rule only after runtime proof.
 - **Verification:** No background-image 404 occurs and appearance remains unchanged.
 
+**Status:** Resolved on 2026-09-08 by removing the missing background URL from compiled CSS, Sass, and page social metadata. Representative pages continue to return HTTP 200; visual equivalence requires deployment screenshot review.
+
 ## D-006 — Missing favicon
 
 - **Severity:** Low
@@ -89,6 +91,42 @@ This file records defects discovered during the dead-code cleanup baseline on 20
 - **Future fix direction:** Confirm whether the links are obsolete template chrome. Remove or replace only after checking direct URLs and intended portfolio navigation.
 - **Verification:** Exercise every affected link and confirm no intended route is lost.
 
+**Status:** Resolved on 2026-09-08 by removing the obsolete inherited menu entries from the 13 affected project pages. All affected pages still return HTTP 200; no replacement route was introduced.
+
+## D-013 — Direct-entry placement review for Honeywell and password template
+
+- **Severity:** Informational
+- **Affected files:** `honeywell.html`, `password_template.html`
+- **Observed behavior:** Both pages have no inbound HTML links and may be intended for direct or protected access.
+- **Required action:** Review whether these pages should be moved into a dedicated protected/archive location, preserving case-sensitive direct URLs and deployment behavior.
+- **Verification:** Confirm canonical URLs, redirects, access controls, noindex behavior, and all direct references before any move.
+
+## D-014 — Orphaned asset review queue
+
+- **Severity:** Informational
+- **Affected scope:** 32 media/font/specimen candidates listed in `ORPHAN_ASSET_REPORT.md`
+- **Observed behavior:** Candidates have no detected textual source reference.
+- **Required action:** Complete path/history/source searches, runtime/direct-entry checks, and ownership confirmation before deciding whether any asset can be removed.
+- **Verification:** Record an item-level decision and rollback path for every candidate.
+
+## D-015 — Direct-entry review queue
+
+- **Severity:** Informational
+- **Affected scope:** Unlinked pages, specimen/demo content, protected resources, and externally addressable assets
+- **Observed behavior:** Lack of inbound repository links does not establish that a resource is unused.
+- **Required action:** Test canonical case-sensitive URLs in staging, inspect redirects and hosting configuration, and confirm owner intent.
+- **Verification:** Preserve unresolved resources and document pass/fail evidence before any deletion or relocation.
+
+## D-016 — MailChimp library usage review
+
+- **Severity:** Informational
+- **Affected scope:** `ajaxserver/servermailchimp.php` and `ajaxserver/mailchimp/`
+- **Observed behavior:** The repository contains a MailChimp endpoint and bundled client classes; active production use has not been established.
+- **Required action:** Trace includes, calls, form actions, deployment configuration, and staging/server logs. Remove only if no active use is proven and the owner approves.
+- **Verification:** Run credential-safe form and endpoint regression checks after any approved removal; preserve rollback evidence.
+
+**Static trace status:** `servermailchimp.php` is not referenced by repository HTML, JavaScript, or PHP callers other than its own MailChimp include. The bundled classes are referenced by that endpoint. This is a candidate for manual removal review, not an approved deletion, because external clients or deployment configuration may invoke the endpoint directly.
+
 ## D-010 — Missing inherited sample images
 
 - **Severity:** Low
@@ -97,6 +135,8 @@ This file records defects discovered during the dead-code cleanup baseline on 20
 - **Impact:** Affected template/demo content can show broken-image placeholders.
 - **Future fix direction:** Determine whether these images are visible or reachable content; restore approved assets or remove the obsolete references.
 - **Verification:** Review affected pages at desktop and mobile sizes and confirm no broken-image requests.
+
+**Status:** Resolved on 2026-09-08 by removing the five pairs of inherited sample-image elements. All five affected pages return HTTP 200; no remaining source references exist.
 
 ## D-011 — External references require availability review
 
