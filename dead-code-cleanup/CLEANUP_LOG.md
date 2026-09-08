@@ -464,6 +464,17 @@ No application code or dependency files were changed in this step.
 - Repository-side validation is complete through local HTTP, static reference, direct-entry, ownership-provenance, and server-side tracing checks.
 - No merge recommendation is made until the external preview is compared against production with no unexplained differences.
 
+### Local desktop preview pass
+
+- Loaded `http://127.0.0.1:8765/index.html#projects` in the Codex in-app Chromium browser.
+- Confirmed the homepage project surface, menu, tabs, visible cards, footer, and navigation links render in the accessibility tree.
+- Exact 1440×900 geometry could not be asserted because viewport resizing and DOM evaluation are unavailable in this browser surface.
+
+### Owner-approved validation scope adjustment
+
+- Per owner instruction, continue with desktop/accessibility and HTTP regression checks without mobile/responsive validation.
+- Mobile geometry, breakpoint, touch, and responsive-whitespace checks remain explicitly deferred and must be completed before any responsive markup/CSS cleanup or final production merge.
+
 ### Plan update — remaining work before merge
 
 - Added an eight-item checklist covering preview access, production comparison, complete runtime matrix, unresolved defects, owner decisions, rollback-safe approved removals, final documentation, and commit/dependency review.
