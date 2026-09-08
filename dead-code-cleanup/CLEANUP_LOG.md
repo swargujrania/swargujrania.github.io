@@ -205,3 +205,42 @@ No application code or dependency files were changed in this step.
 - Confirmed-dead set remains empty.
 - Marked duplicated/defective behavior as behavior-affecting, dynamic/template/asset questions as uncertain, Sass/vendor surfaces as retained dependencies, and protected/demo content as intentionally retained pending review.
 - No application or dependency code was changed.
+
+### Step 2 — Comments and empty handlers (validated)
+
+- Confirmed `js/main.js` `noop` is actively assigned to console methods and retained it.
+- Identified the empty `window.onhashchange` assignment as behavior-affecting pending browser verification; it was not removed.
+- Classified TODO comments as non-executable maintenance notes and Vegas callback stubs as vendor defaults; neither was changed.
+
+### Step 3 — Unreachable branches and empty elements (validated)
+
+- Found no literal unreachable application branches.
+- Confirmed dynamic project definitions remain active candidates under C-002.
+- Determined automated empty-element matches include scripts, icon elements, layout containers, and plugin placeholders; none is safe to remove without runtime and CSS checks.
+- No application code was changed.
+
+### Step 4 — Dynamic project loader (validated, retained)
+
+- Traced the dynamic project data and found no active `LoadProjects` caller; the homepage renders project cards statically.
+- Retained the implementation pending browser instrumentation for global reads, filter interactions, and script timing.
+- Classified C-002 as uncertain; no JavaScript was removed.
+
+### Step 5 — Hidden Drone placeholders (validated, retained)
+
+- Confirmed 11 hidden cards remain in layout flow because `.invisible` uses `visibility: hidden`.
+- Confirmed their links, images, duplicate IDs, and hover markup make them behavior-affecting rather than empty content.
+- Retained all cards pending desktop/mobile layout measurements and before/after browser comparison.
+
+### Step 6 — Layout measurement baseline (partially completed)
+
+- Loaded the homepage through a temporary local server and confirmed the Projects section and hidden-card markup render in the browser.
+- The available browser surface did not expose a DOM geometry evaluation method in this run, so numeric desktop/mobile measurements could not be captured.
+- Stopped before any placeholder removal; a measurement-capable browser pass remains required.
+
+## Phase 4 — Low-risk cleanup
+
+### Step 1 — Tracked Finder metadata (validated and removed)
+
+- Validated `img/hyperloop/.DS_Store` as non-application Finder metadata with no runtime or repository references.
+- Confirmed `.gitignore` already excludes `.DS_Store`.
+- Removed only the validated artifact; no application, dependency, link, or package files were changed.
