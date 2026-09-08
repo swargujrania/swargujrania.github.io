@@ -190,3 +190,18 @@ No application code or dependency files were changed in this step.
 - Inventoried external URLs without modifying or dereferencing them.
 - Recorded major external groups (GitHub, Adobe XD, Figma, Google Fonts, social links, documentation, embeds, and form services) in `REFERENCE_GRAPH.md`.
 - Preserved every external reference pending dedicated availability and ownership checks.
+
+## Phase 3 — Dead-code catalog
+
+### Step 1 — Candidate inventory (completed)
+
+- Added `CANDIDATE_CATALOG.md` with evidence, risks, confidence, and proposed validation for 11 candidate groups.
+- Catalogued markup, JavaScript, links, assets, Sass, protected/demo content, and vendor code.
+- No candidate was classified as confirmed dead and no application or dependency code was removed.
+
+### Step 2 — Candidate classification (completed)
+
+- Classified all 11 candidate groups using the plan's evidence thresholds.
+- Confirmed-dead set remains empty.
+- Marked duplicated/defective behavior as behavior-affecting, dynamic/template/asset questions as uncertain, Sass/vendor surfaces as retained dependencies, and protected/demo content as intentionally retained pending review.
+- No application or dependency code was changed.
