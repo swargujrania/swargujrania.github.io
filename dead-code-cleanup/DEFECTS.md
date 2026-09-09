@@ -127,6 +127,8 @@ This file records defects discovered during the dead-code cleanup baseline on 20
 
 **Static trace status:** `servermailchimp.php` is not referenced by repository HTML, JavaScript, or PHP callers other than its own MailChimp include. The bundled classes are referenced by that endpoint. This is a candidate for manual removal review, not an approved deletion, because external clients or deployment configuration may invoke the endpoint directly.
 
+**Review update (2026-09-08):** Active site forms resolve to `ajaxserver/serverfile.php`, not `servermailchimp.php`. No PHP interpreter is available locally for syntax or endpoint testing. The MailChimp endpoint/library remains an uncertain direct-entry candidate pending staging logs and owner confirmation.
+
 ## D-010 — Missing inherited sample images
 
 - **Severity:** Low

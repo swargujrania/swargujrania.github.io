@@ -405,6 +405,13 @@ No application code or dependency files were changed in this step.
 - Confirmed `servermailchimp.php` and bundled MailChimp classes have include/call relationships.
 - Preserved all PHP endpoints and server-side libraries pending staging request tests and credential-safe review.
 
+### MailChimp library review execution
+
+- Confirmed active forms use `ajaxserver/serverfile.php`; no repository caller invokes `servermailchimp.php`.
+- Confirmed the MailChimp endpoint internally uses its bundled classes.
+- PHP syntax and endpoint tests could not run because PHP is unavailable locally.
+- Kept the endpoint/library preserved pending staging logs and owner confirmation.
+
 ### Plan/defect update — MailChimp library review
 
 - Added a plan step requiring include/call tracing, form and deployment verification, credential-safe staging tests, owner confirmation, rollback evidence, and post-removal regression checks before removing MailChimp code.
