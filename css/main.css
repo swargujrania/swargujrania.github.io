@@ -270,6 +270,10 @@ p {
   font-weight: 300;
 }
 
+.font-open-sans{
+  font-family: "Open Sans", "Proxima Nova", sans-serif;
+}
+
 .tags{
   visibility: hidden;
 }
