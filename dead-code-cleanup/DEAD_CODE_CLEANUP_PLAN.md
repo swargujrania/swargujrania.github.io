@@ -190,6 +190,43 @@ Before closing any Phase 3–8 cleanup group, perform and record a dedicated val
 7. Update `DEFECTS.md`, `ORPHAN_ASSET_REPORT.md`, and `CLEANUP_LOG.md` with final pass/fail outcomes and reviewer decisions.
 8. Review the complete commit series, verify no dependency/package/vendor changes were introduced, and merge only when no unexplained production differences remain.
 
+## Expert next-steps execution plan
+
+### Step A — Owner input and access confirmation
+
+Obtain the following written decisions before external validation begins:
+
+- Preview deployment permission or a preview URL for `portfolio-revision/sep2026`.
+- Production URL approval and confirmation of the canonical domain (`https://swargujrania.com`).
+- Supported browsers, viewport sizes, touch/keyboard requirements, and any known accessibility commitments.
+- Intent for `honeywell.html`, `password_template.html`, font specimen pages, demo/protected content, and direct URLs.
+- Item-level decisions for the 32 orphaned asset candidates: retain, restore reference, relocate, or approve deletion.
+- Whether the MailChimp endpoint/library is still owned, deployed, or externally invoked; provide staging access/logs if applicable.
+- Approval for any proposed movement of files, with redirect/backward-compatibility requirements.
+
+### Step B — Reproducible preview validation
+
+- Deploy the branch to a preview environment matching GitHub Pages and record commit, build/deploy timestamp, domain, and configuration.
+- Capture baseline and preview screenshots at agreed desktop/tablet/mobile sizes.
+- Record console errors/warnings, failed requests, loaded resources, DOM geometry, computed styles, and font usage.
+- Exercise menus, tabs, FullPage and normal scrolling, hover overlays, forms, hashes, refresh, Back/Forward, direct-entry pages, protected flows, and external links.
+- Compare preview against production and classify every difference as expected, defect, or unexplained.
+
+### Step C — Candidate decision gates
+
+- Remove or relocate only owner-approved candidates with complete runtime evidence and a rollback path.
+- Preserve anything with unresolved direct use, ownership, deployment use, or visual/behavioral impact.
+- For MailChimp, require a credential-safe staging request test and server-log confirmation before removal.
+- For orphaned assets, review one item/group at a time and rerun affected page, network, and visual checks after each change.
+
+### Step D — Final guardrail audit
+
+- Verify no package, vendor, dependency, or import-order changes occurred without explicit approval.
+- Verify every deletion has catalog evidence, owner decision, runtime pass/fail evidence, and rollback instructions.
+- Verify no direct-entry resource was removed solely because it lacked inbound links.
+- Verify no broad CSS purge, dependency upgrade, redesign, accessibility redesign, or unrelated content change was introduced.
+- Block merge on unexplained console, request, layout, navigation, scrolling, loaded-content, accessibility, or external-link differences.
+
 ## Final end-of-plan review gates
 
 The orphaned-asset review and direct-entry review are final gates and must be completed after implementation and deployment verification, immediately before merge:

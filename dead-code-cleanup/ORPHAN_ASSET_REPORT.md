@@ -51,6 +51,13 @@ The basename/path scan found 266 files under `img/` and `fonts/`: 234 with a tex
 - Protected pages use client-side password forms and remain direct-entry resources.
 - No PHP endpoint or bundled server-side library is safe to remove without a staging request test and credential-safe configuration review.
 
+### MailChimp review execution
+
+- Static tracing confirms active forms use `ajaxserver/serverfile.php`; no repository form or script invokes `servermailchimp.php`.
+- `servermailchimp.php` still includes and calls the bundled MailChimp classes internally.
+- Local PHP syntax/endpoint testing was unavailable because no PHP interpreter is installed.
+- Classification remains uncertain/directly addressable; staging logs and owner confirmation are required before removal.
+
 ### MailChimp trace result
 
 - `servermailchimp.php` has no repository caller beyond its own include of `mailchimp/MailChimp.php`.

@@ -405,6 +405,13 @@ No application code or dependency files were changed in this step.
 - Confirmed `servermailchimp.php` and bundled MailChimp classes have include/call relationships.
 - Preserved all PHP endpoints and server-side libraries pending staging request tests and credential-safe review.
 
+### MailChimp library review execution
+
+- Confirmed active forms use `ajaxserver/serverfile.php`; no repository caller invokes `servermailchimp.php`.
+- Confirmed the MailChimp endpoint internally uses its bundled classes.
+- PHP syntax and endpoint tests could not run because PHP is unavailable locally.
+- Kept the endpoint/library preserved pending staging logs and owner confirmation.
+
 ### Plan/defect update — MailChimp library review
 
 - Added a plan step requiring include/call tracing, form and deployment verification, credential-safe staging tests, owner confirmation, rollback evidence, and post-removal regression checks before removing MailChimp code.
@@ -464,9 +471,24 @@ No application code or dependency files were changed in this step.
 - Repository-side validation is complete through local HTTP, static reference, direct-entry, ownership-provenance, and server-side tracing checks.
 - No merge recommendation is made until the external preview is compared against production with no unexplained differences.
 
+### Local desktop preview pass
+
+- Loaded `http://127.0.0.1:8765/index.html#projects` in the Codex in-app Chromium browser.
+- Confirmed the homepage project surface, menu, tabs, visible cards, footer, and navigation links render in the accessibility tree.
+- Exact 1440×900 geometry could not be asserted because viewport resizing and DOM evaluation are unavailable in this browser surface.
+
+### Owner-approved validation scope adjustment
+
+- Per owner instruction, continue with desktop/accessibility and HTTP regression checks without mobile/responsive validation.
+- Mobile geometry, breakpoint, touch, and responsive-whitespace checks remain explicitly deferred and must be completed before any responsive markup/CSS cleanup or final production merge.
+
 ### Plan update — remaining work before merge
 
 - Added an eight-item checklist covering preview access, production comparison, complete runtime matrix, unresolved defects, owner decisions, rollback-safe approved removals, final documentation, and commit/dependency review.
+
+### Plan update — expert next-steps execution plan
+
+- Added owner-input requirements, reproducible preview-validation instructions, candidate decision gates, and a final guardrail audit covering dependencies, direct-entry resources, rollback evidence, runtime pass/fail results, and scope control.
 
 ### Plan update — final orphaned-asset review
 
