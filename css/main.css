@@ -4983,6 +4983,37 @@ h1, h2, h3, h4 {
 .text-black {
   color: #1d1d1d !important; }
 
+.last-updated-banner {
+  width: calc(100vw - 256px);
+  max-width: none;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0 auto 2rem;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  border-radius: 0;
+  background: rgba(95, 0, 8, 1);
+  color: #ffffff;
+  font-family: "Open Sans", "Proxima Nova", sans-serif;
+  text-align: center; }
+  .last-updated-banner .last-updated-banner-text {
+    margin: 0;
+    opacity: 1;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.3; }
+  @media (max-width: 576px) {
+    .last-updated-banner {
+      width: calc(100vw - 24px);
+      margin-bottom: 1.5rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 0; }
+    .last-updated-banner .last-updated-banner-text {
+      font-size: 0.65rem; } }
+
 
 /* Add your responsiveness hook here  */
 /* ipad and tablet */
