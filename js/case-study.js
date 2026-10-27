@@ -8,6 +8,17 @@
     else document.addEventListener('DOMContentLoaded', fn);
   }
 
+  // Embeds marked with data-src start loading only after the page has loaded,
+  // so a slow third-party prototype never holds up the page loader.
+  function loadEmbeds() {
+    document.querySelectorAll('iframe[data-src]').forEach(function (f) {
+      f.src = f.getAttribute('data-src');
+      f.removeAttribute('data-src');
+    });
+  }
+  if (document.readyState === 'complete') loadEmbeds();
+  else window.addEventListener('load', loadEmbeds);
+
   ready(function () {
     // Reveal elements as they scroll into view
     var revealables = document.querySelectorAll('.cs-reveal, .cs-stagger, .cs-observe, .cs-block');
