@@ -64,7 +64,7 @@
 /* Text column + illustration column */
 .cs-split {
   display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   gap: 2.5rem;
   align-items: center;
   margin-bottom: 1.5rem;
@@ -220,10 +220,11 @@
 .cs .cs-definition {
   text-align: center;
   font-size: 1.05rem;
+  display: table;
   margin: 2.5rem auto 0;
-  padding-bottom: .75rem;
+  padding-bottom: .5rem;
   border-bottom: 2px solid var(--cs-line);
-  max-width: 640px;
+  max-width: 100%;
 }
 
 /* ---------- Responsibilities (icon + label row) ---------- */
@@ -264,6 +265,7 @@
   font-size: 2.75rem;
   color: #c4c4c4;
 }
+.cs-persona-icon img { width: 68%; height: 68%; object-fit: contain; opacity: .8; }
 .cs-persona h4 { font-size: 1.3rem; font-weight: 700; margin: 0; color: #fff; }
 .cs-persona .cs-persona-role { color: var(--cs-muted); font-size: .9rem; margin-bottom: .75rem; }
 .cs-persona ul { margin: 0; padding-left: 1.1rem; }
@@ -440,6 +442,9 @@ html:not(.cs-js) .cs-chain-hint { display: none; }
 }
 .cs-radial-item:hover .cs-radial-icon { color: #fff; transform: scale(1.12); }
 .cs-radial-item svg { width: 52px; height: 52px; }
+.cs-icon-expand .cs-expand-panel { transform-origin: 24px 21px; }
+.cs-radial-item:hover .cs-icon-expand .cs-expand-panel { animation: cs-expand .5s ease; }
+@keyframes cs-expand { from { transform: scaleY(0); opacity: 0; } to { transform: none; opacity: 1; } }
 .cs-radial-item.p1 { left: 20%; top: 24%; }
 .cs-radial-item.p2 { left: 80%; top: 24%; }
 .cs-radial-item.p3 { left: 25%; top: 76%; }
@@ -523,6 +528,9 @@ html:not(.cs-js) .cs-chain-hint { display: none; }
 
 /* Mind-map illustrations */
 .cs-mindmap { width: 100%; max-width: 420px; margin: 0 auto; display: block; overflow: visible; }
+.cs-mm { display: flex; align-items: center; justify-content: center; gap: .75rem; }
+.cs-mm-img { width: 56px; height: 56px; flex: none; object-fit: contain; }
+.cs-mm .cs-mindmap { flex: 1 1 auto; min-width: 0; margin: 0; }
 .cs-mindmap text { fill: #d8d8d8; font-size: 20px; font-family: inherit; }
 .cs-mindmap .cs-mm-root { fill: #fff; font-size: 22px; }
 .cs-mindmap .cs-mm-hot { fill: var(--cs-accent); }
@@ -613,7 +621,7 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 }
 .cs-cardsort-labels { color: #ddd; line-height: 1.5; }
 .cs-gapnote { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
-.cs-gapnote .fa { font-size: 2.5rem; }
+.cs-gapnote img { width: 52px; height: 52px; flex: none; }
 .cs-gapnote div { font-size: 1.15rem; line-height: 1.3; }
 .cs-gapnote small { display: block; color: var(--cs-muted); font-size: .85rem; margin-top: .35rem; }
 
