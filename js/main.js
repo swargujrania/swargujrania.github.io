@@ -295,10 +295,14 @@ $(document).on('ready', function () {
 
 
 	// 9. Page Loader : hide loader when all are loaded
-	contextWindow.on('load', function () {
+	// Embedded prototypes (Figma, XD, Slides) can keep the window 'load' event
+	// waiting for a long time, so the loader also gives up after a few seconds.
+	function hidePageLoader() {
 		$('#page-loader').addClass('p-hidden');
 		$('.section').addClass('anim');
-	});
+	}
+	contextWindow.on('load', hidePageLoader);
+	setTimeout(hidePageLoader, 3000);
 
 
 	//10. add event listener to project thumbnails

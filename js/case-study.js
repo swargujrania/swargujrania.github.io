@@ -10,7 +10,7 @@
 
   ready(function () {
     // Reveal elements as they scroll into view
-    var revealables = document.querySelectorAll('.cs-reveal, .cs-stagger, .cs-observe');
+    var revealables = document.querySelectorAll('.cs-reveal, .cs-stagger, .cs-observe, .cs-block');
     if ('IntersectionObserver' in window) {
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {

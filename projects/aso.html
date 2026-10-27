@@ -58,6 +58,8 @@ http://miradontsoa.com
 
   <!-- add alt layout here -->
   <link rel="stylesheet" href="../css/style-default.css">
+  <link rel="stylesheet" href="../css/case-study.css?v=9">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap">
 
   <script src="../js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
@@ -189,7 +191,7 @@ http://miradontsoa.com
             </a>
           </li>
           <li class="nav-item">
-            <a href="#evaluations">
+            <a href="#evaluation">
               <i class="icon ion-ios-information-outline"></i>
               Evaluations
             </a>
@@ -243,130 +245,631 @@ http://miradontsoa.com
               <article class="article article-light">
 
                 <div class="article-content">
-                  <div class="wrapper partialwidth">
+                  <div class="wrapper partialwidth cs cs-aso">
 
-                    <h1 id="summary">SUMMARY</h1>
-                    <div class="img-1" >
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-summary.jpg" alt="">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-summary-2.jpg" alt="">
+                    <!-- ============ SUMMARY ============ -->
+                    <h2 id="summary">SUMMARY</h2>
+                    <p class="cs-lead cs-reveal">This project outlines the journey of designing an <strong>end-to-end service experience for Atlanta Symphony Orchestra (ASO)</strong> to gather valuable community audience feedback in an integrated, low-cost and non-intrusive manner. We introduced a streamlined process, various digital touch-points as well as their non-digital alternatives aligned to integrate well with ASO’s current infrastructure.</p>
 
+                    <div class="cs-aso-bg">
+                      <div class="cs-reveal">
+                        <h3 class="cs-block">Background</h3>
+                        <p><strong>ASO</strong> is a nationally acclaimed, award winning orchestra committed to building foundations of artistic integrity. One of the ways they work towards this is through their <strong>non-profit Musicians in Community (MIC) program</strong> that exposes underserved and underrepresented groups to classical music through <strong>free concerts, lecture demonstrations and workshops</strong>.</p>
+                      </div>
+                      <img class="cs-reveal" src="../img/aso/figures/orchestra.jpg" width="741" height="534" alt="The Atlanta Symphony Orchestra performing on stage">
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <h1 id="problem">PROBLEM</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-problem.jpg" alt="">
+
+                    <div class="cs-aso-team">
+                      <div class="cs-reveal">
+                        <h3 class="cs-block">Team members</h3>
+                        <p class="cs-aso-names">Swar Gujrania<br>Tae Prasongpongchai<br>Gurudutt Perichetla</p>
+                      </div>
+                      <div class="cs-reveal">
+                        <h3 class="cs-block">My contributions</h3>
+                        <div class="cs-aso-roles">
+                          <div>
+                            <h4>Service Designer, UX Designer</h4>
+                            <ul>
+                              <li>Problem definition &amp; scoping</li>
+                              <li>Needs, constraints, value mapping</li>
+                              <li>Interaction Design</li>
+                              <li>User journey mapping</li>
+                              <li>Introduced credit rewards systems</li>
+                            </ul>
+                            <h4>Project Liaison</h4>
+                            <ul>
+                              <li>Managed stakeholder communication, tracked project progress and led documentation</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>User research</h4>
+                            <ul>
+                              <li>Designed &amp; led stakeholder need finding workshop</li>
+                              <li>Analyzed the audience survey</li>
+                              <li>Conducted stakeholder interviews</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <h1 id="users">USERS & STAKEHOLDERS</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-users.jpg" alt="">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-users-2.jpg" alt="">
+
+                    <!-- ============ PROBLEM ============ -->
+                    <h2 id="problem">PROBLEM</h2>
+                    <p class="cs-reveal">MIC representatives are currently looking to gather audience’s feedback for their free, community concerts.</p>
+
+                    <ul class="cs-aso-cols cs-stagger">
+                      <li>
+                        <svg class="cs-aso-process" viewBox="0 0 180 24" width="104" height="14" aria-hidden="true">
+                          <path d="M0 12h180" />
+                          <rect x="16" y="5" width="14" height="14" /><rect x="64" y="5" width="14" height="14" />
+                          <circle class="is-on" cx="119" cy="12" r="8" /><rect x="157" y="5" width="14" height="14" />
+                        </svg>
+                        <h3>Lack of a consistent process</h3>
+                        <p>MIC representatives currently do not have a consistent process to gather audience feedback</p>
+                      </li>
+                      <li>
+                        <img src="../img/aso/figures/icon-manual.png" width="90" height="110" alt="">
+                        <h3>Manual efforts</h3>
+                        <p>Sometimes, after the concert, organizers talk to some audience members to learn about their experience; other times they leverage a short in-person survey for the same.</p>
+                      </li>
+                      <li>
+                        <img src="../img/aso/figures/icon-resources.png" width="102" height="104" alt="">
+                        <h3>Resource constraints</h3>
+                        <p>Being the non-profit arm of ASO, MIC team often works under tight constraints on their resources (monetary, technology and people)</p>
+                      </li>
+                    </ul>
+
+                    <h3 class="cs-block">Impact</h3>
+                    <ul class="cs-aso-cols cs-stagger">
+                      <li>
+                        <img src="../img/aso/figures/icon-dissatisfaction.png" width="154" height="110" alt="">
+                        <h3>Audience dissatisfaction,<br>Loss of patrons</h3>
+                        <p>Lack of feedback mechanism leads to gap between what audience expects and what ASO delivers, which further leads to audience dissatisfaction and loss of patrons</p>
+                      </li>
+                      <li>
+                        <img src="../img/aso/figures/icon-effectiveness.png" width="110" height="110" alt="">
+                        <h3>Inability to demonstrate effectiveness of programs</h3>
+                        <p>MIC team is unable to show “numbers” that demonstrate its effectiveness towards its goals of widening ASO’s reach to underserved communities of Atlanta</p>
+                      </li>
+                      <li>
+                        <img src="../img/aso/figures/icon-donors.png" width="110" height="137" alt="">
+                        <h3>Loss of donors and financial implications</h3>
+                        <p>MIC depends on sponsorship and donations to drive the community engagements. The lack of numbers bleeds into these donations and thus can have serious financial implications for the team.</p>
+                      </li>
+                    </ul>
+
+                    <p class="cs-reveal">To summarize the problem statement:</p>
+                    <div class="cs-aso-hmw cs-reveal">
+                      <em>How might…</em>
+                      <p>ASO gather valuable feedback from the participants of the MIC program in a low-cost, integrated manner without being intrusive to audience’s experience</p>
+                      <em>so that they can…</em>
+                      <p>demonstrate their effectiveness in generating community engagement and identify opportunities to further it.</p>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <h1 id="overview">PROCESS OVERVIEW</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-process-overview.jpg" alt="">
+
+                    <!-- ============ USERS & STAKEHOLDERS ============ -->
+                    <h2 id="users">USERS &amp; STAKEHOLDERS</h2>
+                    <h3 class="cs-block">Stakeholder mapping</h3>
+                    <div class="cs-smap cs-stagger">
+                      <div>
+                        <h4>Primary Users</h4>
+                        <div class="cs-smap-row"><img src="../img/aso/figures/icon-audience.png" width="113" height="92" alt=""><span>Audience</span></div>
+                        <h4>Experience</h4>
+                        <div class="cs-smap-row"><img src="../img/aso/figures/icon-smile.png" width="113" height="113" alt=""><span>Non-intrusive</span></div>
+                        <h4>Primary Task</h4>
+                        <div class="cs-smap-row"><img src="../img/aso/figures/icon-feedback.png" width="96" height="98" alt=""><ul><li>Provide feedback</li><li>Engage better</li></ul></div>
+                      </div>
+                      <div>
+                        <h4>Primary stakeholders</h4>
+                        <div class="cs-smap-row"><img src="../img/aso/figures/icon-stakeholders.png" width="113" height="97" alt=""><ul><li>ASO</li><li>MIC team</li><li>Donors</li></ul></div>
+                        <h4>Experience</h4>
+                        <div class="cs-smap-row"><img class="is-wide" src="../img/aso/figures/icon-lowcost.png" width="160" height="71" alt=""><ul><li>Low-cost</li><li>Integrated</li></ul></div>
+                        <h4>Primary Task</h4>
+                        <div class="cs-smap-row"><img class="is-grey" src="../img/aso/figures/icon-gather.png" width="113" height="100" alt=""><span>Gather valuable feedback</span></div>
+                        <h4>Value</h4>
+                        <div class="cs-smap-row"><img class="is-grey" src="../img/aso/figures/icon-value.png" width="111" height="91" alt=""><ul><li>Demonstrate effectiveness of MIC initiatives</li><li>Get community “voice”</li><li>Quantifiable performance</li></ul></div>
+                      </div>
+                      <div>
+                        <h4>Secondary stakeholders</h4>
+                        <div class="cs-smap-row"><img src="../img/aso/figures/icon-performer.png" width="97" height="98" alt=""><span>Performers</span></div>
+                      </div>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br><br>
-                    <h1 id="designexploration">DESIGN EXPLORATIONS</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-solution-1.jpg" alt="">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-solution-2.jpg" alt="">
+
+                    <h3 class="cs-block">Primary Users</h3>
+                    <p class="cs-aso-center"><strong>Audience members</strong></p>
+                    <div class="cs-agecards cs-stagger">
+                      <div>
+                        <h4>15-25 yo</h4>
+                        <div class="cs-agecard">
+                          <div class="cs-agecard-head">
+                            <img src="../img/aso/figures/audience-kalyn.jpg" width="174" height="173" alt="">
+                            <p><strong>Kalyn</strong>21, Student</p>
+                          </div>
+                          <blockquote>“I came to the concert because my friend invited me to, and it’s free so we got the tickets online. I’m alright with classical music; I only come to see these performances every year or so.”</blockquote>
+                          <ul>
+                            <li>Mainly students</li>
+                            <li>Conscious of cost</li>
+                            <li>Concerts are leisurely activity</li>
+                            <li>Not concerned by performers’ reputation</li>
+                            <li>Mostly booked tickets online</li>
+                            <li>Always on the lookout for free concerts</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h4>30-50 yo</h4>
+                        <div class="cs-agecard is-teal">
+                          <div class="cs-agecard-head">
+                            <img src="../img/aso/figures/audience-melissa.jpg" width="173" height="174" alt="">
+                            <p><strong>Melissa</strong>43, Accounting</p>
+                          </div>
+                          <blockquote>“I saw this event on Facebook and it seems like a good way to spend time with my family this weekend. I go to classical concerts a few times a year.”</blockquote>
+                          <ul>
+                            <li>Mainly women</li>
+                            <li>Attended few times a year</li>
+                            <li>Heard about the concerts from other people.</li>
+                            <li>Mostly attended concerts with their family.</li>
+                            <li>Mostly bought their tickets online</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h4>60+ yo</h4>
+                        <div class="cs-agecard is-rust">
+                          <div class="cs-agecard-head">
+                            <img src="../img/aso/figures/audience-josh.jpg" width="169" height="169" alt="">
+                            <p><strong>Josh</strong>64, Retired</p>
+                          </div>
+                          <blockquote>“I go to classical music concerts every few months with my wife. I get concert news directly from ASO and call them to get the tickets. I expect a good, well-organized show from reputable performers.”</blockquote>
+                          <ul>
+                            <li>Mostly retired individuals</li>
+                            <li>High interest in classical music</li>
+                            <li>Frequent concert attendees</li>
+                            <li>Performers’ reputation played an important role</li>
+                            <li>Less tech-savvy and mostly buys tickets in-person or on phone.</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <br>
-                    <br>
-                    <br><br><br>
-                    <h1 id="finalauddesign">AUDIENCE EXPERIENCE DESIGN</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-solution-audience-1.jpg" alt="">
-                      <iframe height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D0%253A1%26node-id%3D10%253A197%26viewport%3D759%252C175%252C0.13563130795955658%26scaling%3Dscale-down" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
 
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-solution-audience-2.jpg" alt="">
-                      <iframe height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D10%253A975%26node-id%3D12%253A393%26viewport%3D494%252C482%252C0.3079080283641815%26scaling%3Dscale-down" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
-
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-solution-audience-3.jpg" alt="">
-                      <iframe height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D13%253A11%26node-id%3D13%253A454%26viewport%3D454%252C482%252C0.2407894730567932%26scaling%3Dscale-down" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
-
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-solution-audience-4.jpg" alt="">
-                      <iframe height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D13%253A980%26node-id%3D13%253A1468%26viewport%3D477%252C482%252C0.2965964376926422%26scaling%3Dscale-down" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
-
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-solution-audience-5.jpg" alt="">
-                      <iframe height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D13%253A2021%26node-id%3D19%253A110%26viewport%3D603%252C446%252C0.2016899287700653%26scaling%3Dscale-down" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
-
+                    <p class="cs-aso-center cs-reveal">Meet Troy, an audience member<br>(Persona)</p>
+                    <div class="cs-pcard is-single cs-reveal">
+                      <figure><img src="../img/aso/figures/persona-troy.jpg" width="366" height="893" alt="Portrait of Troy"><figcaption>Photo by Rui Silvestre on Unsplash</figcaption></figure>
+                      <div class="cs-pcard-body">
+                        <h4>Troy Williams <small>(Audience Member)</small></h4>
+                        <h5>Demographics</h5>
+                        <p>Gender: Male<br>Age: 24<br>Job Title: Student</p>
+                        <h5>Goals</h5>
+                        <ul><li>Visiting music concerts</li><li>Taking pictures</li><li>Buying Merchandise</li></ul>
+                        <h5>Motivations to attend concerts</h5>
+                        <ul><li>Finding new musicians</li><li>Gathering with Family and Friends</li><li>Take mind off things</li><li>Recreation</li></ul>
+                        <h5>Pain Points</h5>
+                        <ul><li>Not being able to find parking</li><li>Unavailability of Food</li><li>Long queues and huge wait times</li></ul>
+                      </div>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <h1 id="finalstkdesign">STAKEHOLDER EXPERIENCE DESIGN</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-solution-stk-1.jpg" alt="">
-                      <iframe height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D19%253A1444%26node-id%3D19%253A1467%26viewport%3D434%252C482%252C0.1742303967475891%26scaling%3Dscale-down" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
 
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-solution-stk-2.jpg" alt="">
-                      <iframe height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D19%253A2065%26node-id%3D26%253A22%26viewport%3D297%252C724%252C0.04469410330057144%26scaling%3Dscale-down" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
-
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-solution-stk-3.jpg" alt="">
-                      <iframe height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D26%253A5499%26node-id%3D26%253A5535%26viewport%3D802%252C482%252C0.16142311692237854%26scaling%3Dscale-down" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
-
+                    <h3 class="cs-block">Primary Stakeholders</h3>
+                    <div class="cs-pcards cs-stagger">
+                      <div>
+                        <h4 class="cs-pcards-title">MIC team (ASO)</h4>
+                        <div class="cs-pcard">
+                          <figure><img src="../img/aso/figures/persona-alison.jpg" width="375" height="898" alt="Portrait of Alison"><figcaption>Photo by Mandy Zhang on Unsplash</figcaption></figure>
+                          <div class="cs-pcard-body">
+                            <h4>Alison Chen <small>(ASO Representative)</small></h4>
+                            <h5>Demographics</h5>
+                            <p>Gender: Female<br>Age: 32<br>Job Title: Development Manager</p>
+                            <h5>Goals</h5>
+                            <ul><li>Provide impactful concerts for audiences</li><li>Gather audience feedback</li><li>Get funding</li></ul>
+                            <h5>Motivations to organize concerts</h5>
+                            <ul><li>Enrich community experiences</li><li>Introduce audiences to Classical Music</li><li>Improve Future Concerts</li></ul>
+                            <h5>Pain Points</h5>
+                            <ul><li>Slow process of feedback data collection</li><li>Communication between siloed departments within the ASO</li></ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="cs-pcards-title">Donors</h4>
+                        <div class="cs-pcard">
+                          <figure><img src="../img/aso/figures/persona-trent.jpg" width="367" height="898" alt="Portrait of Trent"><figcaption>Photo by Ali Morshedlou on Unsplash</figcaption></figure>
+                          <div class="cs-pcard-body">
+                            <h4>Trent Baylor <small>(Donor)</small></h4>
+                            <h5>Demographics</h5>
+                            <p>Gender: Male<br>Age: 39<br>Job Title: Investment Banker</p>
+                            <h5>Goals</h5>
+                            <ul><li>Organize Social Campaigns</li><li>Fund projects that support my cause</li><li>Communicate with the ASO to facilitate the grant process</li></ul>
+                            <h5>Motivations to organize concerts</h5>
+                            <ul><li>Enrich community experiences</li><li>Make a difference for people of my community</li><li>Improve Future Concerts</li></ul>
+                            <h5>Gain Points</h5>
+                            <ul><li>My organization gets exposure through ASO events</li><li>My money is used effectively to support my cause</li></ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
 
-                    <h1 id="visuallanguage">VISUAL LANGUAGE</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-visual-design.jpg" alt="">
+                    <h3 class="cs-block">Ecosystem Map (High-level)</h3>
+                    <div class="cs-eco cs-observe" style="position:relative;aspect-ratio:2250/1270;">
+                    <svg class="cs-eco-lines" viewBox="0 1600 2250 1270" aria-hidden="true" style="position:absolute;left:0;top:0;width:100%;height:100%;">
+                    <defs><marker id="cs-eco-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9a9a9a"/></marker></defs>
+                    <polyline class="d0" points="510,2207 510,1952 987,1952" marker-end="url(#cs-eco-head)"/>
+                    <polyline class="d1" points="987,1994 558,1994 558,2182" marker-end="url(#cs-eco-head)"/>
+                    <polyline class="d2" points="1920,1955 1335,1955" marker-end="url(#cs-eco-head)"/>
+                    <polyline class="d3" points="1335,1997 1920,1997" marker-end="url(#cs-eco-head)"/>
+                    <polyline class="d0" points="1152,2237 1152,2525" marker-end="url(#cs-eco-head)"/>
+                    <polyline class="d1" points="1194,2525 1194,2237" marker-end="url(#cs-eco-head)"/>
+                    <polyline class="d2" points="510,2467 510,2725 987,2725" marker-end="url(#cs-eco-head)"/>
+                    <polyline class="d3" points="987,2683 558,2683 558,2467" marker-end="url(#cs-eco-head)"/>
+                    </svg>
+                    <p class="cs-eco-label" style="position:absolute;left:14.93%;top:19.84%;">Feedback, impact<br>information, future<br>customers</p>
+                    <p class="cs-eco-label" style="position:absolute;left:30.00%;top:32.91%;">Access to<br>classical music</p>
+                    <div class="cs-eco-node is-big" style="position:absolute;left:42.67%;top:23.62%;width:17.78%;"><img src="../img/aso/figures/icon-stakeholders.png" alt="" style="height:6.44cqw" width="113" height="97"><span>MIC team (ASO)</span></div>
+                    <div class="cs-eco-node is-big" style="position:absolute;left:82.22%;top:26.54%;width:17.78%;"><img src="../img/aso/figures/icon-audience.png" alt="" style="height:4.58cqw" width="113" height="97"><span><strong>Donors</strong></span></div>
+                    <div class="cs-eco-node is-big" style="position:absolute;left:13.24%;top:50.55%;width:17.78%;"><img src="../img/aso/figures/icon-audience.png" alt="" style="height:4.44cqw" width="113" height="97"><span>Audience</span></div>
+                    <div class="cs-eco-node is-big" style="position:absolute;left:43.64%;top:75.98%;width:17.78%;"><img src="../img/aso/figures/icon-audience.png" alt="" style="height:5.24cqw" width="113" height="97"><span>Performers</span></div>
+                    <p class="cs-eco-bubble is-blue tail-b" style="position:absolute;left:36.84%;top:1.89%;width:14.76%;">I want to improve the program &amp; get more funding</p>
+                    <p class="cs-eco-bubble is-red tail-b" style="position:absolute;left:52.67%;top:7.64%;width:14.76%;">I want deeper feedback &amp; more data but we’re short-staffed.</p>
+                    <p class="cs-eco-bubble is-blue tail-b" style="position:absolute;left:80.98%;top:15.12%;width:14.67%;">I want to support a cause I care about.</p>
+                    <p class="cs-eco-bubble is-red tail-t" style="position:absolute;left:80.31%;top:45.12%;width:15.24%;">I want to make sure my money is put to good use.</p>
+                    <p class="cs-eco-bubble is-blue tail-r" style="position:absolute;left:4.44%;top:41.34%;width:14.76%;">I want to see a good show &amp; have a good time.</p>
+                    <div class="cs-eco-stack" style="position:absolute;left:6.53%;top:67.72%;width:14.80%;">
+                    <p class="cs-eco-bubble is-red tail-t">Traditional surveys require too much from me and I don’t usually really care about it.</p>
+                    <p class="cs-eco-bubble is-red ">I have to wait in line for some time before getting inside the hall.</p>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+                    <div class="cs-eco-stack" style="position:absolute;left:60.36%;top:65.20%;width:14.67%;">
+                    <p class="cs-eco-bubble is-blue tail-l">I want to introduce classical music to underserved communities</p>
+                    <p class="cs-eco-bubble is-red tail-l">I want to get feedback about the show and make sure that collaborating w/ ASO was worthwhile</p>
+                    </div>
+                    </div>
 
-                    <h1 id="evaluation">EVALUATION</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/aso/aso-evaluation.jpg" alt="">
+                    <h3 class="cs-block">Current User Journey</h3>
+                    <p class="cs-reveal">The current journey of going to a concert is below. To identify opportunities of intervention, we broke the journey down into 3 main sections</p>
+                    <p class="cs-aso-caption">Current Journey, broken down into stages</p>
+                    <div class="cs-journey is-current cs-observe">
+                      <ol>
+                        <li>Learning about the event</li>
+                        <li>Preparing to come</li>
+                        <li>Arrive, Check-in</li>
+                        <li>Get into hall, pick seat</li>
+                        <li>Receive program notes</li>
+                        <li>Show starts</li>
+                        <li>Intermission</li>
+                        <li>Show continues</li>
+                        <li>End show</li>
+                        <li>After show</li>
+                      </ol>
+                      <div class="cs-journey-phases">
+                        <span style="grid-column:1 / 4">Before concert</span>
+                        <span style="grid-column:4 / 9">During concert</span>
+                        <span style="grid-column:9 / 11">After concert</span>
+                      </div>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <h1 id="processdetails">PROCESS DETAILS</h1>
-                    <br>
-                    <div class="img-1">
-                      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTi9uESZ_0fjEie_54--dP_h_31ohVOPfsiM5Ro174M6qIy1z1xxgnnb-wlV8V-q4waS9e9aMjKZhna/embed?start=false&loop=false&delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+                    <!-- ============ PROCESS OVERVIEW ============ -->
+                    <h2 id="overview">PROCESS OVERVIEW</h2>
+                    <h3 class="cs-block">Design goals</h3>
+                    <p class="cs-reveal">Based on our research and analysis, we identified the following goals for our end solution. As we navigated through various iterations, these metrics/goals served as the north star for the team.</p>
+                    <ol class="cs-aso-goals cs-stagger">
+                      <li>Increase audience satisfaction</li>
+                      <li>Higher response rate from audience</li>
+                      <li>Ensuring data quality</li>
+                      <li>Accessibility</li>
+                      <li>Technical Feasibility</li>
+                      <li>Ease of data processing</li>
+                    </ol>
+
+                    <h3 class="cs-block">Process Overview</h3>
+                    <p class="cs-reveal">This is an overview of the double-diamond process we took:</p>
+                    <div class="cs-dd cs-observe" style="position:relative;aspect-ratio:2250/700;">
+                    <svg class="cs-dd-svg" viewBox="0 1060 2250 700" aria-hidden="true" style="position:absolute;left:0;top:0;width:100%;height:100%;">
+                    <defs><marker id="cs-dd-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M2 0L9 5L2 10" fill="none" stroke="#bbb" stroke-width="1.5"/></marker></defs>
+                    <polygon class="cs-dd-diamond" points="188,1228 664,1028 1149,1228 664,1431"/>
+                    <polygon class="cs-dd-diamond d2" points="1149,1228 1631,1028 2128,1228 1631,1431"/>
+                    <line class="cs-dd-axis" x1="188" y1="1228" x2="2128" y2="1228"/>
+                    <polyline class="cs-dd-loop" points="2128,1214 2128,1138 1631,1138 1631,1194" marker-end="url(#cs-dd-head)"/>
+                    <circle class="cs-dd-node n0" cx="188" cy="1228" r="19"/>
+                    <circle class="cs-dd-node n1" cx="664" cy="1228" r="19"/>
+                    <circle class="cs-dd-node n2" cx="1149" cy="1228" r="19"/>
+                    <circle class="cs-dd-node n3" cx="1631" cy="1228" r="19"/>
+                    <circle class="cs-dd-node is-end n4" cx="2128" cy="1228" r="19"/>
+                    </svg>
+                    <span class="cs-dd-phase" style="position:absolute;left:8.36%;top:2.57%;transform:translateX(-50%);text-align:center;white-space:nowrap;">Discover</span>
+                    <span class="cs-dd-phase" style="position:absolute;left:51.07%;top:2.57%;transform:translateX(-50%);text-align:center;white-space:nowrap;">Define</span>
+                    <span class="cs-dd-phase" style="position:absolute;left:72.49%;top:2.57%;transform:translateX(-50%);text-align:center;white-space:nowrap;">Develop</span>
+                    <span class="cs-dd-phase" style="position:absolute;left:94.18%;top:2.57%;transform:translateX(-50%);text-align:center;white-space:nowrap;">Deliver</span>
+                    <span class="cs-dd-stage" style="position:absolute;left:8.36%;top:29.71%;transform:translateX(-50%);text-align:center;white-space:nowrap;">Opportunity<br>activation</span>
+                    <span class="cs-dd-stage" style="position:absolute;left:29.51%;top:29.71%;transform:translateX(-50%);text-align:center;white-space:nowrap;">Research</span>
+                    <span class="cs-dd-stage" style="position:absolute;left:51.07%;top:29.71%;transform:translateX(-50%);text-align:center;white-space:nowrap;">Problem<br>definition</span>
+                    <span class="cs-dd-stage" style="position:absolute;left:72.49%;top:29.71%;transform:translateX(-50%);text-align:center;white-space:nowrap;">Design &amp;<br>prototype</span>
+                    <span class="cs-dd-stage" style="position:absolute;left:94.58%;top:29.71%;transform:translateX(-50%);text-align:center;white-space:nowrap;">Test</span>
+                    <ul class="cs-dd-methods" style="position:absolute;left:29.51%;top:53.86%;transform:translateX(-50%);text-align:center;white-space:nowrap;"><li>Interviews</li><li>Surveys</li><li>Stakeholder workshops</li><li>Empathy Maps</li><li>Persona</li><li>User Journey (current)</li></ul>
+                    <ul class="cs-dd-methods" style="position:absolute;left:51.07%;top:53.86%;transform:translateX(-50%);text-align:center;white-space:nowrap;"><li>Ecosystem mapping</li><li>Needs-Constraints-Value</li><li>10 types of innovation</li><li>Business Model Canvas</li></ul>
+                    <ul class="cs-dd-methods" style="position:absolute;left:72.49%;top:53.86%;transform:translateX(-50%);text-align:center;white-space:nowrap;"><li>Experience metrics</li><li>Process alternatives</li><li>User Journey (Future)</li><li>Touchpoint mapping</li><li>Storyboarding</li><li>Low, High-fi prototypes</li><li>Service Blueprint</li><li>Branding &amp; Visual Design</li></ul>
+                    <ul class="cs-dd-methods" style="position:absolute;left:94.58%;top:76.86%;transform:translateX(-50%);text-align:center;white-space:nowrap;"><li>Remote Usability<br>Testing</li><li>Stakeholder<br>Walkthrough</li></ul>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+
+                    <!-- ============ DESIGN EXPLORATIONS ============ -->
+                    <h2 id="designexploration">DESIGN EXPLORATIONS</h2>
+                    <p class="cs-reveal">The team designed a service experience to help ASO gather feedback for its community concerts effectively. This experience was:</p>
+                    <ul class="cs-aso-qualities cs-stagger">
+                      <li>
+                        <svg viewBox="0 0 70 20" width="70" height="20" aria-hidden="true"><path d="M8 10h54" stroke="#fff" stroke-width="2"/><circle cx="8" cy="10" r="6" fill="#000" stroke="#fff" stroke-width="2"/><circle cx="62" cy="10" r="7" fill="#fff"/></svg>
+                        End-to-End
+                      </li>
+                      <li><img src="../img/aso/figures/icon-lowcost.png" width="160" height="71" alt="" style="height:26px;margin:9px 0">Low cost</li>
+                      <li><img src="../img/aso/figures/icon-integrated.png" width="99" height="99" alt="">Well-Integrated</li>
+                      <li><img src="../img/aso/figures/icon-accessible.png" width="98" height="98" alt="">Accessible</li>
+                    </ul>
+
+                    <h3 class="cs-block">Design Themes</h3>
+                    <div class="cs-aso-themes">
+                      <p class="cs-reveal">Analyzing the current journey, along with insights from research led us to develop main themes that’ll be crucial to designing the intervention journey.</p>
+                      <ol class="cs-stagger">
+                        <li><span><strong>Multiple small surveys</strong> instead of one big survey</span></li>
+                        <li><span>Providing <strong>Incentives</strong></span></li>
+                        <li><span><strong>Quantifiable</strong> nature of data/ insights</span></li>
+                        <li><span>Providing ways for <strong>ASO to follow-up</strong> for deeper conversations</span></li>
+                        <li><span><strong>Engaging</strong> ways of collecting information</span></li>
+                      </ol>
+                    </div>
+
+                    <h3 class="cs-block">Ideation - 3 alternative journeys</h3>
+                    <p class="cs-reveal">Analyzing the current journey, along with insights from research led us to develop main themes that’ll be crucial to designing the intervention journey.</p>
+                    <div class="cs-ideation cs-stagger">
+                      <div class="cs-ideation-idea">
+                        <span class="cs-num">1</span>
+                        <h4>Physical voting +<br>Sticky feedback board</h4>
+                        <img src="../img/aso/figures/ideation-1.jpg" width="517" height="318" alt="Illustration of a person posting sticky notes on a board">
+                        <p>Audience puts token “votes” in physical voting boxes and posts their feedback using colorful stickies on a giant board. ASO members collect and analyze them later</p>
+                      </div>
+                      <div class="cs-ideation-idea">
+                        <span class="cs-num">2</span>
+                        <h4>Live voting +<br>Visualization session</h4>
+                        <img src="../img/aso/figures/ideation-2.jpg" width="527" height="320" alt="Illustration of live voting on a phone">
+                        <p>Within the concert, people digitally vote and their feedback is visualized live for everyone to see.</p>
+                      </div>
+                      <div class="cs-ideation-idea">
+                        <span class="cs-num">3</span>
+                        <h4>QR Code +<br>In-App Survey</h4>
+                        <img src="../img/aso/figures/ideation-3.jpg" width="518" height="318" alt="Illustration of a survey on a phone">
+                        <p>Audience uses QR code to fill out a brief survey. ASO provides incentive through redeemable credits.</p>
+                      </div>
+                      <h4 class="cs-ideation-label">Stakeholder’s feedback</h4>
+                      <p class="cs-ideation-fb">A lot of resources and manual effort required. ASO’s MIC team is not very well staffed.</p>
+                      <p class="cs-ideation-fb">Appealing to stakeholders, but may not be technically feasible. Also, concerned about the kind of responses people may provide in a live session.</p>
+                      <p class="cs-ideation-fb">Minimal effort, very effective. It might need a back-up for audience members who are not technologically savvy.</p>
+                    </div>
+
+                    <h3 class="cs-block">Final Concept</h3>
+                    <p class="cs-reveal">Based on stakeholders’ feedback, our final concept had following features:</p>
+                    <ul class="cs-aso-features cs-stagger">
+                      <li><img src="../img/aso/figures/icon-surveys.png" width="104" height="92" alt=""><span><strong>Multiple small surveys</strong> instead of one big survey</span></li>
+                      <li><img class="is-wide" src="../img/aso/figures/icon-journey.png" width="160" height="53" alt=""><span>Surveys were <strong>integrated with user journey</strong></span></li>
+                      <li><img src="../img/aso/figures/icon-integrated-2.png" width="98" height="98" alt=""><span>Digital touchpoints <strong>integrated with ASO’s ticketing platform</strong></span></li>
+                      <li><img class="is-wide" src="../img/aso/figures/icon-qr-paper.png" width="160" height="102" alt=""><span>Leveraged <strong>QR code + Digital Survey</strong>, but introducing <strong>paper surveys</strong> too for the older population</span></li>
+                      <li><img src="../img/aso/figures/icon-incentives.png" width="111" height="107" alt=""><span>Providing <strong>incentives through ASO Credits</strong> that can be redeemed at ASO</span></li>
+                    </ul>
+                    <p class="cs-reveal">Here is the final concept as user journey:</p>
+                    <div class="cs-journey is-final cs-observe">
+                      <ol>
+                        <li><strong>Reservation</strong><span>Collect basic demographic information along with reservation process</span></li>
+                        <li><strong>Check-in</strong><span>Collect information on attendance frequency, outreach</span></li>
+                        <li><strong>During Concert</strong><span>Provide details for live feedback, QR code, post concert survey and incentives in program notes</span></li>
+                        <li><strong>Intermission</strong><span>Reminder for survey and incentives</span></li>
+                        <li><strong>After Concert</strong><span>Users scan the QR code to fill a survey digitally. Alternative paper surveys made available for others</span><span>Text message as reference for how many credits they received</span></li>
+                        <li><strong>ASO to reach out post survey</strong><span>Post-concert in-depth phone interview with those who volunteered</span></li>
+                        <li><strong>Incentives</strong><span>Users leverage ASO credits for future interactions</span></li>
+                      </ol>
+                    </div>
+
+                    <h3 class="cs-block">Touchpoint overview</h3>
+                    <ol class="cs-touchpoints cs-stagger">
+                      <li><span class="cs-num">1</span><img src="../img/aso/figures/icon-ticketmaster.png" width="103" height="160" alt=""><h4>Ticketmaster</h4><p>For presenting the booking-time demographic survey.</p></li>
+                      <li><span class="cs-num">2</span><img src="../img/aso/figures/icon-mobileweb.png" width="130" height="160" alt=""><h4>Mobile Web + SMS</h4><p>For the rest of the surveys and the ASO Credit system.</p></li>
+                      <li><span class="cs-num">3</span><img src="../img/aso/figures/icon-backend.png" width="157" height="160" alt=""><h4>Back-End System</h4><p>For ASO staff to manage the surveys &amp; display the results.</p></li>
+                      <li><span class="cs-num">4</span><img src="../img/aso/figures/icon-programbook.png" width="160" height="142" alt=""><h4>Program Book</h4><p>For advertising the ASO Credits program</p></li>
+                      <li><span class="cs-num">5</span><img src="../img/aso/figures/icon-papersurvey.png" width="109" height="160" alt=""><h4>Paper Survey</h4><p>To cater to the preferences of some audience groups.</p></li>
+                    </ol>
+
+                    <!-- ============ AUDIENCE EXPERIENCE DESIGN ============ -->
+                    <h2 id="finalauddesign">AUDIENCE EXPERIENCE DESIGN</h2>
+                    <h3 class="cs-block">User Scenarios - Audience</h3>
+
+                    <div class="cs-sb-scenario">
+                      <h4>Scenario 1: Reserving Tickets online</h4>
+                      <p class="cs-reveal">Kalyn is a regular ASO concert attendee. She is always on the lookout for events and because she always wants to ensure her place, she would make a reservation, even when tickets are free.</p>
+                      <ol class="cs-sb is-left cs-stagger">
+                        <li><img src="../img/aso/figures/sketch-1-1.jpg" width="342" height="231" alt="Sketch: browsing the ticket site"><p>Go to online ticket retail site, look at concert details, decide to book</p></li>
+                        <li><img src="../img/aso/figures/sketch-1-2.jpg" width="362" height="245" alt="Sketch: filling the ticket details"><p>Fill out the ticket details (no. of tickets, session, zone, etc.)</p></li>
+                        <li class="is-hl"><img src="../img/aso/figures/sketch-1-3.jpg" width="362" height="246" alt="Sketch: demographic survey on the ticket site"><p>Fill-out pre-concert demographic details like age, gender, location, etc.</p></li>
+                        <li><img src="../img/aso/figures/sketch-1-4.jpg" width="353" height="238" alt="Sketch: ticket in the email"><p>Receive ticket in the email</p></li>
+                        <li class="is-hl"><img src="../img/aso/figures/sketch-1-5.jpg" width="359" height="243" alt="Sketch: credits notification on a phone"><p>Receive ASO Credits notification through email / SMS</p></li>
+                      </ol>
+                      <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Please click on the prototype to interact with it</p>
+                      <iframe class="cs-embed is-figma" loading="lazy" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D0%253A1%26node-id%3D10%253A197%26viewport%3D759%252C175%252C0.13563130795955658%26scaling%3Dscale-down" title="Scenario 1 prototype: reserving tickets online" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="cs-sb-scenario">
+                      <h4>Scenario 2: Arriving at concert &amp; check-in</h4>
+                      <p class="cs-reveal">Kalyn comes to the concert and checks in. Then, as she is entering the hall, she receives program notes and ASO representative informs her about the second part of survey in the notes. Excited about the credits, she scans the QR code and fills up the short survey.</p>
+                      <div class="cs-sb-split">
+                        <ol class="cs-sb is-grid cs-stagger">
+                          <li><img src="../img/aso/figures/sketch-2-1.jpg" width="364" height="250" alt="Sketch: arriving at the concert hall"><p>Kalyn arrives at the concert hall &amp; checks-in</p></li>
+                          <li class="is-hl"><img src="../img/aso/figures/sketch-2-2.jpg" width="370" height="246" alt="Sketch: receiving program notes"><p>She receives program notes &amp; information about ASO credits</p></li>
+                          <li class="is-hl"><img src="../img/aso/figures/sketch-2-3.jpg" width="370" height="250" alt="Sketch: scanning the QR code in the program notes"><p>Kalyn scans the QR code, gets to the survey, and fills it out</p></li>
+                          <li class="is-hl"><img src="../img/aso/figures/sketch-2-4.jpg" width="370" height="253" alt="Sketch: credits confirmation on the phone"><p>Once submitted, she receives the ASO credits</p></li>
+                        </ol>
+                        <figure class="cs-sb-artifact cs-reveal">
+                          <a href="../img/aso/figures/program-notes-poster.jpg" target="_blank" rel="noopener"><img src="../img/aso/figures/program-notes-poster.jpg" width="793" height="1025" alt="Program notes page advertising ASO Credits with QR codes for the surveys"></a>
+                        </figure>
+                      </div>
+                      <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Please click on the prototype to interact with it</p>
+                      <iframe class="cs-embed is-figma" loading="lazy" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D10%253A975%26node-id%3D12%253A393%26viewport%3D494%252C482%252C0.3079080283641815%26scaling%3Dscale-down" title="Scenario 2 prototype: pre-concert survey" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="cs-sb-scenario">
+                      <h4>Scenario 3: Interactive session</h4>
+                      <p class="cs-reveal">During the concert, there will be an interactive session for patrons to participate with their phones by scanning a QR code in their program notes. The interactive prompt will be based on the theme of the concert. Patrons’ responses will be shown on the screen on the stage. A short survey will follow the interactive prompt. Once completed, the patron will earn ASO Credits</p>
+                      <ol class="cs-sb cs-stagger">
+                        <li class="is-hl"><img src="../img/aso/figures/sketch-3-1.jpg" width="299" height="204" alt="Sketch: host on stage showing a QR code"><p>Host introduces feedback session and shows the QR code</p></li>
+                        <li class="is-hl"><img src="../img/aso/figures/sketch-3-2.jpg" width="303" height="204" alt="Sketch: audience scanning the code"><p>Patrons scan the code &amp; enters interactive experience</p></li>
+                        <li class="is-hl"><img src="../img/aso/figures/sketch-3-3.jpg" width="298" height="203" alt="Sketch: answering on the phone"><p>Patrons fill feedback inputs and answers other questions</p></li>
+                        <li class="is-hl"><img src="../img/aso/figures/sketch-3-4.jpg" width="299" height="212" alt="Sketch: responses shown on the stage screen"><p>All responses are displayed; host talks through them</p></li>
+                        <li class="is-hl"><img src="../img/aso/figures/sketch-3-5.jpg" width="295" height="196" alt="Sketch: credits on the phone"><p>Patrons receive the ASO credits on their phones</p></li>
+                      </ol>
+                      <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Please click on the prototype to interact with it</p>
+                      <iframe class="cs-embed is-figma" loading="lazy" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D13%253A11%26node-id%3D13%253A454%26viewport%3D454%252C482%252C0.2407894730567932%26scaling%3Dscale-down" title="Scenario 3 prototype: interactive session" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="cs-sb-scenario">
+                      <h4>Scenario 4: Post-Concert survey</h4>
+                      <p class="cs-reveal">After the concert, the host reminds the audience once again about the survey and the incentives. Kalyn scans the QR code once more, completes the remaining survey and receives more credits.</p>
+                      <div class="cs-sb-split">
+                        <ol class="cs-sb is-grid cs-stagger">
+                          <li><img src="../img/aso/figures/sketch-4-1.jpg" width="365" height="256" alt="Sketch: leaving the concert hall"><p>Kalyn leaves concert hall</p></li>
+                          <li class="is-hl"><img src="../img/aso/figures/sketch-4-2.jpg" width="366" height="247" alt="Sketch: scanning the QR code again"><p>She scans the QR code again</p></li>
+                          <li class="is-hl"><img src="../img/aso/figures/sketch-4-4.jpg" width="361" height="247" alt="Sketch: filling out the survey"><p>Kalyn fills out the survey</p></li>
+                          <li class="is-hl"><img src="../img/aso/figures/sketch-4-3.jpg" width="369" height="252" alt="Sketch: credit confirmation"><p>Kalyn receives credit for completing the survey</p></li>
+                        </ol>
+                        <figure class="cs-sb-artifact cs-reveal">
+                          <figcaption>Alternative Paper Survey</figcaption>
+                          <a href="../img/aso/figures/paper-survey.jpg" target="_blank" rel="noopener"><img src="../img/aso/figures/paper-survey.jpg" width="789" height="1020" alt="ASO Community Concert Experience Survey on paper"></a>
+                        </figure>
+                      </div>
+                      <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Please click on the prototype to interact with it</p>
+                      <iframe class="cs-embed is-figma" loading="lazy" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D13%253A980%26node-id%3D13%253A1468%26viewport%3D477%252C482%252C0.2965964376926422%26scaling%3Dscale-down" title="Scenario 4 prototype: post-concert survey" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="cs-sb-scenario">
+                      <h4>Scenario 5: Redeeming credits</h4>
+                      <p class="cs-reveal">Patrons can use the ASO Credits they have earned to redeem ticket discounts or gifts from the ASO Store. When purchasing an item, the patron will get a promo code that will be used for online orders or a barcode for in-store purchases.</p>
+                      <div class="cs-sb-tree cs-stagger">
+                        <div class="cs-sb-item is-hl is-root"><img src="../img/aso/figures/sketch-5-1.jpg" width="368" height="249" alt="Sketch: credit profile on the phone"><p>Kalyn checks her ASO credit profile to see her credits</p></div>
+                        <div class="cs-sb-item is-hl is-b1"><img src="../img/aso/figures/sketch-5-2.jpg" width="353" height="248" alt="Sketch: at the ASO store counter"><p>She goes to the ASO store</p></div>
+                        <div class="cs-sb-item is-hl is-b1 is-next"><img src="../img/aso/figures/sketch-5-3.jpg" width="362" height="244" alt="Sketch: redeeming credits with a barcode"><p>She redeems the credits to buy her favorite items</p></div>
+                        <div class="cs-sb-item is-hl is-b2"><img src="../img/aso/figures/sketch-5-4.jpg" width="369" height="251" alt="Sketch: ticket discount on the phone"><p>She decides to redeem her credits for the next concert</p></div>
+                        <div class="cs-sb-item is-hl is-b2 is-next"><img src="../img/aso/figures/sketch-5-5.jpg" width="371" height="250" alt="Sketch: booking a ticket on a computer"><p>Kalyn applies credit when booking her next ticket</p></div>
+                        <div class="cs-sb-item is-hl is-b2 is-next"><img src="../img/aso/figures/sketch-5-6.jpg" width="372" height="254" alt="Sketch: discount applied at checkout"><p>Kalyn receives a discount on her next booking</p></div>
+                      </div>
+                      <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Please click on the prototype to interact with it</p>
+                      <iframe class="cs-embed is-figma" loading="lazy" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D13%253A2021%26node-id%3D19%253A110%26viewport%3D603%252C446%252C0.2016899287700653%26scaling%3Dscale-down" title="Scenario 5 prototype: redeeming credits" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- ============ STAKEHOLDER EXPERIENCE DESIGN ============ -->
+                    <h2 id="finalstkdesign">STAKEHOLDER EXPERIENCE DESIGN</h2>
+                    <div class="cs-sb-scenario">
+                      <h4>Scenario 1: Login</h4>
+                      <p class="cs-reveal">ASO Employees can log into the dedicated Feedback Platform and view the list of upcoming concerts and past concerts. Then, they can edit surveys and view audience responses.</p>
+                      <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Please click on the prototype to interact with it</p>
+                      <iframe class="cs-embed is-figma is-wide" loading="lazy" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D19%253A1444%26node-id%3D19%253A1467%26viewport%3D434%252C482%252C0.1742303967475891%26scaling%3Dscale-down" title="Stakeholder scenario 1 prototype: login" allowfullscreen></iframe>
+                    </div>
+                    <div class="cs-sb-scenario">
+                      <h4>Scenario 2: Edit surveys</h4>
+                      <p class="cs-reveal">ASO Employees can log into the dedicated Feedback Platform and view the list of upcoming concerts and past concerts. Then, they can edit surveys and view audience responses.</p>
+                      <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Please click on the prototype to interact with it</p>
+                      <iframe class="cs-embed is-figma is-wide" loading="lazy" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D19%253A2065%26node-id%3D26%253A22%26viewport%3D297%252C724%252C0.04469410330057144%26scaling%3Dscale-down" title="Stakeholder scenario 2 prototype: edit surveys" allowfullscreen></iframe>
+                    </div>
+                    <div class="cs-sb-scenario">
+                      <h4>Scenario 3: Viewing Audience Responses</h4>
+                      <p class="cs-reveal">ASO Employees can view detailed audience responses as a report of gathered feedback for each concert.</p>
+                      <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Please click on the prototype to interact with it</p>
+                      <iframe class="cs-embed is-figma is-wide" loading="lazy" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOIFjwwhzqsWOv764XdccZX%2FASO_FullPrototype_Swar%3Fpage-id%3D26%253A5499%26node-id%3D26%253A5535%26viewport%3D802%252C482%252C0.16142311692237854%26scaling%3Dscale-down" title="Stakeholder scenario 3 prototype: viewing audience responses" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- ============ VISUAL LANGUAGE ============ -->
+                    <h2 id="visuallanguage">VISUAL LANGUAGE</h2>
+                    <p class="cs-reveal">The visual design of the audience-side touchpoints is based on ASO’s current visual language.</p>
+                    <div class="cs-vl">
+                      <div>
+                        <h3 class="cs-block">Typography</h3>
+                        <div class="cs-type cs-reveal">
+                          <p class="cs-type-sizes"><span style="font-size:2.6em">Aa</span><span style="font-size:1.9em">Aa</span><span style="font-size:1.45em">Aa</span><span style="font-size:1.15em">Aa</span><span>Aa</span><span>Aa</span><span>Aa</span></p>
+                          <p class="cs-type-weights"><span style="font-weight:900">BLACK</span><span style="font-weight:700">BOLD</span><span style="font-weight:400">REGULAR</span><span style="font-weight:300">LIGHT</span><span style="font-weight:100;color:#555">HAIRLINE</span></p>
+                          <p>The quick brown fox jumps over the lazy dog</p>
+                          <p class="cs-type-digits">0123456789</p>
+                        </div>
+                        <h3 class="cs-block">Colors palette</h3>
+                        <ul class="cs-swatches cs-stagger" aria-label="Color palette">
+                          <li style="background:#0098a6" title="#0098A6"></li><li style="background:#00bbd4" title="#00BBD4"></li><li style="background:#4dcee1" title="#4DCEE1"></li><li style="background:#b3eaf1" title="#B3EAF1"></li><li style="background:#d8efff" title="#D8EFFF"></li><li style="background:#ffffff" title="#FFFFFF"></li>
+                          <li style="background:#527daa" title="#527DAA"></li><li style="background:#0093c9" title="#0093C9"></li><li style="background:#008dc5" title="#008DC5"></li><li style="background:#fcbd00" title="#FCBD00"></li><li style="background:#fcc000" title="#FCC000"></li><li style="background:#f5d580" title="#F5D580"></li>
+                          <li style="background:#71ad57" title="#71AD57"></li><li style="background:#aed582" title="#AED582"></li><li style="background:#cf3809" title="#CF3809"></li><li style="background:#dd002c" title="#DD002C"></li><li style="background:#646cf1" title="#646CF1"></li><li style="background:#505050" title="#505050"></li>
+                        </ul>
+                      </div>
+                      <figure class="cs-vl-mock cs-reveal">
+                        <img src="../img/aso/figures/mockups.jpg" width="1100" height="887" alt="ASO website and the asofeedback.com credits screen on a phone">
+                      </figure>
+                    </div>
+
+                    <!-- ============ EVALUATION ============ -->
+                    <h2 id="evaluation">EVALUATION</h2>
+                    <h3 class="cs-block">Remote Usability Testing</h3>
+                    <p class="cs-reveal">The audience mobile experience was tested through remote usability testing sessions to gather feedback and evaluate the design idea.</p>
+                    <div class="cs-eval-setup cs-reveal">
+                      <div>
+                        <h4>Participants</h4>
+                        <p>6 Participants<br>4 Males, 2 Females<br>4 in their 20s, 1 in their 30s, 1 in their 60s<br>Experienced with classical music concert. One had given feedback to a concert before.</p>
+                      </div>
+                      <div>
+                        <h4>Tasks</h4>
+                        <p>We covered five touchpoint scenarios throughout a concert experience including:</p>
+                        <ul>
+                          <li>Booking a ticket</li>
+                          <li>Answering a pre-concert survey</li>
+                          <li>Participating in a live interactive session</li>
+                          <li>Answering a post-concert survey</li>
+                          <li>Redeeming ASO Credits</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h4 class="cs-eval-results">Results</h4>
+                    <ul class="cs-eval-scores cs-stagger">
+                      <li class="is-good"><span><b>4.8</b>/5</span>Ease of Use</li>
+                      <li class="is-good"><span><b>4.2</b>/5</span>Likeliness to fill out at least one survey</li>
+                      <li class="is-bad"><span><b>2.4</b>/5</span>No. of surveys that participants think they will fill out</li>
+                      <li class="is-bad"><span><b>2.3</b>/5</span>Intrusiveness</li>
+                    </ul>
+                    <div class="cs-eval-panels">
+                      <div class="cs-reveal">
+                        <h4>What worked</h4>
+                        <ul class="cs-eval-panel is-good">
+                          <li>A <em>higher response rate</em> can be expected compared to traditional feedback process.</li>
+                          <li>The incentives to answer surveys with the <em>ASO Credits system</em>.</li>
+                          <li>The design was very <em>easy and straightforward</em>, it requires very <em>low effort</em>.</li>
+                          <li>In-the-moment pre-concert survey helps <em>fill the idle waiting gap</em> before the concert</li>
+                          <li>Using <em>a phone to answer the survey is more convenient</em> than filling out a paper survey.</li>
+                          <li><em>No app download</em> required, no account creation required.</li>
+                        </ul>
+                      </div>
+                      <div class="cs-reveal">
+                        <h4>Improvements</h4>
+                        <ul class="cs-eval-panel is-bad">
+                          <li>Some thought the <em>tech-powered in-concert session was too disruptive</em> for a classical music concert that feels “analog” to some.</li>
+                          <li>Some aspects <em>can be more streamlined</em> e.g. pre-filling/saving phone number.</li>
+                          <li>Possible <em>survey fatigue</em>.</li>
+                          <li>The <em>post-concert survey might get the least response</em>: people will be in a hurry to leave the hall and go back.</li>
+                          <li>The actual <em>value of the ASO credits should be clear</em> for users to decide whether to take the time to fill the survey.</li>
+                          <li><em>Buying more ASO Credits</em> should be an option.</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <h3 class="cs-block">Remote Stakeholder Feedback</h3>
+                    <p class="cs-reveal">We showed our designs to the ASO representative, the community programs manager, to gather feedback from the stakeholder’s side. The stakeholders seemed to be extremely enthusiastic about the outcome of this project. They expressed their excitement about:</p>
+                    <div class="cs-eval-stk">
+                      <ul class="cs-reveal">
+                        <li>how the ASO Credits incentivizes the system</li>
+                        <li>how ASO back-end system seems to be tightly integrated.</li>
+                        <li>In-concert interactive sessions allows the patrons to connect with ASO at a deeper level.</li>
+                      </ul>
+                      <div class="cs-eval-quotes cs-stagger">
+                        <blockquote class="q1">“Wow! this is awesome!”</blockquote>
+                        <blockquote class="q2">“[The back-end system] is very similar to the survey platform we’re using so our colleagues will be able to do this.”</blockquote>
+                        <blockquote class="q3">“The patron experience part is my favorite. It really allows them to connect with us beyond the concert, and beyond just an institution.”</blockquote>
+                        <blockquote class="q4">“This is way better than our existing system because it also has this credits system integrated.”</blockquote>
+                      </div>
+                    </div>
+
+                    <!-- ============ PROCESS DETAILS ============ -->
+                    <h2 id="processdetails">PROCESS DETAILS</h2>
+                    <iframe class="cs-embed is-slides" loading="lazy" src="https://docs.google.com/presentation/d/e/2PACX-1vTi9uESZ_0fjEie_54--dP_h_31ohVOPfsiM5Ro174M6qIy1z1xxgnnb-wlV8V-q4waS9e9aMjKZhna/embed?start=false&amp;loop=false&amp;delayms=10000" title="Process details slide deck" allowfullscreen></iframe>
+                    <p class="cs-embed-link"><a href="https://docs.google.com/presentation/d/e/2PACX-1vTi9uESZ_0fjEie_54--dP_h_31ohVOPfsiM5Ro174M6qIy1z1xxgnnb-wlV8V-q4waS9e9aMjKZhna/pub" target="_blank" rel="noopener">Open the slides in a new tab<i class="fa fa-external-link" aria-hidden="true"></i></a></p>
 
                   </div>
                 </div>
@@ -422,6 +925,7 @@ http://miradontsoa.com
 
   <!-- Javascript main files -->
   <script src="../js/main.js"></script>
+  <script src="../js/case-study.js?v=9"></script>
 
 
 </body>
