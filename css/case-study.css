@@ -913,92 +913,64 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 }
 
 /* ---------- Proportional strip (share of survey mentions) ----------
-   Columns are sized by weight (--cols); row 1 holds the blocks, row 2 the
-   pins' labels or quotes. A .cs-strip-group outlines related columns. */
-.cs-strip {
-  display: grid;
-  grid-template-columns: var(--cols);
-  grid-template-rows: 180px auto;
-  column-gap: 4px;
-  margin: 1.25rem 0 2.5rem;
-  position: relative;
-}
-.cs-strip-block {
-  grid-row: 1;
+   Recreates the slide chart: every element is placed from the slide's own
+   coordinates, x as % of the strip width and y in cqw (the strip spans the
+   .cs container, so 1cqw = 1% of its width) so it scales like the slide. */
+.cs-pstrip { position: relative; margin: .5rem 0 2.5rem; }
+.cs-pstrip > * { position: absolute; }
+.cs-pstrip-block {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2px;
-  /* scale with the strip like the original slide (~11.5px at 1440px) */
-  font-size: max(11px, 1.35cqw);
-  line-height: 1.35;
   color: #fff;
-  position: relative;
-  min-width: 0;
+  /* Open Sans runs ~7% wider than the slide's Segoe UI */
+  font-size: 1.3cqw;
+  line-height: 1.87cqw;
+  letter-spacing: .01em;
 }
-.cs-strip-block.is-dark-text { color: #0d4a6b; }
-.cs-strip-block.is-warm-text { color: #c4501d; }
-.cs-strip-block .is-vertical { writing-mode: vertical-rl; transform: rotate(180deg); }
-.cs-strip-pin {
+.cs-pstrip-block.is-dark { color: #1d6896; }
+.cs-pstrip-block.is-warm { color: #c4501d; }
+.cs-pstrip-block.is-semibold { font-weight: 400; }
+.cs-pstrip-block.is-bold { font-weight: 700; }
+.cs-pstrip-block .is-vertical { writing-mode: vertical-rl; transform: rotate(180deg); }
+.cs-pstrip-pin {
+  width: 1.24cqw;
+  margin: -.62cqw 0 0 -.62cqw;
+}
+.cs-pstrip-pin::before {
+  content: "";
   position: absolute;
-  left: 50%;
-  bottom: 18px;
-  width: 14px;
-  height: 14px;
-  margin-left: -7px;
+  left: 0;
+  top: 0;
+  width: 1.24cqw;
+  height: 1.24cqw;
   border-radius: 50%;
   background: #fff;
 }
-.cs-strip-pin::after {
+.cs-pstrip-pin::after {
   content: "";
   position: absolute;
-  left: 6px;
-  top: 14px;
-  height: 52px;
-  border-left: 2px dashed #ddd;
+  left: calc(.62cqw - 1px);
+  top: 1.24cqw;
+  bottom: 0;
+  border-left: 2px dashed #fff;
 }
-.cs-strip-note {
-  grid-row: 2;
-  padding: 3.6rem .25rem .5rem;
-  text-align: center;
-  font-size: max(11px, 1.3cqw);
-  line-height: 1.5;
-  color: #fff;
-  min-width: 0;
-}
-/* Pin labels may be wider than their column, as on the slide */
-.cs-strip-note.is-label { justify-self: center; width: max-content; white-space: nowrap; }
-.cs-strip-note.is-quote { font-style: italic; }
-.cs-strip-group {
-  grid-row: 1 / span 2;
-  margin: -14px -6px -6px;
-  border: 3px dashed #fff;
-  pointer-events: none;
-}
-.cs-js .cs-strip .cs-strip-block { transform: scaleY(0); transform-origin: bottom; transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
-.cs-js .cs-strip.is-visible .cs-strip-block { transform: none; }
-.cs-strip.is-visible .cs-strip-block:nth-child(2) { transition-delay: .05s; }
-.cs-strip.is-visible .cs-strip-block:nth-child(3) { transition-delay: .1s; }
-.cs-strip.is-visible .cs-strip-block:nth-child(4) { transition-delay: .15s; }
-.cs-strip.is-visible .cs-strip-block:nth-child(5) { transition-delay: .2s; }
-.cs-strip.is-visible .cs-strip-block:nth-child(6) { transition-delay: .25s; }
-.cs-strip.is-visible .cs-strip-block:nth-child(7) { transition-delay: .3s; }
-.cs-strip.is-visible .cs-strip-block:nth-child(8) { transition-delay: .35s; }
-.cs-strip.is-visible .cs-strip-block:nth-child(9) { transition-delay: .4s; }
-.cs-strip.is-visible .cs-strip-block:nth-child(10) { transition-delay: .45s; }
-.cs-strip-block:hover { filter: brightness(1.15); }
-.cs-strip-block .cs-strip-inner-label { display: none; }
-/* Narrow columns: one block per row, labels inside, groups marked per block */
+.cs-pstrip-note { color: #fff; font-size: 1.24cqw; line-height: 1.87cqw; letter-spacing: .01em; }
+.cs-pstrip-note.is-quote { font-style: italic; }
+.cs-pstrip-box { border: 3px dashed #fff; pointer-events: none; }
+.cs-js .cs-pstrip .cs-pstrip-block { transform: scaleY(0); transform-origin: bottom; transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
+.cs-js .cs-pstrip.is-visible .cs-pstrip-block { transform: none; }
+.cs-pstrip-block:hover { filter: brightness(1.12); }
+/* Narrow columns (to be refined): stack the blocks and show quotes under them */
 @container cs (max-width: 600px) {
-  .cs-strip { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 4px; }
-  .cs-strip-block, .cs-strip-note { grid-row: auto !important; grid-column: auto !important; }
-  .cs-strip-block { min-height: 52px; justify-content: flex-start; text-align: left; padding: .6rem 1rem; }
-  .cs-strip-block .is-vertical { writing-mode: horizontal-tb; transform: none; }
-  .cs-strip-block .cs-strip-inner-label { display: inline; }
-  .cs-strip-block.is-grouped { outline: 3px dashed #fff; outline-offset: -3px; }
-  .cs-strip-pin, .cs-strip-group, .cs-strip-note.is-label { display: none; }
-  .cs-strip-note { padding: .25rem 1rem .75rem; text-align: left; }
+  .cs-pstrip { height: auto !important; display: flex; flex-direction: column; gap: 4px; }
+  .cs-pstrip > * { position: static; transform: none !important; }
+  .cs-pstrip-block { width: auto !important; height: auto !important; min-height: 48px; justify-content: flex-start; text-align: left; padding: .5rem 1rem; font-size: .9rem; line-height: 1.35; }
+  .cs-pstrip-block br { display: none; }
+  .cs-pstrip-block .is-vertical { writing-mode: horizontal-tb; transform: none; }
+  .cs-pstrip-note.is-quote { white-space: normal !important; font-size: .85rem; line-height: 1.5; padding: .25rem 1rem .75rem; text-align: left !important; }
+  .cs-pstrip-pin, .cs-pstrip-box, .cs-pstrip-note.is-label { display: none; }
 }
 
 /* ---------- Idea map ('Good' recommendation) ---------- */
