@@ -965,7 +965,7 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 /* Narrow columns (to be refined): stack the blocks and show quotes under them */
 @container cs (max-width: 600px) {
   .cs-pstrip { height: auto !important; display: flex; flex-direction: column; gap: 4px; }
-  .cs-pstrip > * { position: static; transform: none !important; }
+  .cs-pstrip > * { position: static !important; transform: none !important; }
   .cs-pstrip-block { width: auto !important; height: auto !important; min-height: 48px; justify-content: flex-start; text-align: left; padding: .5rem 1rem; font-size: .9rem; line-height: 1.35; }
   .cs-pstrip-block br { display: none; }
   .cs-pstrip-block .is-vertical { writing-mode: horizontal-tb; transform: none; }
