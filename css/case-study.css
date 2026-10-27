@@ -1176,3 +1176,10 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 @container cs (max-width: 700px) {
   .cs-aso-bg { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   Research Repository: slides rebuilt as positioned text and shapes
+   ========================================================================== */
+.cs-rr .cs-slides { margin: 1.5rem 0 4rem; }
+.cs-rr .cs-slides .cs-slide { margin-bottom: 1rem; }
+.cs-rr > h1 { scroll-margin-top: 80px; }
