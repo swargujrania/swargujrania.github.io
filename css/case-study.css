@@ -34,6 +34,8 @@
 .cs .cs-steps li,
 .cs .cs-chain li { list-style: none; }
 .cs li { margin-bottom: .35rem; }
+.cs ol { padding-left: 1.4rem; }
+.cs ol > li { list-style: decimal; }
 
 /* Section heading, matches the SUMMARY heading style of the theme */
 .article-light > .article-content > .wrapper.cs > h2 {
@@ -749,6 +751,251 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
   .cs-loop-compact { display: block; }
 }
 
+/* ---------- Publication / note callout ---------- */
+.cs-callout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #333;
+  border-left: 3px solid var(--cs-accent);
+  padding: .9rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: .95rem;
+}
+.cs-callout .fa { font-size: 1.6rem; color: var(--cs-accent); flex: none; }
+.cs-callout a { white-space: nowrap; }
+
+/* ---------- Stat tiles ---------- */
+.cs-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+  list-style: none;
+  padding: 0;
+}
+.cs .cs-stats li { list-style: none; margin: 0; }
+.cs-stat { background: var(--cs-surface); padding: 1.25rem; border-top: 2px solid var(--cs-accent); }
+.cs-stat-value { display: block; font-size: 2rem; font-weight: 700; line-height: 1.1; color: #fff; }
+.cs-stat-value small { font-size: .55em; font-weight: 400; color: var(--cs-muted); }
+.cs-stat-label { display: block; color: #ccc; font-size: .9rem; margin-top: .4rem; line-height: 1.4; }
+
+/* ---------- User group cards ---------- */
+.cs-users { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+.cs-user { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.cs-user img { width: 84px; height: 84px; object-fit: contain; }
+.cs-user h4 { color: var(--cs-accent); font-size: 1.2rem; font-weight: 700; margin: 0 0 .35rem; }
+.cs-user p { margin: 0; }
+@container cs (max-width: 600px) {
+  .cs-users { grid-template-columns: 1fr; }
+  .cs-user { grid-template-columns: 64px minmax(0, 1fr); }
+  .cs-user img { width: 64px; height: 64px; }
+}
+
+/* ---------- Problem cards ---------- */
+.cs-problems {
+  display: grid;
+  grid-template-columns: 150px repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+  align-items: start;
+  margin: 2rem 0;
+}
+.cs-problems-hub {
+  grid-row: span 2;
+  align-self: center;
+  width: 150px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #5c1014;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.cs-problem h4 { color: var(--cs-accent); font-size: 1.15rem; font-weight: 700; margin: 0 0 .35rem; }
+.cs-problem p { margin: 0; font-size: .95rem; }
+@container cs (max-width: 700px) {
+  .cs-problems { grid-template-columns: 1fr 1fr; }
+  .cs-problems-hub { grid-row: auto; grid-column: 1 / -1; width: auto; aspect-ratio: auto; border-radius: 999px; padding: .5rem 1.5rem; justify-self: start; }
+}
+@container cs (max-width: 420px) { .cs-problems { grid-template-columns: 1fr; } }
+
+/* ---------- "How might we" statement ---------- */
+.cs-hmw {
+  position: relative;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.45;
+  margin: 3rem auto;
+  padding: 2.5rem 1rem;
+  max-width: 720px;
+  isolation: isolate;
+}
+.cs-hmw::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: #4a0d10;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: cs-breathe 4s ease-in-out infinite;
+}
+.cs-hmw strong { font-weight: 700; }
+@keyframes cs-breathe { 50% { transform: translate(-50%, -50%) scale(1.12); } }
+@container cs (max-width: 480px) { .cs-hmw { font-size: 1.25rem; } .cs-hmw::before { width: 140px; height: 140px; } }
+
+/* ---------- Sticky-note clusters (affinity map) ---------- */
+.cs-clusters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem 1.5rem; margin: 1.5rem 0 1rem; }
+.cs-cluster { display: flex; flex-direction: column; align-items: center; gap: .6rem; }
+.cs-sticky {
+  background: #a8e4f7;
+  color: #0d2f3d;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  padding: 1rem .75rem;
+  width: 130px;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, .45);
+  transition: transform .3s ease;
+}
+.cs-cluster:nth-child(1) .cs-sticky { transform: rotate(-2deg); }
+.cs-cluster:nth-child(3) .cs-sticky { transform: rotate(2deg); }
+.cs-cluster:hover .cs-sticky,
+.cs-sticky:hover { transform: rotate(0) scale(1.05); }
+.cs .cs-quotes { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; }
+.cs .cs-quotes li {
+  list-style: none;
+  margin: 0;
+  border: 1px solid #bbb;
+  padding: .35rem .6rem;
+  font-size: .85rem;
+  line-height: 1.35;
+  text-align: center;
+  max-width: 150px;
+}
+.cs-stickies-small { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin: 1.5rem 0 0; }
+.cs-stickies-small .cs-sticky { width: auto; min-width: 96px; min-height: 0; font-size: .8rem; padding: .7rem .8rem; }
+.cs-stickies-small .cs-sticky:nth-child(odd) { transform: rotate(-1.5deg); }
+.cs-stickies-small .cs-sticky:nth-child(even) { transform: rotate(1.5deg); }
+.cs-sublabel { color: var(--cs-muted); font-size: .85rem; text-align: center; margin: 1rem 0 0; }
+@container cs (max-width: 600px) { .cs-clusters { grid-template-columns: 1fr; } }
+
+/* ---------- Ranked bars (relative share, single series) ---------- */
+.cs-bars { --cs-bar: #3a9fd4; margin: 1.25rem 0 2rem; }
+.cs-bars.is-warm { --cs-bar: #e0692c; }
+.cs-bars-title { font-weight: 700; font-size: 1.1rem; margin-bottom: .25rem; }
+.cs-bars-note { color: var(--cs-muted); font-size: .8rem; margin-bottom: 1rem; }
+.cs .cs-bar-list { list-style: none; padding: 0; margin: 0; }
+.cs .cs-bar-list > li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(130px, 34%) minmax(0, 1fr);
+  gap: .25rem 1rem;
+  align-items: center;
+  margin: 0 0 .6rem;
+}
+.cs-bar-label { color: #ddd; font-size: .95rem; line-height: 1.3; }
+.cs-bar-track { height: 14px; }
+.cs-bar {
+  display: block;
+  height: 100%;
+  width: var(--w);
+  background: var(--cs-bar);
+  border-radius: 0 4px 4px 0;
+  opacity: .55;
+  transform-origin: left center;
+  transition: opacity .25s ease;
+}
+.cs-js .cs-bars .cs-bar { transform: scaleX(0); transition: transform .9s cubic-bezier(.2, .7, .2, 1), opacity .25s ease; }
+.cs-js .cs-bars.is-visible .cs-bar { transform: none; }
+.cs .cs-bar-list > li.is-focus .cs-bar { opacity: 1; }
+.cs .cs-bar-list > li.is-focus .cs-bar-label { color: #fff; font-weight: 700; }
+.cs .cs-bar-list > li:hover .cs-bar { opacity: 1; }
+.cs-focus-tag {
+  display: inline-block;
+  font-size: .65rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 0 .35rem;
+  margin-left: .4rem;
+  vertical-align: middle;
+  font-weight: 400;
+}
+.cs-bar-quotes { grid-column: 2; color: #bbb; font-style: italic; font-size: .85rem; line-height: 1.5; margin: .1rem 0 .4rem; }
+@container cs (max-width: 480px) {
+  .cs .cs-bar-list > li { grid-template-columns: 1fr; }
+  .cs-bar-quotes { grid-column: 1; }
+}
+
+/* ---------- Idea chips with a legend ---------- */
+.cs-ideas-q {
+  border: 2px dashed #8e1b17;
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-align: center;
+  max-width: 420px;
+  margin: 2rem auto 1.5rem;
+}
+.cs .cs-ideas { list-style: none; padding: 0; margin: 0 0 1rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+.cs .cs-ideas li {
+  list-style: none;
+  margin: 0;
+  padding: .7rem 1rem;
+  text-align: center;
+  font-size: .95rem;
+  line-height: 1.35;
+  color: #ccc;
+  border: 1px solid #555;
+  max-width: 230px;
+}
+.cs .cs-ideas li.is-focus { background: #3a0b0e; border-color: #3a0b0e; color: #fff; font-weight: 600; }
+.cs .cs-ideas li.is-future { border: 1px solid #888; color: #999; }
+.cs-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.5rem; font-size: .8rem; color: #bbb; margin-bottom: 1.5rem; }
+.cs-legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; margin-right: .4rem; vertical-align: -1px; border: 1px solid #555; }
+.cs-legend .is-focus::before { background: #3a0b0e; border-color: #3a0b0e; }
+.cs-legend .is-future::before { border-color: #888; }
+
+/* ---------- Feature blocks ---------- */
+.cs-audience {
+  display: inline-block;
+  background: #5c1014;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: .45rem 1.25rem;
+  margin: 3rem 0 1rem;
+}
+.cs-feature-title { color: var(--cs-accent); font-weight: 700; font-size: 1.35rem; margin: 2rem 0 .5rem; }
+
+/* ---------- Before / after table ---------- */
+.cs-compare { width: 100%; max-width: 720px; margin: 1.5rem auto .5rem; border-collapse: collapse; font-size: 1rem; }
+.cs-compare th { font-weight: 400; font-style: italic; color: #ccc; text-align: right; padding: .5rem .75rem; border-bottom: 1px solid #777; }
+.cs-compare th:first-child { text-align: left; }
+.cs-compare td { padding: .7rem .75rem; text-align: right; font-variant-numeric: tabular-nums; border-bottom: 1px solid #222; }
+.cs-compare td:first-child { text-align: left; color: #ddd; }
+.cs-compare .is-better { color: #8fd48a; font-weight: 600; }
+.cs-compare .is-better .fa { margin-left: .4rem; }
+.cs-compare caption { caption-side: bottom; text-align: center; color: var(--cs-muted); padding-top: .75rem; font-size: .9rem; }
+@container cs (max-width: 480px) { .cs-compare { font-size: .85rem; } .cs-compare td, .cs-compare th { padding: .5rem .35rem; } }
+
+/* Two figures side by side */
+.cs-figure-pair { display: grid; grid-template-columns: 1.15fr 1fr; gap: 1.5rem; align-items: end; }
+.cs-figure-pair .cs-figure { margin: 0; }
+.cs-figure-pair figcaption { color: #ddd; font-size: .95rem; }
+@container cs (max-width: 600px) { .cs-figure-pair { grid-template-columns: 1fr; } }
+
 /* ---------- Page layout ----------
    The theme pins the cover to the left third from 768px up, which crops the
    cover art and squeezes the content on tablets. Stack it until 992px, and
@@ -759,7 +1006,8 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
     top: 0;
     width: 100%;
     height: auto;
-    min-height: min(100vw, 600px);
+    /* artwork height + top offset + room for the title below it */
+    min-height: calc(min(86vw, 480px) + 56px + 150px);
     background-size: min(86%, 480px) auto;
     background-repeat: no-repeat;
     background-position: center 56px;

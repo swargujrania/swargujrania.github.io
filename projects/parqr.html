@@ -58,6 +58,7 @@ http://miradontsoa.com
 
   <!-- add alt layout here -->
   <link rel="stylesheet" href="../css/style-default.css">
+  <link rel="stylesheet" href="../css/case-study.css?v=6">
 
   <script src="../js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
@@ -213,72 +214,217 @@ http://miradontsoa.com
               <article class="article article-light">
 
                 <div class="article-content">
-                  <div class="wrapper partialwidth">
+                  <div class="wrapper partialwidth cs">
 
-                    <div class="img-1" >
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/dash.jpg" alt="PARQR is a Machine Learning driven recommendation system that improves the experience for online distance learning programs for both students and instructors. It reduces duplicate content and highlights important class activity to help users navigate the volume of content in typical class of 200-300 students. Currently, it works as an add-on for Piazza - a widely used platform for student collaboration and communication by many universities for both their in-class offerings as well as distance learning programs. It’s been actively used by Georgia Tech for it’s Online Master’s of Science (OMS) programs since 2018.">
-                    <h6 class="text-center" style='color:grey'> This work was published at ACM Conference on Learning@ Scale. <br><br> <a href="https://dl.acm.org/doi/abs/10.1145/3386527.3405914">Link to the publication</a></h6>
-                    <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/dash.jpg" alt="PARQR is a Machine Learning driven recommendation system that improves the experience for online distance learning programs for both students and instructors. It reduces duplicate content and highlights important class activity to help users navigate the volume of content in typical class of 200-300 students. Currently, it works as an add-on for Piazza - a widely used platform for student collaboration and communication by many universities for both their in-class offerings as well as distance learning programs. It’s been actively used by Georgia Tech for it’s Online Master’s of Science (OMS) programs since 2018.">
-                    </div>
-                    <br>
-                    <br>
+                    <!-- ============ SUMMARY ============ -->
+                    <h2 id="summary">SUMMARY</h2>
+                    <p class="cs-lead cs-reveal"><strong class="cs-accent">PARQR</strong> (Piazza Automated Related Question Recommender) is a <strong>Machine Learning driven recommendation system</strong> that improves the experience for online distance learning programs for both students and instructors. It <strong>reduces duplicate content</strong> and highlights <strong>important class activity</strong> to help users <strong>navigate the volume of content</strong> in a typical class of 200-300 students.</p>
+                    <p class="cs-reveal">Currently, it works as an add-on for Piazza - a widely used platform for student collaboration and communication by many universities for both their in-class offerings as well as distance learning programs. It’s been actively used by Georgia Tech for its <strong>Online Master’s of Science (OMS) programs</strong> since 2018.</p>
 
-                    <h1 id="summary">SUMMARY</h1>
-                    <div class="img-1" >
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/summary.jpg" alt="PARQR is a Machine Learning driven recommendation system that improves the experience for online distance learning programs for both students and instructors. It reduces duplicate content and highlights important class activity to help users navigate the volume of content in typical class of 200-300 students. Currently, it works as an add-on for Piazza - a widely used platform for student collaboration and communication by many universities for both their in-class offerings as well as distance learning programs. It’s been actively used by Georgia Tech for it’s Online Master’s of Science (OMS) programs since 2018.">
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <h1 id="problem">PROBLEM</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/problem.jpg" alt="How might we make online learning forums more efficient, less redundant, and better focused?">
-                    </div>
-                    <br>
-                    <br>
-                    <br>
+                    <ul class="cs-stats cs-stagger">
+                      <li class="cs-stat"><span class="cs-stat-value">200–300</span><span class="cs-stat-label">students in a typical class</span></li>
+                      <li class="cs-stat"><span class="cs-stat-value">2018</span><span class="cs-stat-label">in use at Georgia Tech’s OMS programs since</span></li>
+                      <li class="cs-stat"><span class="cs-stat-value">98<small>%</small></span><span class="cs-stat-label">of active students used PARQR in a Spring 2019 class</span></li>
+                    </ul>
 
-                    <h1 id="research">USER RESEARCH</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/research1.jpg" alt="The surveys we rolled out always have quantitative as well as a qualitative components. We asked certain questions to identify:
-                      1. Current pain-points with Piazza
-                      2. Current feedback on PARQR
-                      3. Potential improvements for PARQR">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/research2.jpg" alt="">
-
+                    <div class="cs-callout cs-reveal">
+                      <i class="fa fa-book" aria-hidden="true"></i>
+                      <div>This work was published at the <strong>ACM Conference on Learning @ Scale</strong>. <a href="https://dl.acm.org/doi/abs/10.1145/3386527.3405914" target="_blank" rel="noopener">Read the publication <i class="fa fa-external-link" aria-hidden="true" style="font-size:.85em;color:inherit"></i></a></div>
                     </div>
 
-                    <br>
-                    <br>
-                    <h1 id="features">SOLUTION DESIGN</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/feature1.jpg" alt="Our team created an ML based post recommendation system, aimed specifically at reducing duplicate posts and focusing on making the process of consuming and managing large volumes of information efficient for students and instructors.">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/student_feature1.jpg" alt="FOR STUDENTS: In-line recommendation when creating posts - PARQR suggests relevant content when users are typing the questions out. The recommendations update in real-time as students type. This prevents duplicate questions, and gets answers to students more quickly.">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/feature2.jpg" alt="FOR STUDENTS: Student Recommendation dashboard - When students return to Piazza, PARQR shows them the important content that they may have missed out on, while they were away, through a recommendation dashboard.">
-                      <iframe height="600" src="https://xd.adobe.com/embed/ab37cb3f-b324-43cc-62d3-c752fddb02a5-dd06/?fullscreen" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/ins_feature_1.jpg" alt="FOR INSTRUCTORS: Recommending similar questions that have been answered - When Answering a question, PARQR suggests similar posts that have been already answered. The instructors  can then simply add a reference to that answer to redirect students. This is really helpful when instructors have to answer large volumes of questions, many of which could be duplicate.">
-                      <iframe height="600" src="https://xd.adobe.com/embed/ab37cb3f-b324-43cc-62d3-c752fddb02a5-dd06/screen/c91814fd-381d-4cda-9a36-ef443219622d/Artboard-5/?fullscreen" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/ins_feature_2.jpg" alt="In order to handle duplicate questions, PARQR provides the capability of combining multiple unanswered questions together such that, the instructors can answer all the questions in one go. However, this functionality, as of now, does not allow modifying content for each linked question separately. ">
-                      <iframe height="600" src="https://xd.adobe.com/embed/ab37cb3f-b324-43cc-62d3-c752fddb02a5-dd06/screen/f9fc0037-823a-468d-b1e3-5ebf3c7328e2/Artboard-9/?fullscreen" style='width:105%; object-fit: contain' frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-                    <h1 id="feedback">USER FEEDBACK (from MVP)</h1>
-                    <br>
-                    <div class="img-1">
-                      <img style='height: 100%; width: 100%; object-fit: contain' src="../img/parqr/feedback1.jpg" alt="">
-
+                    <div class="cs-tag">Users</div>
+                    <p class="cs-reveal">PARQR focuses on two main user groups:</p>
+                    <div class="cs-users cs-stagger">
+                      <div class="cs-user">
+                        <img src="../img/parqr/figures/icon-student.png" alt="" width="84" height="84">
+                        <div>
+                          <h4>College Students</h4>
+                          <p>who engage in class discussions. Their main tasks include posting questions, adding follow-ups to an existing post and answering questions.</p>
+                        </div>
                       </div>
-                    <br>
+                      <div class="cs-user">
+                        <img src="../img/parqr/figures/icon-instructor.png" alt="" width="84" height="84">
+                        <div>
+                          <h4>Instructors &amp; TAs</h4>
+                          <p>who respond to students’ questions and keep on top of all class activity and discussions. Many TAs are students supporting the professors.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- ============ PROBLEM ============ -->
+                    <h2 id="problem">PROBLEM</h2>
+                    <p class="cs-reveal">This is what a typical Piazza forum looks like:</p>
+                    <figure class="cs-figure cs-reveal">
+                      <a href="../img/parqr/figures/piazza-forum-annotated.jpg" target="_blank" rel="noopener"><img loading="lazy" src="../img/parqr/figures/piazza-forum-annotated.jpg" alt="Annotated Piazza forum: different groups of content, general search, a large number of questions, follow-up discussions and post stats"></a>
+                      <figcaption>A Piazza class forum: content groups, general search, a long list of questions, follow-up discussions and post stats</figcaption>
+                    </figure>
+
+                    <div class="cs-problems cs-stagger">
+                      <div class="cs-problems-hub">Problems</div>
+                      <div class="cs-problem"><h4>Volume of content</h4><p>Users feel overwhelmed when navigating through large volumes of class content.</p></div>
+                      <div class="cs-problem"><h4>Redundancy</h4><p>It’s difficult for students to track what content has already been posted in the system, resulting in redundancy, particularly in case of private content.</p></div>
+                      <div class="cs-problem"><h4>What to search?</h4><p>Students often don’t know which keywords to search on until after they complete their post.</p></div>
+                      <div class="cs-problem"><h4>Content quality</h4><p>A lot of students post content to show class participation. This makes it difficult to find quality content.</p></div>
+                      <div class="cs-problem"><h4>Limited search</h4><p>Static search responses limit what we can present to students and many times the results are less contextual.</p></div>
+                    </div>
+
+                    <p class="cs-reveal">To summarize, we focused on</p>
+                    <p class="cs-hmw cs-reveal">How might we make online forums<br><strong>more efficient, less redundant,</strong> and <strong>better focused?</strong></p>
+
+                    <!-- ============ USER RESEARCH ============ -->
+                    <h2 id="research">USER RESEARCH</h2>
+                    <p class="cs-reveal">Every semester, the PARQR team rolls out a survey to a large number of OMS students of Georgia Tech to gather their feedback on the developments on PARQR.</p>
+
+                    <div class="cs-tag">Qualitative feedback</div>
+                    <p class="cs-reveal">The surveys we rolled out always have quantitative as well as qualitative components. We asked certain questions to identify:</p>
+                    <ol class="cs-reveal">
+                      <li>Current pain-points with Piazza</li>
+                      <li>Current feedback on PARQR</li>
+                      <li>Potential improvements for PARQR</li>
+                    </ol>
+
+                    <h3 class="cs-feature-title" style="color:#fff">Piazza pain-points</h3>
+                    <div class="cs-clusters cs-stagger">
+                      <div class="cs-cluster">
+                        <div class="cs-sticky">Too many posts</div>
+                        <ul class="cs-quotes"><li>Piazza is overwhelming</li><li>post volume discouraged me from using Piazza</li><li>Too many conversations to follow</li></ul>
+                      </div>
+                      <div class="cs-cluster">
+                        <div class="cs-sticky">Duplicate posts</div>
+                        <ul class="cs-quotes"><li>Tons of duplicate posts</li><li>Information is scattered</li><li>would be nice if posts are found before user posts them</li></ul>
+                      </div>
+                      <div class="cs-cluster">
+                        <div class="cs-sticky">Hard to search</div>
+                        <ul class="cs-quotes"><li>you have to learn how to search</li><li>Unable to find right information at the right time</li><li>difficult to find information in threads</li><li>no good way to distinguish valuable content from low-value content</li></ul>
+                      </div>
+                    </div>
+                    <p class="cs-sublabel">Other themes</p>
+                    <div class="cs-stickies-small cs-stagger">
+                      <div class="cs-sticky">Delayed replies</div>
+                      <div class="cs-sticky">UX</div>
+                      <div class="cs-sticky">Posting anonymously</div>
+                      <div class="cs-sticky">Spam posts</div>
+                      <div class="cs-sticky">Post for participation</div>
+                    </div>
+
+                    <div class="cs-bars cs-observe" style="margin-top:3rem">
+                      <div class="cs-bars-title">Current PARQR experience - positive</div>
+                      <div class="cs-bars-note">Bar length shows how often each theme came up, relative to the most common one.</div>
+                      <ul class="cs-bar-list">
+                        <li><span class="cs-bar-label">Simple, unobtrusive, convenient</span><span class="cs-bar-track"><span class="cs-bar" style="--w:100%"></span></span></li>
+                        <li><span class="cs-bar-label">Find relevant posts easily</span><span class="cs-bar-track"><span class="cs-bar" style="--w:71%"></span></span></li>
+                        <li><span class="cs-bar-label">Reduces redundancy</span><span class="cs-bar-track"><span class="cs-bar" style="--w:57%"></span></span></li>
+                        <li><span class="cs-bar-label">Makes Piazza better</span><span class="cs-bar-track"><span class="cs-bar" style="--w:55%"></span></span></li>
+                        <li class="is-focus"><span class="cs-bar-label">Good recommendations &amp; suggestions</span><span class="cs-bar-track"><span class="cs-bar" style="--w:50%"></span></span></li>
+                        <li class="is-focus"><span class="cs-bar-label">Better search</span><span class="cs-bar-track"><span class="cs-bar" style="--w:50%"></span></span></li>
+                        <li><span class="cs-bar-label">Integrates well with Piazza</span><span class="cs-bar-track"><span class="cs-bar" style="--w:42%"></span></span></li>
+                        <li><span class="cs-bar-label">Good concept</span><span class="cs-bar-track"><span class="cs-bar" style="--w:42%"></span></span></li>
+                        <li><span class="cs-bar-label">Easy to install</span><span class="cs-bar-track"><span class="cs-bar" style="--w:32%"></span></span></li>
+                        <li class="is-focus"><span class="cs-bar-label">Dashboard</span><span class="cs-bar-track"><span class="cs-bar" style="--w:24%"></span></span></li>
+                      </ul>
+                    </div>
+                    <p class="cs-reveal">While students appreciated features like search, recommendations and the dashboard view <span class="cs-muted">(in bold above)</span>, the <strong>quality of these features presented more scope of improvement.</strong> This was further reinforced by their feedback on what could be improved about PARQR.</p>
+
+                    <div class="cs-bars is-warm cs-observe">
+                      <div class="cs-bars-title">Current PARQR experience - improvements</div>
+                      <div class="cs-bars-note">Bar length shows how often each theme came up, relative to the most common one.</div>
+                      <ul class="cs-bar-list">
+                        <li class="is-focus"><span class="cs-bar-label">Improved recommendations<span class="cs-focus-tag">Focus</span></span><span class="cs-bar-track"><span class="cs-bar" style="--w:100%"></span></span>
+                          <span class="cs-bar-quotes">“Provide reason for recommendation” · “Show relevance score” · “More training / should be more accurate”</span></li>
+                        <li class="is-focus"><span class="cs-bar-label">Search<span class="cs-focus-tag">Focus</span></span><span class="cs-bar-track"><span class="cs-bar" style="--w:84%"></span></span>
+                          <span class="cs-bar-quotes">“direct, without going to new post page” · “Search should extend to follow-ups also” · “Advanced search”</span></li>
+                        <li><span class="cs-bar-label">UX</span><span class="cs-bar-track"><span class="cs-bar" style="--w:56%"></span></span>
+                          <span class="cs-bar-quotes">“difficult to understand”</span></li>
+                        <li><span class="cs-bar-label">Other browser extensions</span><span class="cs-bar-track"><span class="cs-bar" style="--w:41%"></span></span></li>
+                        <li><span class="cs-bar-label">Privacy concerns</span><span class="cs-bar-track"><span class="cs-bar" style="--w:23%"></span></span>
+                          <span class="cs-bar-quotes">“I don’t know how my data is being used for these recommendations”</span></li>
+                      </ul>
+                    </div>
+
+                    <div class="cs-tag">‘Good’ recommendation ???</div>
+                    <p class="cs-reveal">We decided to dive deeper into users’ expectations of what makes a good recommendation. Of the things users recommended, we decided to focus on some (highlighted below) for the current iteration of the project.</p>
+                    <div class="cs-ideas-q cs-reveal">What type of information would you like PARQR to recommend to you?</div>
+                    <ul class="cs-ideas cs-stagger">
+                      <li class="is-focus">Sorted recommendations</li>
+                      <li class="is-focus">Instructor or student endorsed answers</li>
+                      <li>Activity level - no. of follow-up discussions</li>
+                      <li>Recommendations according to class schedule</li>
+                      <li class="is-focus">Finding popular posts with many replies</li>
+                      <li class="is-focus">Questions with recent replies</li>
+                      <li class="is-future">Semantic similarity, beyond word search</li>
+                      <li>Information related to class logistics</li>
+                      <li>Recommendations relevant to my most recent search</li>
+                      <li>Best answers</li>
+                    </ul>
+                    <div class="cs-legend"><span class="is-focus">Focus for this iteration</span><span class="is-future">Future work</span><span>Not in scope</span></div>
+                    <p class="cs-reveal">The decision was based on the <strong>type of information we had access to</strong>, since we were piggybacking on the <strong>information available from Piazza</strong>.</p>
+
+                    <!-- ============ SOLUTION DESIGN ============ -->
+                    <h2 id="features">SOLUTION DESIGN</h2>
+                    <p class="cs-reveal">Our team created an ML based post recommendation system, aimed specifically at reducing duplicate posts and focusing on making the process of consuming and managing large volumes of information efficient for students and instructors.</p>
+
+                    <div class="cs-audience">FOR STUDENTS</div>
+                    <h3 class="cs-feature-title">In-line recommendation when creating posts</h3>
+                    <p class="cs-reveal">PARQR suggests relevant content when users are typing the questions out. The recommendations <strong>update in real-time</strong> as students type. This <strong>prevents duplicate questions</strong>, and <strong>gets answers to students more quickly</strong>.</p>
+                    <figure class="cs-figure cs-reveal">
+                      <a href="../img/parqr/figures/inline-recommendations-annotated.jpg" target="_blank" rel="noopener"><img loading="lazy" src="../img/parqr/figures/inline-recommendations-annotated.jpg" alt="Annotated new-post form showing PARQR's in-line recommendations: recommended posts, instructor-answered and resolved markers, metrics like age and follow-ups, and highlighted matching text explaining why a post was recommended"></a>
+                      <figcaption>Recommended posts with answered and resolved markers, metrics to judge relevance, and highlighted text showing why each post was recommended</figcaption>
+                    </figure>
+
+                    <h3 class="cs-feature-title">Student recommendation dashboard</h3>
+                    <p class="cs-reveal">When students return to Piazza, PARQR shows them the <strong>important content that they may have missed out on,</strong> while they were away, through a recommendation dashboard.</p>
+                    <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Click on the prototype to interact with it</p>
+                    <iframe class="cs-embed" height="600" src="https://xd.adobe.com/embed/ab37cb3f-b324-43cc-62d3-c752fddb02a5-dd06/?fullscreen" title="Student recommendation dashboard prototype" allowfullscreen></iframe>
+
+                    <div class="cs-audience">FOR INSTRUCTORS</div>
+                    <h3 class="cs-feature-title">Recommending similar questions that have been answered</h3>
+                    <p class="cs-reveal">When answering a question, PARQR suggests similar posts that have already been answered. The instructors can then simply add a reference to that answer to redirect students. This is really helpful when instructors have to answer large volumes of questions, many of which could be duplicate.</p>
+                    <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Click on the prototype to interact with it</p>
+                    <iframe class="cs-embed" height="600" src="https://xd.adobe.com/embed/ab37cb3f-b324-43cc-62d3-c752fddb02a5-dd06/screen/c91814fd-381d-4cda-9a36-ef443219622d/Artboard-5/?fullscreen" title="Similar answered questions prototype" allowfullscreen></iframe>
+
+                    <h3 class="cs-feature-title">Linking similar unanswered questions</h3>
+                    <p class="cs-reveal">In order to handle duplicate questions, PARQR provides the capability of combining multiple unanswered questions together such that the instructors can answer all the questions in one go. However, this functionality, as of now, does not allow modifying content for each linked question separately.</p>
+                    <p class="cs-hint"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Click on the prototype to interact with it</p>
+                    <iframe class="cs-embed" height="600" src="https://xd.adobe.com/embed/ab37cb3f-b324-43cc-62d3-c752fddb02a5-dd06/screen/f9fc0037-823a-468d-b1e3-5ebf3c7328e2/Artboard-9/?fullscreen" title="Linking unanswered questions prototype" allowfullscreen></iframe>
+
+                    <!-- ============ USER FEEDBACK ============ -->
+                    <h2 id="feedback">USER FEEDBACK <span class="cs-muted" style="font-size:.5em">(from MVP)</span></h2>
+                    <p class="cs-reveal">The <strong>development and testing of the current project is underway</strong>. But here are some results from <strong>previous user research</strong> that inspired the current designs.</p>
+
+                    <div class="cs-tag">Last year’s stats from a class</div>
+                    <p class="cs-reveal">Every semester, the PARQR team rolls out a survey to a large number of OMS students of Georgia Tech to gather their feedback on the developments on PARQR. Below are some of last year’s stats from a class.</p>
+
+                    <ul class="cs-stats cs-stagger">
+                      <li class="cs-stat"><span class="cs-stat-value">98.0<small>%</small></span><span class="cs-stat-label">of active students used PARQR (578 of 590)</span></li>
+                      <li class="cs-stat"><span class="cs-stat-value">25.6 → 17.8<small>%</small></span><span class="cs-stat-label">share of posts that were duplicates</span></li>
+                      <li class="cs-stat"><span class="cs-stat-value">0.506 → 0.291</span><span class="cs-stat-label">posts per active student</span></li>
+                    </ul>
+
+                    <table class="cs-compare cs-reveal">
+                      <caption>Piazza metrics during an assignment</caption>
+                      <thead><tr><th scope="col">Statistic</th><th scope="col">Spring 2017</th><th scope="col">Spring 2019</th></tr></thead>
+                      <tbody>
+                        <tr><td>Enrolled students</td><td>390</td><td>590</td></tr>
+                        <tr><td>Active students on Piazza</td><td>385</td><td>590</td></tr>
+                        <tr><td>PARQR users (%)</td><td>0 (0%)</td><td class="is-better">578 (98.0%)<i class="fa fa-arrow-up" aria-label="increase"></i></td></tr>
+                        <tr><td>Number of posts</td><td>195</td><td class="is-better">168<i class="fa fa-arrow-down" aria-label="decrease"></i></td></tr>
+                        <tr><td>Number of duplicate posts (%)</td><td>50 (25.6%)</td><td class="is-better">30 (17.8%)<i class="fa fa-arrow-down" aria-label="decrease"></i></td></tr>
+                        <tr><td>Posts per active student</td><td>0.506</td><td class="is-better">0.291<i class="fa fa-arrow-down" aria-label="decrease"></i></td></tr>
+                      </tbody>
+                    </table>
+
+                    <p class="cs-reveal" style="margin-top:2.5rem">These results were taken after the MVP of PARQR was released in production (2019). This version only focused on the <strong>inline recommendations for students</strong> and <strong>dashboards for students and TAs</strong>, which were as follows:</p>
+                    <div class="cs-figure-pair cs-reveal">
+                      <figure class="cs-figure">
+                        <a href="../img/parqr/figures/mvp-inline-recommendations.jpg" target="_blank" rel="noopener"><img loading="lazy" src="../img/parqr/figures/mvp-inline-recommendations.jpg" alt="MVP new-post form with PARQR's inline recommendations under the summary field"></a>
+                        <figcaption>Inline recommendations for students</figcaption>
+                      </figure>
+                      <figure class="cs-figure">
+                        <a href="../img/parqr/figures/mvp-recommendation-dashboard.jpg" target="_blank" rel="noopener"><img loading="lazy" src="../img/parqr/figures/mvp-recommendation-dashboard.jpg" alt="MVP PARQR recommendations dashboard listing posts with follow-ups, views and tags"></a>
+                        <figcaption>Recommendation dashboards</figcaption>
+                      </figure>
+                    </div>
+
                   </div>
                 </div>
                 <footer class="article-footer">
@@ -333,6 +479,7 @@ http://miradontsoa.com
 
   <!-- Javascript main files -->
   <script src="../js/main.js"></script>
+  <script src="../js/case-study.js?v=6"></script>
 
 
 </body>
