@@ -58,7 +58,7 @@ http://miradontsoa.com
 
   <!-- add alt layout here -->
   <link rel="stylesheet" href="../css/style-default.css">
-  <link rel="stylesheet" href="../css/case-study.css?v=6">
+  <link rel="stylesheet" href="../css/case-study.css?v=7">
 
   <script src="../js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
@@ -217,22 +217,12 @@ http://miradontsoa.com
                   <div class="wrapper partialwidth cs">
 
                     <!-- ============ SUMMARY ============ -->
+                    <p class="cs-dashnote cs-reveal">This work was published at ACM Conference on Learning @ Scale.<br><br><a href="https://dl.acm.org/doi/abs/10.1145/3386527.3405914" target="_blank" rel="noopener">Link to the publication</a></p>
                     <h2 id="summary">SUMMARY</h2>
                     <p class="cs-lead cs-reveal"><strong class="cs-accent">PARQR</strong> (Piazza Automated Related Question Recommender) is a <strong>Machine Learning driven recommendation system</strong> that improves the experience for online distance learning programs for both students and instructors. It <strong>reduces duplicate content</strong> and highlights <strong>important class activity</strong> to help users <strong>navigate the volume of content</strong> in a typical class of 200-300 students.</p>
                     <p class="cs-reveal">Currently, it works as an add-on for Piazza - a widely used platform for student collaboration and communication by many universities for both their in-class offerings as well as distance learning programs. It’s been actively used by Georgia Tech for its <strong>Online Master’s of Science (OMS) programs</strong> since 2018.</p>
 
-                    <ul class="cs-stats cs-stagger">
-                      <li class="cs-stat"><span class="cs-stat-value">200–300</span><span class="cs-stat-label">students in a typical class</span></li>
-                      <li class="cs-stat"><span class="cs-stat-value">2018</span><span class="cs-stat-label">in use at Georgia Tech’s OMS programs since</span></li>
-                      <li class="cs-stat"><span class="cs-stat-value">98<small>%</small></span><span class="cs-stat-label">of active students used PARQR in a Spring 2019 class</span></li>
-                    </ul>
-
-                    <div class="cs-callout cs-reveal">
-                      <i class="fa fa-book" aria-hidden="true"></i>
-                      <div>This work was published at the <strong>ACM Conference on Learning @ Scale</strong>. <a href="https://dl.acm.org/doi/abs/10.1145/3386527.3405914" target="_blank" rel="noopener">Read the publication <i class="fa fa-external-link" aria-hidden="true" style="font-size:.85em;color:inherit"></i></a></div>
-                    </div>
-
-                    <div class="cs-tag">Users</div>
+                    <h3 class="cs-h is-big">USERS</h3>
                     <p class="cs-reveal">PARQR focuses on two main user groups:</p>
                     <div class="cs-users cs-stagger">
                       <div class="cs-user">
@@ -275,7 +265,7 @@ http://miradontsoa.com
                     <h2 id="research">USER RESEARCH</h2>
                     <p class="cs-reveal">Every semester, the PARQR team rolls out a survey to a large number of OMS students of Georgia Tech to gather their feedback on the developments on PARQR.</p>
 
-                    <div class="cs-tag">Qualitative feedback</div>
+                    <h3 class="cs-h is-red">Qualitative Feedback</h3>
                     <p class="cs-reveal">The surveys we rolled out always have quantitative as well as qualitative components. We asked certain questions to identify:</p>
                     <ol class="cs-reveal">
                       <li>Current pain-points with Piazza</li>
@@ -283,7 +273,7 @@ http://miradontsoa.com
                       <li>Potential improvements for PARQR</li>
                     </ol>
 
-                    <h3 class="cs-feature-title" style="color:#fff">Piazza pain-points</h3>
+                    <h3 class="cs-h">Piazza pain-points:</h3>
                     <div class="cs-clusters cs-stagger">
                       <div class="cs-cluster">
                         <div class="cs-sticky">Too many posts</div>
@@ -298,7 +288,6 @@ http://miradontsoa.com
                         <ul class="cs-quotes"><li>you have to learn how to search</li><li>Unable to find right information at the right time</li><li>difficult to find information in threads</li><li>no good way to distinguish valuable content from low-value content</li></ul>
                       </div>
                     </div>
-                    <p class="cs-sublabel">Other themes</p>
                     <div class="cs-stickies-small cs-stagger">
                       <div class="cs-sticky">Delayed replies</div>
                       <div class="cs-sticky">UX</div>
@@ -307,56 +296,54 @@ http://miradontsoa.com
                       <div class="cs-sticky">Post for participation</div>
                     </div>
 
-                    <div class="cs-bars cs-observe" style="margin-top:3rem">
-                      <div class="cs-bars-title">Current PARQR experience - positive</div>
-                      <div class="cs-bars-note">Bar length shows how often each theme came up, relative to the most common one.</div>
-                      <ul class="cs-bar-list">
-                        <li><span class="cs-bar-label">Simple, unobtrusive, convenient</span><span class="cs-bar-track"><span class="cs-bar" style="--w:100%"></span></span></li>
-                        <li><span class="cs-bar-label">Find relevant posts easily</span><span class="cs-bar-track"><span class="cs-bar" style="--w:71%"></span></span></li>
-                        <li><span class="cs-bar-label">Reduces redundancy</span><span class="cs-bar-track"><span class="cs-bar" style="--w:57%"></span></span></li>
-                        <li><span class="cs-bar-label">Makes Piazza better</span><span class="cs-bar-track"><span class="cs-bar" style="--w:55%"></span></span></li>
-                        <li class="is-focus"><span class="cs-bar-label">Good recommendations &amp; suggestions</span><span class="cs-bar-track"><span class="cs-bar" style="--w:50%"></span></span></li>
-                        <li class="is-focus"><span class="cs-bar-label">Better search</span><span class="cs-bar-track"><span class="cs-bar" style="--w:50%"></span></span></li>
-                        <li><span class="cs-bar-label">Integrates well with Piazza</span><span class="cs-bar-track"><span class="cs-bar" style="--w:42%"></span></span></li>
-                        <li><span class="cs-bar-label">Good concept</span><span class="cs-bar-track"><span class="cs-bar" style="--w:42%"></span></span></li>
-                        <li><span class="cs-bar-label">Easy to install</span><span class="cs-bar-track"><span class="cs-bar" style="--w:32%"></span></span></li>
-                        <li class="is-focus"><span class="cs-bar-label">Dashboard</span><span class="cs-bar-track"><span class="cs-bar" style="--w:24%"></span></span></li>
-                      </ul>
+                    <h3 class="cs-h">Current PARQR Experience - Positive:</h3>
+                    <div class="cs-strip cs-observe" style="--cols: 278fr 198fr 158fr 152fr 138fr 138fr 118fr 118fr 88fr 68fr" role="img" aria-label="Themes in positive feedback, sized by how often they came up: simple, unobtrusive, convenient; find relevant posts easily; reduces redundancy; makes Piazza better; good recommendations and suggestions; better search; integrates well with Piazza; good concept; easy to install; dashboard">
+                      <div class="cs-strip-block" style="grid-column:1;background:#0a467e">Simple, unobtrusive, convenient</div>
+                      <div class="cs-strip-block" style="grid-column:2;background:#075c94">Find relevant posts easily</div>
+                      <div class="cs-strip-block" style="grid-column:3;background:#176f8f">Reduces redundancy</div>
+                      <div class="cs-strip-block" style="grid-column:4;background:#0a8db4">Makes Piazza better</div>
+                      <div class="cs-strip-block is-grouped" style="grid-column:5;background:#00c3ea"><span class="cs-strip-inner-label">Good recommendations &amp; suggestions</span><span class="cs-strip-pin"></span></div>
+                      <div class="cs-strip-note is-label" style="grid-column:5">Good<br>recommendations<br>&amp; suggestions</div>
+                      <div class="cs-strip-block is-grouped" style="grid-column:6;background:#0ab4cf"><span class="cs-strip-inner-label">Better search</span><span class="cs-strip-pin"></span></div>
+                      <div class="cs-strip-note is-label" style="grid-column:6">Better<br>Search</div>
+                      <div class="cs-strip-block" style="grid-column:7;background:#36a8c0">Integrates well with Piazza</div>
+                      <div class="cs-strip-block is-dark-text" style="grid-column:8;background:#6dcfce">Good concept</div>
+                      <div class="cs-strip-block is-dark-text" style="grid-column:9;background:#b2ddd9">Easy to install</div>
+                      <div class="cs-strip-block is-dark-text is-grouped" style="grid-column:10;background:#fff"><span class="is-vertical">Dashboard</span></div>
+                      <div class="cs-strip-group" style="grid-column:5 / span 2"></div>
+                      <div class="cs-strip-group" style="grid-column:10"></div>
                     </div>
-                    <p class="cs-reveal">While students appreciated features like search, recommendations and the dashboard view <span class="cs-muted">(in bold above)</span>, the <strong>quality of these features presented more scope of improvement.</strong> This was further reinforced by their feedback on what could be improved about PARQR.</p>
+                    <p class="cs-reveal">While students appreciated features like search, recommendations and the dashboard view, the <strong>quality of these features presented more scope of improvement.</strong> This was further reinforced by their feedback on what could be improved about PARQR.</p>
 
-                    <div class="cs-bars is-warm cs-observe">
-                      <div class="cs-bars-title">Current PARQR experience - improvements</div>
-                      <div class="cs-bars-note">Bar length shows how often each theme came up, relative to the most common one.</div>
-                      <ul class="cs-bar-list">
-                        <li class="is-focus"><span class="cs-bar-label">Improved recommendations<span class="cs-focus-tag">Focus</span></span><span class="cs-bar-track"><span class="cs-bar" style="--w:100%"></span></span>
-                          <span class="cs-bar-quotes">“Provide reason for recommendation” · “Show relevance score” · “More training / should be more accurate”</span></li>
-                        <li class="is-focus"><span class="cs-bar-label">Search<span class="cs-focus-tag">Focus</span></span><span class="cs-bar-track"><span class="cs-bar" style="--w:84%"></span></span>
-                          <span class="cs-bar-quotes">“direct, without going to new post page” · “Search should extend to follow-ups also” · “Advanced search”</span></li>
-                        <li><span class="cs-bar-label">UX</span><span class="cs-bar-track"><span class="cs-bar" style="--w:56%"></span></span>
-                          <span class="cs-bar-quotes">“difficult to understand”</span></li>
-                        <li><span class="cs-bar-label">Other browser extensions</span><span class="cs-bar-track"><span class="cs-bar" style="--w:41%"></span></span></li>
-                        <li><span class="cs-bar-label">Privacy concerns</span><span class="cs-bar-track"><span class="cs-bar" style="--w:23%"></span></span>
-                          <span class="cs-bar-quotes">“I don’t know how my data is being used for these recommendations”</span></li>
-                      </ul>
+                    <h3 class="cs-h">Current PARQR Experience - Improvements:</h3>
+                    <div class="cs-strip cs-observe" style="--cols: 488fr 410fr 275fr 200fr 115fr" role="img" aria-label="Themes in improvement feedback, sized by how often they came up: improved recommendations, search, UX, other browser extensions, privacy concerns">
+                      <div class="cs-strip-block is-grouped" style="grid-column:1;background:#a3372a">Improved recommendations<span class="cs-strip-pin"></span></div>
+                      <div class="cs-strip-note is-quote" style="grid-column:1">“Provide reason for recommendation”<br>“Show relevance score”<br>“More training / should be more accurate”</div>
+                      <div class="cs-strip-block is-grouped" style="grid-column:2;background:#cf4f25">Search<span class="cs-strip-pin"></span></div>
+                      <div class="cs-strip-note is-quote" style="grid-column:2">“direct, without going to new post page”<br>“Search should extend to follow-ups also”<br>“Advanced search”</div>
+                      <div class="cs-strip-block" style="grid-column:3;background:#ed7322;font-weight:700">UX<span class="cs-strip-pin"></span></div>
+                      <div class="cs-strip-note is-quote" style="grid-column:3">“difficult to understand”</div>
+                      <div class="cs-strip-block is-warm-text" style="grid-column:4;background:#f4a246">Other browser extensions</div>
+                      <div class="cs-strip-block is-warm-text" style="grid-column:5;background:#f3d36c">Privacy concerns<span class="cs-strip-pin"></span></div>
+                      <div class="cs-strip-note is-quote" style="grid-column:4 / span 2;text-align:right">“I don’t know how my data is being used for these recommendations”</div>
+                      <div class="cs-strip-group" style="grid-column:1 / span 2"></div>
                     </div>
 
-                    <div class="cs-tag">‘Good’ recommendation ???</div>
+                    <h3 class="cs-h">‘Good’ Recommendation ???</h3>
                     <p class="cs-reveal">We decided to dive deeper into users’ expectations of what makes a good recommendation. Of the things users recommended, we decided to focus on some (highlighted below) for the current iteration of the project.</p>
                     <div class="cs-ideas-q cs-reveal">What type of information would you like PARQR to recommend to you?</div>
                     <ul class="cs-ideas cs-stagger">
-                      <li class="is-focus">Sorted recommendations</li>
-                      <li class="is-focus">Instructor or student endorsed answers</li>
-                      <li>Activity level - no. of follow-up discussions</li>
-                      <li>Recommendations according to class schedule</li>
-                      <li class="is-focus">Finding popular posts with many replies</li>
-                      <li class="is-focus">Questions with recent replies</li>
-                      <li class="is-future">Semantic similarity, beyond word search</li>
-                      <li>Information related to class logistics</li>
-                      <li>Recommendations relevant to my most recent search</li>
-                      <li>Best answers</li>
+                      <li class="c1 is-focus">Sorted Recommendations</li>
+                      <li class="c3 is-focus">Instructor or student endorsed answers</li>
+                      <li class="c5">Activity level - no. of follow-up discussions</li>
+                      <li class="c2">Recommendations according to class schedule</li>
+                      <li class="c4 is-focus">Finding popular posts with many replies</li>
+                      <li class="c1 is-focus">Questions with recent replies</li>
+                      <li class="c3 is-future">Semantic similarity, beyond word search</li>
+                      <li class="c5">Information related to class logistics</li>
+                      <li class="c2">Recommendations relevant to my most recent search</li>
+                      <li class="c4">Best Answers</li>
                     </ul>
-                    <div class="cs-legend"><span class="is-focus">Focus for this iteration</span><span class="is-future">Future work</span><span>Not in scope</span></div>
                     <p class="cs-reveal">The decision was based on the <strong>type of information we had access to</strong>, since we were piggybacking on the <strong>information available from Piazza</strong>.</p>
 
                     <!-- ============ SOLUTION DESIGN ============ -->
@@ -391,14 +378,8 @@ http://miradontsoa.com
                     <h2 id="feedback">USER FEEDBACK <span class="cs-muted" style="font-size:.5em">(from MVP)</span></h2>
                     <p class="cs-reveal">The <strong>development and testing of the current project is underway</strong>. But here are some results from <strong>previous user research</strong> that inspired the current designs.</p>
 
-                    <div class="cs-tag">Last year’s stats from a class</div>
+                    <h3 class="cs-h is-red">Last year’s Stats from a class</h3>
                     <p class="cs-reveal">Every semester, the PARQR team rolls out a survey to a large number of OMS students of Georgia Tech to gather their feedback on the developments on PARQR. Below are some of last year’s stats from a class.</p>
-
-                    <ul class="cs-stats cs-stagger">
-                      <li class="cs-stat"><span class="cs-stat-value">98.0<small>%</small></span><span class="cs-stat-label">of active students used PARQR (578 of 590)</span></li>
-                      <li class="cs-stat"><span class="cs-stat-value">25.6 → 17.8<small>%</small></span><span class="cs-stat-label">share of posts that were duplicates</span></li>
-                      <li class="cs-stat"><span class="cs-stat-value">0.506 → 0.291</span><span class="cs-stat-label">posts per active student</span></li>
-                    </ul>
 
                     <table class="cs-compare cs-reveal">
                       <caption>Piazza metrics during an assignment</caption>
@@ -416,12 +397,12 @@ http://miradontsoa.com
                     <p class="cs-reveal" style="margin-top:2.5rem">These results were taken after the MVP of PARQR was released in production (2019). This version only focused on the <strong>inline recommendations for students</strong> and <strong>dashboards for students and TAs</strong>, which were as follows:</p>
                     <div class="cs-figure-pair cs-reveal">
                       <figure class="cs-figure">
-                        <a href="../img/parqr/figures/mvp-inline-recommendations.jpg" target="_blank" rel="noopener"><img loading="lazy" src="../img/parqr/figures/mvp-inline-recommendations.jpg" alt="MVP new-post form with PARQR's inline recommendations under the summary field"></a>
                         <figcaption>Inline recommendations for students</figcaption>
+                        <a href="../img/parqr/figures/mvp-inline-recommendations.jpg" target="_blank" rel="noopener"><img loading="lazy" src="../img/parqr/figures/mvp-inline-recommendations.jpg" alt="MVP new-post form with PARQR's inline recommendations under the summary field"></a>
                       </figure>
                       <figure class="cs-figure">
-                        <a href="../img/parqr/figures/mvp-recommendation-dashboard.jpg" target="_blank" rel="noopener"><img loading="lazy" src="../img/parqr/figures/mvp-recommendation-dashboard.jpg" alt="MVP PARQR recommendations dashboard listing posts with follow-ups, views and tags"></a>
                         <figcaption>Recommendation dashboards</figcaption>
+                        <a href="../img/parqr/figures/mvp-recommendation-dashboard.jpg" target="_blank" rel="noopener"><img loading="lazy" src="../img/parqr/figures/mvp-recommendation-dashboard.jpg" alt="MVP PARQR recommendations dashboard listing posts with follow-ups, views and tags"></a>
                       </figure>
                     </div>
 
@@ -479,7 +460,7 @@ http://miradontsoa.com
 
   <!-- Javascript main files -->
   <script src="../js/main.js"></script>
-  <script src="../js/case-study.js?v=6"></script>
+  <script src="../js/case-study.js?v=7"></script>
 
 
 </body>
