@@ -18,6 +18,8 @@
   font-family: "Open Sans", "Segoe UI", "Roboto", "Helvetica", -apple-system, system-ui, sans-serif;
   font-size: 1rem;
   line-height: 1.7;
+  /* Components below adapt to the width of this column, not the viewport */
+  container: cs / inline-size;
 }
 
 .cs p { margin: 0 0 1rem; }
@@ -69,7 +71,7 @@
   align-items: center;
   margin-bottom: 1.5rem;
 }
-@media (max-width: 991px) {
+@container cs (max-width: 640px) {
   .cs-split { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
@@ -179,11 +181,10 @@
 }
 .cs-concept-arrow .cs-dash { margin-top: .5rem; }
 .cs-concept-col { display: flex; flex-direction: column; }
-@media (min-width: 576px) {
-  .cs-concept-arrow.is-raised { margin-top: -6rem; }
-}
-@media (max-width: 575px) {
+.cs-concept-arrow.is-raised { margin-top: -6rem; }
+@container cs (max-width: 480px) {
   .cs-concept { grid-template-columns: 1fr; }
+  .cs-concept-arrow.is-raised { margin-top: 0; }
   .cs-concept-arrow .cs-dash { margin: .5rem auto 0; }
   .cs-concept-arrow .cs-dash { width: 2px; height: 56px; background-image: repeating-linear-gradient(180deg, currentColor 0 6px, transparent 6px 10px); animation-name: cs-dashmove-y; }
   .cs-concept-arrow .cs-dash::after { right: auto; top: auto; left: -5px; bottom: -6px; border: 6px solid transparent; border-top: 9px solid currentColor; border-bottom: 0; }
@@ -280,8 +281,8 @@
   margin-left: .5rem;
   vertical-align: middle;
 }
-@media (max-width: 575px) {
-  .cs-persona { grid-template-columns: 1fr; }
+@container cs (max-width: 480px) {
+  .cs-persona { grid-template-columns: 1fr; padding: 1.25rem; gap: 1rem; }
   .cs-persona-icon { width: 72px; height: 72px; font-size: 2rem; }
 }
 
@@ -311,7 +312,7 @@
 .cs-stairs.is-visible .cs-stair-role { background-size: 100% 2px; }
 .cs-stairs.is-visible .cs-stair:nth-child(2) .cs-stair-role { transition-delay: .3s; }
 .cs-stairs.is-visible .cs-stair:nth-child(3) .cs-stair-role { transition-delay: .6s; }
-@media (max-width: 575px) {
+@container cs (max-width: 480px) {
   .cs-stair { grid-template-columns: 70px minmax(0, 1fr); }
   .cs-stair:nth-child(2) { margin-left: 10%; }
   .cs-stair:nth-child(3) { margin-left: 20%; }
@@ -372,7 +373,7 @@ html:not(.cs-js) .cs-chain { flex-wrap: wrap; gap: 1rem; }
 html:not(.cs-js) .cs-chain-def { display: block; font-size: .75rem; color: #8fd8f0; margin-top: .5rem; }
 html:not(.cs-js) .cs-chain-detail,
 html:not(.cs-js) .cs-chain-hint { display: none; }
-@media (max-width: 767px) {
+@container cs (max-width: 680px) {
   .cs-chain { flex-wrap: wrap; justify-content: center; gap: .75rem .25rem; }
   .cs-chain > li { flex: 0 0 auto; }
   .cs-chain-link { width: 16px; min-width: 16px; flex: none; }
@@ -451,12 +452,13 @@ html:not(.cs-js) .cs-chain-hint { display: none; }
 .cs-radial-item.p4 { left: 50%; top: 88%; }
 .cs-radial-item.p5 { left: 75%; top: 76%; }
 .cs-radial ul { list-style: none; margin: 0; padding: 0; }
-@media (max-width: 767px) {
+@container cs (max-width: 700px) {
   .cs-radial { aspect-ratio: auto; }
   .cs-radial svg.cs-radial-lines { display: none; }
   .cs-radial-center { position: static; transform: none; width: 150px; margin: 0 auto 1.5rem; }
   .cs-radial ul { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; }
   .cs-radial-item { position: static; transform: none; width: auto; }
+  .cs-radial-item:last-child { grid-column: 1 / -1; }
 }
 
 /* ---------- Scenario cards ---------- */
@@ -485,7 +487,22 @@ html:not(.cs-js) .cs-chain-hint { display: none; }
 .cs-hint { color: var(--cs-muted); font-size: .85rem; text-align: center; }
 .cs-hint .fa { margin-right: .35rem; animation: cs-tap 1.8s ease-in-out infinite; display: inline-block; }
 @keyframes cs-tap { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-.cs-embed { width: 100%; border: 0; display: block; background: #0b0b0b; margin-bottom: 1rem; }
+.cs-embed {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  min-height: 220px;
+  border: 0;
+  display: block;
+  background: #0b0b0b;
+  margin-bottom: 1rem;
+}
+.cs-embed.is-main { aspect-ratio: 4 / 3; }
+.cs-embed-link { display: none; font-size: .85rem; margin: -.5rem 0 1rem; text-align: right; }
+.cs-embed-link .fa { margin-left: .3rem; }
+@container cs (max-width: 600px) {
+  .cs-embed-link { display: block; }
+}
 
 /* ---------- Process overview ---------- */
 .cs-steps {
@@ -667,7 +684,7 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 }
 .cs-chips.is-health li { background: rgba(255, 241, 150, .12); color: #f6e9a0; }
 .cs-server { display: block; margin-top: .4rem; font-size: .75rem; color: #23b5e3; }
-@media (max-width: 767px) {
+@container cs (max-width: 640px) {
   .cs-table thead { display: none; }
   .cs-table, .cs-table tbody, .cs-table tr, .cs-table td { display: block; width: 100%; }
   .cs-table tr { border-bottom: 1px dashed #444; padding: .75rem 0; }
@@ -711,8 +728,8 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 .cs-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
 .cs-gallery .cs-figure { margin: 0; }
 .cs-gallery figcaption { color: #ddd; }
-@media (max-width: 767px) { .cs-gallery { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 480px) { .cs-gallery { grid-template-columns: 1fr; } }
+@container cs (max-width: 640px) { .cs-gallery { grid-template-columns: 1fr 1fr; } }
+@container cs (max-width: 400px) { .cs-gallery { grid-template-columns: 1fr; } }
 
 /* Prototyping loop */
 .cs-loop { width: 100%; max-width: 640px; margin: 1rem auto; display: block; overflow: visible; }
@@ -724,6 +741,43 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 .cs-loop .cs-loop-screen { fill: #fff; }
 .cs-loop .cs-loop-ink { fill: none; stroke: #000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 @keyframes cs-spin { to { transform: rotate(360deg); } }
+.cs-loop-compact { display: none; max-width: 320px; }
+.cs-loop-compact .cs-loop-orbit { transform-origin: 150px 230px; }
+/* Narrow columns get a vertical version so labels stay readable */
+@container cs (max-width: 480px) {
+  .cs-loop-wide { display: none; }
+  .cs-loop-compact { display: block; }
+}
+
+/* ---------- Page layout ----------
+   The theme pins the cover to the left third from 768px up, which crops the
+   cover art and squeezes the content on tablets. Stack it until 992px, and
+   give it room to show the artwork on phones. */
+@media (max-width: 991px) {
+  #itempage .section-cover-tier {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+    min-height: min(100vw, 600px);
+    background-size: min(86%, 480px) auto;
+    background-repeat: no-repeat;
+    background-position: center 56px;
+    background-color: #000;
+    display: flex;
+  }
+  #itempage .section-cover-tier .cover-content { height: auto; width: 100%; }
+  #itempage .item > .col-md-4 { display: none; }
+  #itempage .item > .col-md-8 { flex: 0 0 100%; max-width: 100%; }
+}
+/* Keep the cover title inside the one-third cover column on laptops */
+@media (min-width: 992px) {
+  #itempage .section-cover-tier .display-title { font-size: clamp(2rem, calc(5.6vw - 18px), 4rem); }
+}
+/* The theme's .row negative margins overflow the full-width wrapper */
+@media (min-width: 768px) {
+  #itempage .section-wrapper > .item.row { margin-left: 0; margin-right: 0; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .cs *, .cs *::before, .cs *::after { animation: none !important; transition: none !important; }
