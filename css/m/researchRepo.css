@@ -1,0 +1,133 @@
+/* Research Repository: phone layout (hand-written .cs-mcustom blocks). Applies below 900px only. */
+@media (max-width: 900px) {
+  .cs-rr .cs-mcustom.rr-m { color: #fff; font-size: 15px; line-height: 1.6; margin-bottom: 2.5rem; }
+  .cs-rr .rr-m p { margin: 0 0 1rem; opacity: 1; color: #fff; font-size: 15px; line-height: 1.6; }
+  .cs-rr .rr-m strong { font-weight: 700; color: inherit; }
+  .cs-rr .rr-m ul { margin: 0 0 1rem; padding: 0; list-style: none; opacity: 1; }
+  .cs-rr .rr-m li { list-style: none; }
+  .cs-rr .rr-m li::before { content: none; }
+  .cs-rr .rr-m img { max-width: 100%; }
+  .cs-rr .rr-m p.rr-mid { text-align: center; }
+  .cs-rr .rr-m p.rr-big { font-size: 17px; line-height: 1.45; }
+  .cs-rr .rr-m p.rr-big small { display: block; margin-top: .25rem; font-size: 13px; color: #fcfcfc; }
+
+  /* headings as on the slides */
+  .cs-rr .rr-m p.rr-h { font-size: 20px; line-height: 1.3; text-align: center; margin-bottom: 1.25rem; }
+  .cs-rr .rr-m p.rr-h.rr-sm { font-size: 17px; }
+  .cs-rr .rr-m p.rr-h.rr-bold { font-weight: 700; font-size: 21px; }
+  .cs-rr .rr-m p.rr-stage { font-size: 24px; line-height: 1.3; margin: 0 0 1rem; }
+  .cs-rr .rr-m p.rr-stage:not(:first-child) { margin-top: 1.75rem; }
+  .cs-rr .rr-m p.rr-tab { display: block; background: #2b2b2b; padding: 15px 18px; margin: 0 0 1.25rem; font-size: 16px; text-align: center; }
+
+  /* grey title boxes the engine builds (slides left to the automatic layout): centred as on the slides */
+  .cs-rr .cs-mflow .cs-mpanel p.cs-mt { text-align: center !important; }
+
+  /* slide cut-outs (positioned pictures that scale with their box) */
+  .cs-rr .rr-m .rr-sub { position: relative; width: 100%; margin: 0 0 1rem; container-type: inline-size; overflow: hidden; }
+  .cs-rr .rr-m .rr-sub img { max-width: none; }
+  .cs-rr .rr-m .rr-areas { max-width: 330px; margin: .25rem auto 1.5rem; }
+  .cs-rr .rr-m .rr-addon { max-width: 240px; margin: .5rem auto 1.5rem; }
+  .cs-rr .rr-m .rr-shapes { max-width: 300px; margin: .5rem auto 0; }
+  .cs-rr .rr-m .rr-pic { margin-bottom: 1.25rem; }
+  .cs-rr .rr-m .rr-fb { max-width: 130px; margin: .5rem auto 0; }
+  .cs-rr .rr-m .rr-pan { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cs-rr .rr-m .rr-pan > .rr-sub { margin: 0; max-width: none; }
+  .cs-rr .rr-m p.rr-hint { margin: .4rem 0 0; font-size: 13px; color: #8f8f8f; text-align: center; }
+
+  /* pictures */
+  .cs-rr .rr-m .rr-fig { margin: 0 0 1.25rem; }
+  .cs-rr .rr-m .rr-fig img, .cs-rr .rr-m img.rr-img { display: block; width: 100%; height: auto; }
+  .cs-rr .rr-m .rr-tall img { width: auto; max-width: 100%; max-height: 440px; margin: 0 auto; }
+  .cs-rr .rr-m .rr-mid-img img { width: auto; max-width: 100%; max-height: 380px; margin: 0 auto; }
+  .cs-rr .rr-m .rr-card img { max-width: 300px; margin: 0 auto; }
+  .cs-rr .rr-m .rr-fig figcaption { margin-top: .75rem; font-size: 15px; line-height: 1.5; text-align: center; color: #fff; }
+  .cs-rr .rr-m .rr-capt { display: flex; flex-direction: column-reverse; }
+  .cs-rr .rr-m .rr-capt figcaption { margin: 0 0 .75rem; }
+  .cs-rr .rr-m .rr-sketch { margin-bottom: 1.75rem; }
+  .cs-rr .rr-m img.rr-logo { width: 55%; max-width: 240px; margin: 0 auto 1.5rem; }
+
+  /* icon + label grids */
+  .cs-rr .rr-m .rr-icons { display: grid; gap: 20px 12px; margin: 0 0 1.25rem; text-align: center; }
+  .cs-rr .rr-m .rr-c2 { grid-template-columns: 1fr 1fr; }
+  .cs-rr .rr-m .rr-c3 { grid-template-columns: repeat(3, 1fr); }
+  .cs-rr .rr-m .rr-c4 { grid-template-columns: repeat(4, 1fr); gap: 16px 8px; }
+  .cs-rr .rr-m .rr-icons p { margin: .5rem 0 0; font-size: 14px; line-height: 1.45; }
+  .cs-rr .rr-m .rr-ic { display: flex; align-items: center; justify-content: center; height: 64px; }
+  .cs-rr .rr-m .rr-ic img { width: auto; max-width: 100%; max-height: 100%; }
+  .cs-rr .rr-m .rr-ic .rr-sub { height: 100%; width: auto; margin: 0; }
+  .cs-rr .rr-m .rr-probs .rr-ic { height: 58px; }
+  .cs-rr .rr-m .rr-why .rr-ic { height: 52px; }
+  .cs-rr .rr-m .rr-why .rr-ic img { max-height: 46px; }
+  .cs-rr .rr-m .rr-meth { grid-template-columns: repeat(6, 1fr); }
+  .cs-rr .rr-m .rr-meth > div { grid-column: span 2; }
+  .cs-rr .rr-m .rr-meth > div:nth-child(4) { grid-column: 2 / span 2; }
+  .cs-rr .rr-m .rr-meth .rr-ic { height: 54px; }
+  .cs-rr .rr-m .rr-pair { display: flex; gap: 6px; height: 100%; align-items: flex-end; }
+  .cs-rr .rr-m .rr-pair img { height: 100%; }
+  .cs-rr .rr-m .rr-am .rr-ic { height: 46px; }
+  .cs-rr .rr-m .rr-am p { font-size: 13px; }
+
+  /* process / role */
+  .cs-rr .rr-m .rr-steps { display: grid; gap: 22px; margin-bottom: 1rem; }
+  .cs-rr .rr-m .rr-step { display: grid; grid-template-columns: 72px 1fr; gap: 16px; align-items: start; }
+  .cs-rr .rr-m .rr-step .rr-ic { height: 60px; }
+  .cs-rr .rr-m .rr-step p { margin: 0; }
+  .cs-rr .rr-m p.rr-sname { font-size: 17px; margin-bottom: .2rem; }
+  .cs-rr .rr-m p.rr-list { font-size: 14px; line-height: 1.6; color: #fdfdfd; }
+  .cs-rr .rr-m .rr-roles { display: grid; gap: 20px; margin-bottom: 1rem; }
+  .cs-rr .rr-m .rr-role { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: center; }
+  .cs-rr .rr-m .rr-role p { margin: 0; color: #fcfcfc; }
+  .cs-rr .rr-m p.rr-vl { writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; font-size: 15px; line-height: 1.25; color: #fff; justify-self: center; }
+
+  /* hub circle + spokes (radial diagrams of the slides) */
+  .cs-rr .rr-m .rr-hub { position: relative; display: flex; align-items: center; justify-content: center; min-height: 130px; margin: 1.25rem 0 1rem; text-align: center; font-size: 16px; line-height: 1.4; }
+  .cs-rr .rr-m .rr-hub::before { content: ""; position: absolute; left: 50%; top: 50%; width: 130px; height: 130px; margin: -65px 0 0 -65px; border-radius: 50%; background: #2b2b2b; }
+  .cs-rr .rr-m .rr-hub span { position: relative; }
+  .cs-rr .rr-m .rr-hub.rr-small { min-height: 80px; }
+  .cs-rr .rr-m .rr-hub.rr-small::before { width: 80px; height: 80px; margin: -40px 0 0 -40px; }
+  .cs-rr .rr-m .rr-spokes li { color: #fafafa; position: relative; padding-left: 34px; margin: 0 0 .7rem; font-size: 15px; line-height: 1.5; }
+  .cs-rr .rr-m .rr-spokes li::before { content: ""; position: absolute; left: 0; top: .78em; width: 22px; border-top: 1.5px dashed #949494; }
+  .cs-rr .rr-m .rr-rings li { padding-left: 52px; }
+  .cs-rr .rr-m .rr-rings li::after { content: ""; position: absolute; left: 24px; top: .78em; width: 18px; height: 18px; margin-top: -9px; border: 2px solid #979797; border-radius: 50%; box-sizing: border-box; }
+
+  /* annotation notes under screenshots */
+  .cs-rr .rr-m .rr-notes { display: grid; gap: .9rem; margin: 0 0 1.5rem; }
+  .cs-rr .rr-m .rr-notes li { font-size: 14px; line-height: 1.55; color: #d4d4d4; }
+  .cs-rr .rr-m .rr-notes strong, .cs-rr .rr-m .rr-notes .rr-plain { display: block; color: #fff; font-size: 15px; font-weight: 700; }
+  .cs-rr .rr-m .rr-notes .rr-plain { font-weight: 400; }
+  .cs-rr .rr-m .rr-blue strong { color: #2b88d8; }
+  .cs-rr .rr-m .rr-themes { display: grid; gap: 1rem; margin: 0 0 1rem; }
+  .cs-rr .rr-m .rr-themes li { font-size: 15px; line-height: 1.55; color: #fbfbfb; }
+  .cs-rr .rr-m .rr-themes strong { display: block; color: #fff; }
+
+  /* disclaimer boxes */
+  .cs-rr .rr-m .rr-disc { background: #fff; border-radius: 22px; padding: 16px 20px; margin: 0 0 1.5rem; text-align: center; }
+  .cs-rr .rr-m .rr-disc p { color: #000; margin: 0; font-size: 15px; line-height: 1.5; }
+  .cs-rr .rr-m .rr-disc p + p { margin-top: .25rem; }
+  .cs-rr .rr-m .rr-grey { background: #cccccc; }
+  .cs-rr .rr-m p.rr-note { font-size: 13px; color: #9b9b9b; text-align: center; }
+
+  /* hierarchical task analysis */
+  .cs-rr .rr-m .rr-hta { background: #fff; padding: 18px 16px 14px; margin: 0 0 1rem; font-family: "Tinos", "Times New Roman", serif; }
+  .cs-rr .rr-m .rr-hta p { position: relative; color: #000; font-family: inherit; font-size: 16px; line-height: 1.35; margin: 0 0 .4rem; }
+  .cs-rr .rr-m .rr-hta p::before { position: absolute; left: -16px; }
+  .cs-rr .rr-m .rr-hta .rr-l1 { padding-left: 16px; }
+  .cs-rr .rr-m .rr-hta .rr-l1::before { content: "\25CF"; left: 0; font-size: 12px; top: .15em; }
+  .cs-rr .rr-m .rr-hta .rr-l2 { padding-left: 36px; }
+  .cs-rr .rr-m .rr-hta .rr-l2::before { content: "\25CB"; left: 18px; font-size: 13px; top: .1em; }
+  .cs-rr .rr-m .rr-hta .rr-l3 { padding-left: 56px; }
+  .cs-rr .rr-m .rr-hta .rr-l3::before { content: "\25A0"; left: 38px; font-size: 11px; top: .2em; }
+  .cs-rr .rr-m .rr-hta .rr-l4 { padding-left: 76px; }
+  .cs-rr .rr-m .rr-hta .rr-l4::before { content: "\2666"; left: 59px; font-size: 12px; top: .12em; }
+
+  /* narrative walkthrough steps */
+  .cs-rr .rr-m .rr-story { margin: 0 0 1.75rem; text-align: center; }
+  .cs-rr .rr-m .rr-story img.rr-st { width: auto; max-width: 70%; max-height: 190px; margin: 0 auto; }
+  .cs-rr .rr-m .rr-story p { text-align: left; margin: 0; }
+  .cs-rr .rr-m .rr-story p.rr-src { margin: .4rem 0 .75rem; text-align: center; font-size: 13px; font-weight: 700; color: #737373; overflow-wrap: anywhere; }
+}
+@media (max-width: 900px) {
+  /* tablets: keep pictures at a readable size instead of the full column */
+  .cs-rr .rr-m .rr-fig, .cs-rr .rr-m .rr-sub.rr-pic, .cs-rr .rr-m .rr-hta { max-width: 600px; margin-left: auto; margin-right: auto; }
+  .cs-rr .rr-m .rr-disc { max-width: 600px; margin-left: auto; margin-right: auto; }
+}

@@ -1,0 +1,107 @@
+/* Hashtag Guru - phone layout only. Desktop (> 900px) is untouched. */
+@media (max-width: 900px) {
+  /* Hand-written phone versions of slides 3, 4, 6, 18, 25, 27, 41, 42 and 44 */
+  .cs-hg .hg-m { color: #fff; font-size: 14px; line-height: 1.55; }
+  .cs-hg .hg-m p { opacity: 1; margin: 0 0 1rem; color: #fff; font-size: 14px; line-height: 1.55; font-weight: 400; white-space: normal; }
+  .cs-hg .hg-m > :last-child, .cs-hg .hg-m li > :last-child, .cs-hg .hg-m li div > :last-child { margin-bottom: 0; }
+  .cs-hg .hg-m ul { list-style: none; margin: 0 0 1.25rem; padding: 0; }
+  .cs-hg .hg-m li { margin: 0; list-style: none; }
+  .cs-hg .hg-m li::marker { content: none; }
+  .cs-hg .hg-m p.hg-h { font-size: 18px; margin-bottom: 1.25rem; }
+  .cs-hg .hg-m p.hg-h2 { font-size: 15px; margin: 0 0 1rem; }
+  .cs-hg .hg-m p.hg-h2.is-right { text-align: right; margin-top: 1.75rem; }
+  .cs-hg .hg-m p.hg-b { font-weight: 700; margin-bottom: .25rem; }
+  .cs-hg .hg-m p.hg-c { text-align: center; }
+  .cs-hg .hg-m p.hg-vlab { margin: 0; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 14px; line-height: 1; text-align: center; white-space: nowrap; }
+
+  /* a cut-out of the slide's own art (several pieces kept together) */
+  .cs-hg .hg-crop { position: relative; overflow: hidden; max-width: 100%; }
+  .cs-hg .hg-crop .hg-in { position: absolute; margin: 0; aspect-ratio: auto !important; container-type: inline-size; }
+  .cs-hg .hg-crop .hg-in > * { opacity: 1; translate: none; }
+
+  /* Slides 3 and 6: vertical label + icon, as on the slide, beside the stage's text */
+  .cs-hg .hg-stages > li { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 1.4rem; }
+  .cs-hg .hg-stages > li:last-child { margin-bottom: 0; }
+  .cs-hg .hg-sh { flex: none; width: 108px; display: flex; align-items: center; gap: 8px; }
+  .cs-hg .hg-sh .hg-ico, .cs-hg .hg-sh .hg-crop { flex: 1; min-width: 0; height: auto; }
+  .cs-hg .hg-stages > li > p { flex: 1; margin: 0; }
+  .cs-hg .hg-m3 .hg-sh { width: 92px; }
+  .cs-hg .hg-m3 .hg-stages > li > p { padding-top: 2px; }
+  .cs-hg .hg-m6 .hg-sh { width: 116px; align-self: center; }
+  .cs-hg .hg-m6 .hg-stages { margin-bottom: 2.25rem; }
+  .cs-hg .hg-tedious { width: 180px; margin: 0 auto 1.5rem; }
+  .cs-hg .hg-yay { width: 92px; margin: -.25rem 0 0 auto; }
+
+  /* Slide 4: ROLE and TOOLS, each label beside its own text */
+  .cs-hg .hg-pair { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 1.25rem; }
+  .cs-hg .hg-pair p { flex: 1; margin: 0; }
+  .cs-hg .hg-pair p.hg-vlab { flex: none; align-self: stretch; }
+  .cs-hg .hg-pair.is-right p.hg-tl { text-align: right; }
+
+  /* Slide 25: "How might we" circle with its questions */
+  .cs-hg .hg-hmw-c { width: 128px; height: 128px; border-radius: 50%; background: #2b2b2b; display: flex; align-items: center; justify-content: center; margin: .5rem auto 1.5rem !important; }
+  .cs-hg .hg-qs li { position: relative; padding-left: 34px; margin-bottom: 1rem; color: #f6f6f6; }
+  .cs-hg .hg-qs li::before { content: ""; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid #979797; box-sizing: border-box; }
+  .cs-hg .hg-qs li.is-filled::before { background: #9a9a9a; border-color: #9a9a9a; }
+
+  /* Slide 27: the chosen question inside its circle */
+  .cs-hg .hg-final { width: min(300px, 100%); aspect-ratio: 1; border-radius: 50%; background: #2b2b2b; display: flex; align-items: center; justify-content: center; margin: .75rem auto 0; padding: 0 28px; box-sizing: border-box; }
+  .cs-hg .hg-final p { font-size: 18px; text-align: center; margin: 0; }
+
+  /* Slide 41: the three design themes */
+  .cs-hg .hg-themes li { display: flex; align-items: center; gap: 16px; margin-bottom: 1.4rem; }
+  .cs-hg .hg-themes .hg-ico { flex: none; width: 76px; height: auto; }
+  .cs-hg .hg-themes li div { flex: 1; }
+
+  /* Slides 42 and 44: header, text, sketch and the features as an icon grid */
+  .cs-hg .hg-panel { background: #282828; padding: 14px; margin-bottom: 1.25rem; }
+  .cs-hg .hg-m .hg-panel p { margin: 0; font-size: 14.6px; }
+  .cs-hg .hg-fig { display: block; width: 100%; max-width: 520px; height: auto; margin: 0 auto 1.5rem; }
+  .cs-hg .hg-fig.is-artiscan { max-width: 440px; }
+  .cs-hg .hg-feats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; }
+  .cs-hg .hg-feats li { text-align: center; }
+  .cs-hg .hg-feats .hg-ico, .cs-hg .hg-feats .hg-crop { display: block; width: auto; height: 56px; max-width: 100%; margin: 0 auto 8px; object-fit: contain; }
+  .cs-hg .hg-feats .hg-crop { width: 56px; height: auto; }
+  .cs-hg .hg-feats p { margin: 0; }
+
+  /* Generated phone copy: short justified descriptions read as one paragraph */
+  .cs-hg .cs-mflow p.cs-mt > span { display: inline !important; }
+  .cs-hg .cs-mflow p.cs-mt > span::after { content: " "; }
+  /* Slide 22: the two halves of the affinity icon stay together */
+  .cs-hg .cs-mflow .cs-mgrid:has(> .cs-mimg img[src*="s7-g1.png"]) { display: flex; justify-content: center; gap: 10px; }
+  .cs-hg .cs-mflow .cs-mgrid:has(> .cs-mimg img[src*="s7-g1.png"]) > .cs-mimg { margin: 0; }
+  /* Slide 19: research tools - icons on one baseline, labels centred below */
+  .cs-hg .cs-mflow .cs-mgrid:has(img[src*="s6-g5.png"]) { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 24px 12px; }
+  .cs-hg .cs-mflow .cs-mgrid:has(img[src*="s6-g5.png"]) > .cs-mstack { display: grid; grid-template-rows: 58px auto; justify-items: center; align-items: end; }
+  .cs-hg .cs-mflow .cs-mgrid:has(img[src*="s6-g5.png"]) > .cs-mstack > .cs-mimg { margin: 0; }
+  .cs-hg .cs-mflow .cs-mgrid:has(img[src*="s6-g5.png"]) > .cs-mstack > p.cs-mt { align-self: start; text-align: center !important; }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .cs-hg .hg-m3 .hg-stages, .cs-hg .hg-m6 .hg-stages { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+  .cs-hg .hg-m3 .hg-stages > li, .cs-hg .hg-m6 .hg-stages > li { margin: 0; }
+  .cs-hg .hg-feats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cs-hg .cs-mflow .cs-mgrid:has(img[src*="s6-g5.png"]) { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+  .cs-hg .hg-themes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .cs-hg .hg-themes li { flex-direction: column; align-items: flex-start; margin: 0; }
+  .cs-hg .hg-themes .hg-ico { width: auto; height: 72px; }
+}
+@media (max-width: 900px) {
+  /* Slide 18: stakeholder groups */
+  .cs-hg .hg-stake li { display: flex; align-items: center; gap: 18px; margin-bottom: 1.4rem; }
+  .cs-hg .hg-who { flex: none; width: 96px; text-align: center; }
+  .cs-hg .hg-who .hg-ico { display: block; width: 72px; height: auto; margin: 0 auto 6px; }
+  .cs-hg .hg-m .hg-who p { margin: 0; font-size: 15px; }
+  .cs-hg .hg-stake li > p { flex: 1; margin: 0; }
+  .cs-hg .hg-m18 p.hg-c { margin-top: 2rem; }
+}
+@media (max-width: 900px) {
+  /* Slide 46: "Storyboard" goes below the "Design III" header, not beside it */
+  .cs-hg .cs-mflow .cs-mgrid:has(> .cs-mpanel) { grid-template-columns: minmax(0, 1fr) !important; gap: 28px; }
+}
+@media (max-width: 900px) {
+  /* Slide 40: the mind map at a readable size, scrolling inside its own box */
+  .cs-hg .hg-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cs-hg .hg-scroll a { display: block; width: 1000px; max-width: none; }
+  .cs-hg .hg-scroll .hg-wide { display: block; width: 100%; height: auto; max-width: none; }
+  .cs-hg .hg-m p.hg-hint { margin: .4rem 0 0; font-size: 13px; color: #8f8f8f; text-align: center; }
+}
