@@ -1180,9 +1180,9 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 /* ==========================================================================
    Research Repository: slides rebuilt as positioned text and shapes
    ========================================================================== */
-.cs-rr .cs-slides, .cs-hg .cs-slides, .cs-hl .cs-slides, .cs-ps .cs-slides, .cs-em .cs-slides, .cs-dr .cs-slides, .cs-fl .cs-slides { margin: 1.5rem 0 4rem; }
-.cs-rr .cs-slides .cs-slide, .cs-hg .cs-slides .cs-slide, .cs-hl .cs-slides .cs-slide, .cs-ps .cs-slides .cs-slide, .cs-em .cs-slides .cs-slide, .cs-dr .cs-slides .cs-slide, .cs-fl .cs-slides .cs-slide { margin-bottom: 1rem; }
-.cs-rr > h1, .cs-hg > h1, .cs-hl > h1, .cs-ps > h1, .cs-em > h1, .cs-dr > h1, .cs-fl > h1 { scroll-margin-top: 80px; }
+.cs-rr .cs-slides, .cs-hg .cs-slides, .cs-hl .cs-slides, .cs-ps .cs-slides, .cs-em .cs-slides, .cs-dr .cs-slides, .cs-fl .cs-slides, .cs-wc .cs-slides { margin: 1.5rem 0 4rem; }
+.cs-rr .cs-slides .cs-slide, .cs-hg .cs-slides .cs-slide, .cs-hl .cs-slides .cs-slide, .cs-ps .cs-slides .cs-slide, .cs-em .cs-slides .cs-slide, .cs-dr .cs-slides .cs-slide, .cs-fl .cs-slides .cs-slide, .cs-wc .cs-slides .cs-slide { margin-bottom: 1rem; }
+.cs-rr > h1, .cs-hg > h1, .cs-hl > h1, .cs-ps > h1, .cs-em > h1, .cs-dr > h1, .cs-fl > h1, .cs-wc > h1 { scroll-margin-top: 80px; }
 /* Poison: the heading circles are cut by the slide edge, as in the original */
 .cs-ps .cs-slide { overflow: hidden; }
 .cs-em .cs-slide { overflow: hidden; }
@@ -1193,6 +1193,20 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
   font-family: 'Tinos', 'Times New Roman', Times, serif; font-size: 1.26cqw; line-height: 1.1; }
 .cs-fl-table td { border: .13cqw solid #111; padding: .2cqw .75cqw; vertical-align: top; text-align: left; }
 .cs-fl-table tr:not(:first-child) td:not(:first-child) { vertical-align: middle; }
+/* Wheelchair: bold phrases with the slide's red underline, and the data tables */
+.cs-slide .cs-t b { font-weight: 700; color: inherit; }
+.cs-slide .cs-t .cs-ul { text-decoration: underline; text-decoration-color: #a92219; text-decoration-thickness: .16em; text-underline-offset: .42em; }
+.cs-wc-table { width: 100%; height: 100%; table-layout: fixed; border-collapse: collapse; color: #111; background: #fff;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; line-height: 1.02; }
+.cs-wc-table td { border: .1cqw solid #222; padding: 0 .3cqw; text-align: center; vertical-align: middle; }
+.cs-wc-table b { font-weight: 700; }
+.cs-wc-table .is-title { background: #e06665; padding: 0; }
+.cs-wc-table .is-top { vertical-align: top; padding-top: .5cqw; }
+.cs-wc-table .is-num { text-align: right; }
+.cs-wc-table .is-red { color: #ea1513; }
+.cs-wc-table.is-current td { font-family: 'Open Sans', sans-serif; }
+.cs-wc-table.is-current .is-head { background: #f4cccd; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+.cs-wc-foot { margin: 0; color: #111; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 1.02cqw; line-height: 1.2; opacity: 1; }
 
 /* Hashtag Guru: phone prototype keeps its original fixed height */
 .cs-embed.is-phone { aspect-ratio: auto; height: 542px; }
