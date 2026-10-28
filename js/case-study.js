@@ -427,6 +427,8 @@
       if (!/block/.test(sp.style.display)) return;
       if (bullet.test(sp.textContent)) { sp.removeAttribute('style'); sp.style.display = 'block'; return; }
       var frag = document.createDocumentFragment();
+      var before = sp.previousSibling;
+      if (before && !/\s$/.test(before.textContent || '')) frag.appendChild(document.createTextNode(' '));
       while (sp.firstChild) frag.appendChild(sp.firstChild);
       frag.appendChild(document.createTextNode(' '));
       sp.parentNode.replaceChild(frag, sp);

@@ -1,0 +1,43 @@
+/* Drone (AR Parrot through mobile) - phone layout only. Desktop (> 900px) is untouched. */
+@media (max-width: 900px) {
+  /* Hand-written phone versions of slides 5, 7, 9, 10 and 11 */
+  .cs-dr .dr-m { font-family: 'Open Sans', sans-serif; color: #fff; font-size: 15px; line-height: 1.55; }
+  .cs-dr .dr-m p { opacity: 1; }
+  .cs-dr .dr-m > p, .cs-dr .dr-pair p, .cs-dr .dr-comps p { margin: 0 0 1.1rem; color: #fff; font-size: 15px; line-height: 1.55; font-weight: 400; }
+  .cs-dr .dr-m > :last-child { margin-bottom: 0; }
+
+  /* A cut-out of the slide's own art, scaled to the column (labels never below 13px) */
+  .cs-dr .dr-crop { position: relative; overflow: hidden; max-width: 100%; margin: 0 auto 1.4rem; }
+  .cs-dr .dr-crop .dr-in { position: absolute; margin: 0; aspect-ratio: auto !important; container-type: inline-size; }
+  .cs-dr .dr-crop .dr-in > * { opacity: 1; translate: none; }
+
+  /* Slide 5: label beside each paragraph as on the slide, its icon below */
+  .cs-dr .dr-pair { display: flex; align-items: flex-start; gap: 12px; }
+  .cs-dr .dr-pair p { flex: 1; }
+  .cs-dr .dr-pair p.dr-vlab { flex: none; margin: 0; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 15px; line-height: 1; text-align: center; align-self: stretch; padding: 2px 0; }
+  .cs-dr .dr-pair.is-right p.dr-vlab { padding: 2px 0; }
+  .cs-dr .dr-icon { display: block; width: 92px; height: auto; margin: -.1rem auto 1.8rem; }
+  .cs-dr .dr-icon.is-cost { margin-bottom: 1.4rem; }
+
+  /* Slide 7: the two areas, each followed by its picture */
+  .cs-dr .dr-m7 > p.dr-area { margin-top: 1.5rem; }
+  .cs-dr .dr-c7a, .cs-dr .dr-c7b { width: calc(var(--u) * .66px); }
+
+  /* Slide 9: the architecture diagram in two rows instead of one wide strip */
+  .cs-dr .dr-arch { max-width: 560px; margin: .4rem auto 0; }
+  .cs-dr .dr-c9a { width: 100%; margin: 0 0 .6rem; }
+  .cs-dr .dr-c9b { width: calc(100% * 730 / 800); margin: 0 0 0 auto; }
+
+  /* Slide 10: components as a two-column grid */
+  .cs-dr .dr-m10 > p.dr-lead { margin-top: 1.4rem; margin-bottom: 1.4rem; }
+  .cs-dr .dr-comps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 26px 18px; }
+  .cs-dr .dr-comps li { margin: 0; list-style: none; text-align: center; }
+  .cs-dr .dr-comps .dr-ico { height: 58px; width: auto; margin: 0 auto 10px; }
+  .cs-dr .dr-comps p.dr-ct { margin: 0 0 .35rem; }
+  .cs-dr .dr-comps p.dr-cd { margin: 0; font-size: 13.5px; line-height: 1.5; }
+
+  /* Slide 11: each half of the app diagram beside its paragraph */
+  .cs-dr .dr-m11 > p:first-child { margin-bottom: 1.2rem; }
+  .cs-dr .dr-c11a { width: calc(var(--u) * .62px); }
+  .cs-dr .dr-c11b { width: calc(var(--u) * .76px); margin-bottom: 1.2rem; }
+}

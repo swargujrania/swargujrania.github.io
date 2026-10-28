@@ -1,0 +1,66 @@
+/* Hyperloop case study: phone layout (below 900px only). */
+@media (max-width: 900px) {
+  /* hero title: the wide letter-spacing made the last letter wrap */
+  .cs-hl #summary .cs-mflow > .cs-mstack > p.cs-mt:first-child { font-size: min(30px, 6.4vw) !important; }
+
+  /* hand-written blocks: same type as the slides */
+  .cs-hl .hl-m { color: #fefefe; font-family: 'Open Sans', sans-serif; }
+  .cs-hl .hl-m p { margin: 0; opacity: 1; }
+  .cs-hl .hl-m img { display: block; max-width: 100%; height: auto; }
+  .cs-hl .hl-m figure { margin: 0; }
+  .cs-hl .hl-h { font-family: 'Nunito Sans', 'Open Sans', sans-serif; font-size: 21.6px; line-height: 1.3; color: #fff; }
+  .cs-hl .hl-p { font-size: 15px; line-height: 1.55; margin-top: 12px !important; }
+  .cs-hl .hl-l { font-size: 13px; line-height: 1.4; color: #a0a0a0; }
+  .cs-hl .hl-c { font-size: 14.5px; line-height: 1.55; }
+  .cs-hl .hl-full { width: 100%; margin-top: 18px; }
+
+  /* colour palette: swatch grids rebuilt at full column width */
+  .cs-hl .hl-m > .hl-l { margin-top: 26px; }
+  .cs-hl .hl-pal {
+    position: relative; display: grid; grid-template-columns: 38px repeat(var(--n), 1fr);
+    gap: 4px; padding: 4px 4px 4px 0; margin-top: 10px; max-width: 520px;
+  }
+  .cs-hl .hl-pal::before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; left: 38px; background: #fff; }
+  .cs-hl .hl-pal > * { position: relative; }
+  .cs-hl .hl-pal span { align-self: center; font-size: 13px; color: #9e9e9e; }
+  .cs-hl .hl-pal i { display: block; aspect-ratio: 91 / 79; }
+
+  /* colour combinations next to their gradients */
+  .cs-hl .hl-combos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; max-width: 520px; }
+  .cs-hl .hl-combos .hl-l { margin-bottom: -4px; }
+  .cs-hl .hl-cb { display: flex; aspect-ratio: 188 / 81; }
+  .cs-hl .hl-cb i { flex: 1; }
+  .cs-hl .hl-gr { aspect-ratio: 188 / 81; }
+  .cs-hl .hl-ln { outline: 1px solid #4c4c4c; outline-offset: -1px; }
+
+  /* typography */
+  .cs-hl .hl-type { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 18px 24px; margin-top: 18px; }
+  .cs-hl .hl-mono { flex: 1 1 200px; padding-top: 4%; }
+  .cs-hl .hl-mono-l { font-family: 'Major Mono Display', monospace; letter-spacing: .12em; color: #ccc; font-size: 14px; }
+  .cs-hl .hl-mono-w { font-family: 'Major Mono Display', monospace; color: #fff; font-size: 40px; line-height: 1.35; }
+  .cs-hl .hl-avenir { flex: 0 1 260px; width: 260px; min-width: 0; }
+
+  /* logo */
+  .cs-hl .hl-logos { display: flex; gap: 6%; margin-top: 22px; padding: 0 4%; max-width: 560px; }
+  .cs-hl .hl-logos img { flex: 1; min-width: 0; }
+
+  /* app screens: caption above each screen */
+  .cs-hl .hl-p + .hl-apps { margin-top: 26px; }
+  .cs-hl .hl-apps { display: grid; gap: 30px 20px; }
+  .cs-hl .hl-scr { display: flex; flex-direction: column; }
+  .cs-hl .hl-scr .hl-c + .hl-c { margin-top: 10px; }
+  .cs-hl .hl-scr img { width: min(68%, 270px); margin: 14px auto 0; }
+
+  /* communication material */
+  .cs-hl .hl-ads { display: grid; gap: 30px 24px; }
+  .cs-hl .hl-ads img { width: 100%; margin-top: 12px; }
+  .cs-hl .hl-ads figure:last-child img { width: min(72%, 300px); margin-left: auto; margin-right: auto; }
+
+  /* wider phones and tablets: pairs side by side, like the slides */
+  @media (min-width: 560px) {
+    .cs-hl .hl-apps { grid-template-columns: 1fr 1fr; }
+    .cs-hl .hl-apps .hl-scr img { width: 100%; max-width: 270px; margin-top: auto; padding-top: 14px; }
+    .cs-hl .hl-ads { grid-template-columns: 1fr 1fr; align-items: end; }
+    .cs-hl .hl-ads figure:last-child img { width: 82%; }
+  }
+}

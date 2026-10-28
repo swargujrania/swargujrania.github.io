@@ -60,6 +60,7 @@ http://miradontsoa.com
   <!-- add alt layout here -->
   <link rel="stylesheet" href="../css/style-default.css">
   <link rel="stylesheet" href="../css/case-study.css?v=25">
+  <link rel="stylesheet" href="../css/m/infoviz.css?v=1">
 
   <script src="../js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
@@ -219,7 +220,7 @@ http://miradontsoa.com
                     <br>
                     <div class="cs-slides">
 
-                      <div class="cs-slide cs-observe" style="position:relative;aspect-ratio:1500/818;">
+                      <div class="cs-slide cs-observe" data-m="custom" style="position:relative;aspect-ratio:1500/818;">
                       <svg class="cs-v" viewBox="0 0 1500 818" aria-hidden="true" style="position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;"><line x1="962.5" y1="137.5" x2="440.5" y2="137.5" stroke="#e89820" stroke-width="3.0"/><line x1="586.5" y1="648.5" x2="586.5" y2="715.5" stroke="#1e0700" stroke-width="1.0"/><line x1="705.5" y1="649.5" x2="705.5" y2="715.5" stroke="#1e0700" stroke-width="1.0"/><line x1="782.5" y1="649.5" x2="782.5" y2="714.5" stroke="#160b04" stroke-width="1.0"/></svg>
                       <img loading="lazy" class="cs-g" src="../img/infoViz/s/iv2-g1.png" alt="" style="position:absolute;left:88.800%;top:0.000%;width:11.200%;height:17.359%;--d:0.00s;">
                       <img loading="lazy" class="cs-g" src="../img/infoViz/s/iv2-g2.png" alt="" style="position:absolute;left:83.333%;top:4.645%;width:5.067%;height:12.714%;--d:0.03s;">
@@ -236,6 +237,20 @@ http://miradontsoa.com
                       <p class="cs-t" style="position:absolute;margin:0;white-space:nowrap;top:80.410%;font-size:1.547cqw;line-height:2.300cqw;font-weight:400;color:#fefefe;left:28.483%;transform:translateX(-50%);text-align:center;--d:0.49s;letter-spacing:0.025em;">Darker ones represent<br>people with disability</p>
                       <p class="cs-t" style="position:absolute;margin:0;white-space:nowrap;top:81.751%;font-size:1.547cqw;line-height:2.103cqw;font-weight:400;color:#fffeec;left:40.667%;--d:0.49s;letter-spacing:0.025em;">50,000</p>
                       <p class="cs-t" style="position:absolute;margin:0;white-space:nowrap;top:81.812%;font-size:1.547cqw;line-height:2.103cqw;font-weight:400;color:#060000;left:53.733%;--d:0.49s;letter-spacing:0.025em;">50,000</p>
+                      </div>
+                      <div class="cs-mcustom cs-iv-m0">
+                        <div class="cs-iv-art"><img src="../img/infoViz/s/iv2-g2.png" alt=""><img src="../img/infoViz/s/iv2-g1.png" alt=""></div>
+                        <p>One of our greatest barriers to making progress when it comes to being more inclusive is that we have a tendency to design and engineer things for ourselves. This project is an attempt to tackle that by raising awareness about disability through an <b class="cs-ul">interactive visualization of US census data.</b></p>
+                        <p>Our visualization takes Schneiderman’s approach to design:</p>
+                        <div class="cs-iv-steps">
+                          <img src="../img/infoViz/s/iv2-g3.png" alt="">
+                          <ul><li>Overview First</li><li>Zoom and Filter</li><li>Details on Demand</li></ul>
+                        </div>
+                        <p>We went for a unit visualization approach with each unit being a hexagon representing 50,000 people.</p>
+                        <ul class="cs-iv-hex">
+                          <li><span class="cs-iv-hx cs-iv-dark">50,000</span>Darker ones represent people with disability</li>
+                          <li><span class="cs-iv-hx cs-iv-light">50,000</span>Lighter ones represent those without</li>
+                        </ul>
                       </div>
                       <br>
                       <br>
@@ -418,7 +433,7 @@ http://miradontsoa.com
 
   <!-- Javascript main files -->
   <script src="../js/main.js"></script>
-  <script src="../js/case-study.js?v=25"></script>
+  <script src="../js/case-study.js?v=26"></script>
 
 
 </body>

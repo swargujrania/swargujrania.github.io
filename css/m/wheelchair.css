@@ -1,0 +1,91 @@
+/* Wheelchair analysis - phone layout only. Desktop (> 900px) is untouched. */
+@media (max-width: 900px) {
+  /* section titles: "ANALYSIS & RECOMMENDATIONS" must not run past the column on small phones */
+  .cs-wc > h1 { font-size: min(40px, 8vw); }
+
+  /* ---- User group slide, hand-written phone version ---- */
+  .cs-wc .cs-wc-mug { font-family: 'Open Sans', sans-serif; color: #fefefe; font-size: 14px; line-height: 1.55; }
+  .cs-wc .cs-wc-mug p { margin: 0 0 1rem; color: #fefefe; opacity: 1; font-size: inherit; line-height: inherit; }
+  .cs-wc .cs-wc-mug b { font-weight: 700; color: inherit; }
+  .cs-wc .cs-wc-mgroup { margin: 1.6rem auto 0; max-width: 300px; }
+  .cs-wc .cs-wc-mpair { display: flex; align-items: flex-start; justify-content: space-between; padding: 0 6px 12px;
+    border-bottom: 4px solid #992934; }
+  .cs-wc .cs-wc-mwho { flex: 1 1 0; text-align: center; font-size: 14px; line-height: 1.45; color: #fefefe; }
+  .cs-wc .cs-wc-mbadge { position: relative; display: block; width: 62px; height: 33px; margin: 0 auto 2px; padding-top: 10px;
+    font-size: 15px; line-height: 23px; color: #fefefe; }
+  .cs-wc .cs-wc-mbadge img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: -1; }
+  .cs-wc .cs-wc-mbadge { isolation: isolate; }
+  .cs-wc .cs-wc-marrow { flex: none; width: 34px; height: auto; margin-top: 16px; }
+  .cs-wc .cs-wc-mug p.cs-wc-mcap { margin: .5rem 0 0; text-align: center; font-size: 13px; color: #c6c6c6; }
+
+  /* ---- Tables: the narrow ones fit the column, the others become one card per row ---- */
+  .cs-wc .cs-mflow .cs-mraw table { min-width: 0; width: 100%; font-size: 13.5px !important; line-height: 1.4; }
+  .cs-wc .cs-mflow .cs-mraw tr { height: auto !important; }
+  .cs-wc .cs-mflow .cs-mraw td { padding: 7px 8px !important; }
+  .cs-wc .cs-mflow .cs-mraw tr:first-child td { font-size: 13.5px !important; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Current"] col:nth-child(1) { width: 22% !important; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Current"] col:nth-child(2) { width: 40% !important; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Current"] col:nth-child(3) { width: 38% !important; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Current"] td { padding: 7px 5px !important; }
+  .cs-wc .cs-mflow .cs-mraw .is-title { padding: 6px 12px !important; text-align: left; }
+  .cs-wc .cs-mflow .cs-mraw .cs-wc-foot { font-size: 13px !important; line-height: 1.5; margin-top: .75rem; }
+
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"], table[aria-label^="Summary"]) { display: block; }
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"], table[aria-label^="Summary"]) colgroup { display: none; }
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"], table[aria-label^="Summary"]) tbody { display: block; }
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"], table[aria-label^="Summary"]) tr {
+    display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); gap: 8px 10px; padding: 12px 12px 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, .16); }
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"], table[aria-label^="Summary"]) tr:last-child { border-bottom: 0; }
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"], table[aria-label^="Summary"]) td {
+    display: flex; flex-direction: column; justify-content: space-between; padding: 0 !important; border: 0; text-align: left; vertical-align: top; min-width: 0; }
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"], table[aria-label^="Summary"]) td::before {
+    display: block; margin-bottom: 1px; font-size: 13px; font-weight: 400; line-height: 1.35; color: #a8a8a8; }
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"], table[aria-label^="Summary"]) tr:nth-child(n+3) td:first-child {
+    font-size: 15px; font-weight: 700; color: #fff; padding-left: 0 !important; }
+  /* title bar stays a full-width dark red strip; the column-heading row is replaced by a label on each value */
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"]) tr:first-child { display: block; padding: 0; }
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"]) tr:first-child td { padding: 6px 12px !important; }
+  .cs-wc .cs-mflow .cs-mraw :is(table[aria-label^="CAESAR"], table[aria-label^="ANSUR"], table[aria-label^="Optimal"]) tr:nth-child(2) { display: none; }
+
+  /* CAESAR: key dimension + percentile / wheelchair, anthropometric / mean, SD, Z */
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="CAESAR"] tr:nth-child(n+3) td:nth-child(1) { grid-column: 1 / 3; grid-row: 1; justify-content: flex-end; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="CAESAR"] tr:nth-child(n+3) td:nth-child(2)::before { content: "Wheelchair measurements (cm)"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="CAESAR"] tr:nth-child(n+3) td:nth-child(3) { grid-column: span 2; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="CAESAR"] tr:nth-child(n+3) td:nth-child(3)::before { content: "Anthropometric dimensions associated"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="CAESAR"] tr:nth-child(n+3) td:nth-child(4)::before { content: "Mean for American (cm)"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="CAESAR"] tr:nth-child(n+3) td:nth-child(5)::before { content: "Standard deviation (cm)"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="CAESAR"] tr:nth-child(n+3) td:nth-child(6)::before { content: "Z"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="CAESAR"] tr:nth-child(n+3) td:nth-child(7) { grid-column: 3; grid-row: 1; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="CAESAR"] tr:nth-child(n+3) td:nth-child(7)::before { content: "Percentile"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="CAESAR"] tr:nth-child(n+3) td:nth-child(7) b { font-size: 15px; }
+
+  /* ANSUR: key dimension / wheelchair, anthropometric / 25th women, mean, 75th men */
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="ANSUR"] tr:nth-child(n+3) td:nth-child(1) { grid-column: 1 / -1; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="ANSUR"] tr:nth-child(n+3) td:nth-child(2)::before { content: "Wheelchair measurements (cm)"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="ANSUR"] tr:nth-child(n+3) td:nth-child(3) { grid-column: span 2; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="ANSUR"] tr:nth-child(n+3) td:nth-child(3)::before { content: "Anthropometric dimensions associated"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="ANSUR"] tr:nth-child(n+3) td:nth-child(4)::before { content: "25th percentile women"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="ANSUR"] tr:nth-child(n+3) td:nth-child(5)::before { content: "Mean for American"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="ANSUR"] tr:nth-child(n+3) td:nth-child(6)::before { content: "75th percentile men"; }
+
+  /* Based on research: key dimension / wheelchair, optimal range */
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Optimal"] tr:nth-child(n+3) td:nth-child(1) { grid-column: 1 / -1; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Optimal"] tr:nth-child(n+3) td:nth-child(2)::before { content: "Wheelchair measurements"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Optimal"] tr:nth-child(n+3) td:nth-child(3) { grid-column: span 2; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Optimal"] tr:nth-child(n+3) td:nth-child(3)::before { content: "Range of optimal dimension based on research"; }
+
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Optimal"] td { display: block; }
+
+  /* Summary: the red heading bar keeps "Key parameters | Match/Mismatch", the other two headings label each value */
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Summary"] tr { grid-template-columns: minmax(0, 1fr) auto; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Summary"] tr:first-child { background: #721810; padding: 7px 12px; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Summary"] tr:first-child td { background: none; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Summary"] tr:first-child td:nth-child(2),
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Summary"] tr:first-child td:nth-child(4) { display: none; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Summary"] td:nth-child(3) { grid-column: 2; grid-row: 1; text-align: right; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Summary"] tr:nth-child(n+2) td:nth-child(2)::before { content: "Measurements"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Summary"] tr:nth-child(n+2) td:nth-child(4)::before { content: "Recommended value"; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Summary"] tr:nth-child(n+2) td:nth-child(4) { grid-column: 2; text-align: right; }
+  .cs-wc .cs-mflow .cs-mraw table[aria-label^="Summary"] tr:nth-child(n+2) td:first-child { font-size: 15px; font-weight: 700; color: #fff; }
+}

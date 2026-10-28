@@ -1,0 +1,66 @@
+/* LuminAI: phone/tablet layout. Applies below 900px only. */
+@media (max-width: 900px) {
+  /* ---- shared look of the hand-written blocks (black page, white Open Sans) ---- */
+  .cs-lm .cs-mcustom.lm-m { color: #fdfdfd; font-size: 15px; line-height: 1.55; margin-bottom: 2.5rem; }
+  .cs-lm .lm-m p { margin: 0; color: #fdfdfd; font-size: 15px; line-height: 1.55; }
+  .cs-lm .lm-m img { display: block; max-width: 100%; height: auto; }
+  .cs-lm .lm-m p.lm-h { font-size: 21px; line-height: 1.35; color: #fefefe; margin-bottom: 1.5rem; }
+
+  /* ---- Summary: the two figures side by side, the AI shadow raised as on the slide ---- */
+  .cs-lm .lm-hero p + .lm-pair { margin-top: 1.25rem; }
+  .cs-lm .lm-hero .lm-pair { display: flex; justify-content: center; align-items: flex-start; gap: 9%; margin-bottom: 1.25rem; }
+  .cs-lm .lm-hero .lm-pair img { width: 29%; max-width: 160px; }
+  .cs-lm .lm-hero .lm-pair .lm-solid { margin-top: 26%; }
+  .cs-lm .lm-hero .lm-pair .lm-blur { width: 33.5%; max-width: 185px; }
+
+  /* ---- On-going work / Role: let the short paragraphs reflow to the column ---- */
+  .cs-lm .cs-slide[style*="1500/753"] + .cs-mflow p.cs-mt > span,
+  .cs-lm .cs-slide[style*="1500/509"] + .cs-mflow p.cs-mt > span { display: inline !important; padding-left: 0 !important; }
+  .cs-lm .cs-slide[style*="1500/753"] + .cs-mflow p.cs-mt > span::after,
+  .cs-lm .cs-slide[style*="1500/509"] + .cs-mflow p.cs-mt > span::after { content: " "; }
+
+  /* ---- Viewpoints / Laban's: labels centred under their icons ---- */
+  .cs-lm .cs-slide[style*="1500/338"] + .cs-mflow .cs-mgrid { max-width: 300px; margin-left: auto; margin-right: auto; }
+  .cs-lm .cs-slide[style*="1500/338"] + .cs-mflow .cs-mgrid p.cs-mt { text-align: center !important; }
+
+  /* ---- Columns of icon / title / description (Paradigms, Movement qualities) ---- */
+  .cs-lm .lm-m .lm-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 20px; }
+  .cs-lm .lm-m .lm-col { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0; align-content: start; }
+  .cs-lm .lm-m .lm-ic { display: flex; align-items: center; justify-content: center; min-height: 64px; }
+  .cs-lm .lm-m p.lm-t { margin-top: 14px; text-align: center; font-size: 17px; line-height: 1.35; }
+  .cs-lm .lm-m p.lm-d { margin-top: 10px; font-size: 14px; line-height: 1.5; color: #f6f6f6; }
+  .cs-lm .lm-m p.lm-src { margin-top: 1.25rem; font-size: 13px; text-align: right; color: #f8f8f8; }
+
+  /* Paradigms */
+  .cs-lm .lm-para .lm-ic { min-height: 108px; }
+  .cs-lm .lm-para .lm-ic img { width: auto; }
+  .cs-lm .lm-para .lm-eff { position: relative; display: block; width: 68px; }
+  .cs-lm .lm-para .lm-eff img { width: 100%; }
+  .cs-lm .lm-para .lm-eff img.lm-d1, .cs-lm .lm-para .lm-eff img.lm-d2 { position: absolute; top: 78.3%; width: 27.9%; }
+  .cs-lm .lm-para .lm-eff img.lm-d1 { left: 0; }
+  .cs-lm .lm-para .lm-eff img.lm-d2 { left: 62.5%; }
+
+  /* Movement qualities: each quality keeps its matching step underneath, as in the slide's columns */
+  .cs-lm .lm-qual p.lm-cap { margin: -.25rem 0 1.75rem; text-align: center; font-size: 13px; color: #f8f8f8; }
+  .cs-lm .lm-qual .lm-col { grid-row: span 6; }
+  .cs-lm .lm-qual .lm-ic { min-height: 50px; }
+  .cs-lm .lm-qual .lm-time { display: flex; gap: 27px; }
+  .cs-lm .lm-qual .lm-time img { width: 35px; }
+  .cs-lm .lm-qual .lm-rule { display: block; width: 86%; height: 1px; margin: 20px auto 0; align-self: end;
+    background: repeating-linear-gradient(90deg, #d6d6d6 0 3px, transparent 3px 4px); }
+  .cs-lm .lm-qual p.lm-st { margin-top: 12px; text-align: center; font-size: 17px; line-height: 1.35; }
+  .cs-lm .lm-qual p.lm-sd { margin-top: 8px; text-align: center; font-size: 14px; line-height: 1.5; color: #f9f9f9; }
+
+  /* ---- Architecture: the hub picture with its labels kept on it, readable ---- */
+  .cs-lm .lm-arch .lm-hub { position: relative; container-type: inline-size; max-width: 600px; margin: 0 auto;
+    aspect-ratio: 1200 / 846; }
+  .cs-lm .lm-arch .lm-hub img { position: absolute; left: 8.166%; top: 1.885%; width: 85%; height: 89.98%; max-width: none; }
+  .cs-lm .lm-arch .lm-hub p { position: absolute; transform: translateX(-50%); white-space: nowrap; text-align: center;
+    font-size: max(13px, 2.6cqw); line-height: 1.3; color: #fcfcfc; }
+  .cs-lm .lm-arch .lm-hub p.lm-core { left: 50.5%; top: 41.8%; transform: translate(-50%, -50%); white-space: normal; width: 22%; }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .cs-lm .lm-m .lm-cols { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px 18px; }
+  .cs-lm .cs-slide[style*="1500/753"] + .cs-mflow .cs-mgrid,
+  .cs-lm .cs-slide[style*="1500/753"] + .cs-mflow .cs-mstack:has(> .cs-mstack + .cs-mstack + .cs-mstack) { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 22px 22px; }
+}

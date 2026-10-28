@@ -1,0 +1,40 @@
+/* InfoViz (Able_D) - phone layout only. Desktop (> 900px) is untouched. */
+@media (max-width: 900px) {
+  /* Summary slide, hand-written phone version */
+  .cs-iv .cs-iv-m0 { font-family: 'Open Sans', sans-serif; color: #fefefe; font-size: 14px; line-height: 1.55; letter-spacing: .025em; }
+  .cs-iv .cs-iv-m0 p { margin: 0 0 1.1rem; color: #fefefe; opacity: 1; font-size: inherit; line-height: inherit; }
+  .cs-iv .cs-iv-m0 b { font-weight: 700; color: inherit; }
+  .cs-iv .cs-iv-m0 .cs-ul { text-decoration: underline; text-decoration-color: #f59a1b; text-decoration-thickness: .12em; text-underline-offset: .3em; }
+  .cs-iv .cs-iv-art { display: flex; justify-content: flex-end; align-items: flex-end; gap: 4px; margin: 0 0 .9rem; }
+  .cs-iv .cs-iv-art img { display: block; height: auto; }
+  .cs-iv .cs-iv-art img:first-child { width: 34px; }
+  .cs-iv .cs-iv-art img:last-child { width: 76px; }
+  /* Overview -> Zoom -> Details: icon strip with a label under each icon */
+  .cs-iv .cs-iv-steps { position: relative; margin: .4rem 0 2rem; padding-bottom: 3.4em; }
+  .cs-iv .cs-iv-steps img { display: block; width: 76%; height: auto; margin: 0 12%; }
+  .cs-iv .cs-iv-m0 ul { list-style: none; margin: 0; padding: 0; opacity: 1; }
+  .cs-iv .cs-iv-m0 li { list-style: none; color: #fefefe; opacity: 1; }
+  .cs-iv .cs-iv-m0 li::before, .cs-iv .cs-iv-m0 li::marker { content: none; }
+  .cs-iv .cs-iv-steps li { position: absolute; top: calc(100% - 3.1em); width: 30%; transform: translateX(-50%); text-align: center; font-size: 14px; line-height: 1.4; }
+  .cs-iv .cs-iv-steps li:nth-child(1) { left: 15.8%; }
+  .cs-iv .cs-iv-steps li:nth-child(2) { left: 50.8%; }
+  .cs-iv .cs-iv-steps li:nth-child(3) { left: 84.2%; }
+  /* Hexagon legend */
+  .cs-iv .cs-iv-hex { list-style: none; margin: .4rem 0 0; padding: 0; }
+  .cs-iv .cs-iv-hex li { display: flex; align-items: center; gap: 16px; margin: 0 0 14px; }
+  .cs-iv .cs-iv-hx { flex: none; display: flex; align-items: center; justify-content: center; width: 64px; height: 74px; font-size: 13px;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+  .cs-iv .cs-iv-dark { background: #fe9900; color: #fffeec; }
+  .cs-iv .cs-iv-light { background: #f9ca9c; color: #060000; }
+
+  /* Long project link must wrap instead of widening the page */
+  .cs-iv center a { overflow-wrap: anywhere; }
+
+  /* Animated GIF / PNG charts: use the full column so their labels can be read */
+  .cs-iv .cs-slides center > img { display: block; width: 100% !important; height: auto !important; max-width: 620px; margin: .25rem auto 1.6rem; }
+  .cs-iv .cs-slides > br { display: none; }
+  .cs-iv .cs-slides .cs-gap { display: none; }
+
+  /* Closing line is centred on the desktop slide; keep it centred */
+  .cs-iv .cs-slides:last-of-type > .cs-mflow:last-child .cs-mstack > p.cs-mt:last-child { text-align: center !important; margin-top: 1.4rem; }
+}
