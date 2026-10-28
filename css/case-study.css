@@ -1180,12 +1180,19 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 /* ==========================================================================
    Research Repository: slides rebuilt as positioned text and shapes
    ========================================================================== */
-.cs-rr .cs-slides, .cs-hg .cs-slides, .cs-hl .cs-slides, .cs-ps .cs-slides, .cs-em .cs-slides, .cs-dr .cs-slides { margin: 1.5rem 0 4rem; }
-.cs-rr .cs-slides .cs-slide, .cs-hg .cs-slides .cs-slide, .cs-hl .cs-slides .cs-slide, .cs-ps .cs-slides .cs-slide, .cs-em .cs-slides .cs-slide, .cs-dr .cs-slides .cs-slide { margin-bottom: 1rem; }
-.cs-rr > h1, .cs-hg > h1, .cs-hl > h1, .cs-ps > h1, .cs-em > h1, .cs-dr > h1 { scroll-margin-top: 80px; }
+.cs-rr .cs-slides, .cs-hg .cs-slides, .cs-hl .cs-slides, .cs-ps .cs-slides, .cs-em .cs-slides, .cs-dr .cs-slides, .cs-fl .cs-slides { margin: 1.5rem 0 4rem; }
+.cs-rr .cs-slides .cs-slide, .cs-hg .cs-slides .cs-slide, .cs-hl .cs-slides .cs-slide, .cs-ps .cs-slides .cs-slide, .cs-em .cs-slides .cs-slide, .cs-dr .cs-slides .cs-slide, .cs-fl .cs-slides .cs-slide { margin-bottom: 1rem; }
+.cs-rr > h1, .cs-hg > h1, .cs-hl > h1, .cs-ps > h1, .cs-em > h1, .cs-dr > h1, .cs-fl > h1 { scroll-margin-top: 80px; }
 /* Poison: the heading circles are cut by the slide edge, as in the original */
 .cs-ps .cs-slide { overflow: hidden; }
 .cs-em .cs-slide { overflow: hidden; }
+/* Flow: the questionnaire table, rebuilt from the slide as a real table */
+.cs-slide .cs-x { margin: 0; }
+.cs-slide .cs-x:has(.cs-fl-table) { background: #fff; padding: .6cqw .35cqw .7cqw; box-sizing: border-box; }
+.cs-fl-table { width: 100%; height: 100%; table-layout: fixed; border-collapse: collapse; color: #111;
+  font-family: 'Tinos', 'Times New Roman', Times, serif; font-size: 1.26cqw; line-height: 1.1; }
+.cs-fl-table td { border: .13cqw solid #111; padding: .2cqw .75cqw; vertical-align: top; text-align: left; }
+.cs-fl-table tr:not(:first-child) td:not(:first-child) { vertical-align: middle; }
 
 /* Hashtag Guru: phone prototype keeps its original fixed height */
 .cs-embed.is-phone { aspect-ratio: auto; height: 542px; }
