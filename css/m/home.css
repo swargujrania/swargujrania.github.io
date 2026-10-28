@@ -1,14 +1,15 @@
-/* Home page on phones and tablets.
-   Desktop (wider than 900px with a mouse) is untouched: every rule below sits in a
-   max-width: 900px query, except the scroll rules, which also cover touch-only screens
-   where js/main.js turns off fullPage's section hijacking. */
+/* Home page on phones and tablets (touch screens up to 900px wide, or any window
+   narrower than 601px). With a mouse or trackpad the page is untouched, including
+   fullPage's one-section-at-a-time scrolling. */
 .hm-about { display: none; }
 
-/* Native scrolling with a gentle page-by-page snap instead of fullPage's touch handling,
-   which skipped over the content of tall sections such as the projects grid. */
-@media (max-width: 900px), (hover: none) and (pointer: coarse) {
-  html:has(body.fp-responsive) { scroll-snap-type: y proximity; }
-  body.fp-responsive #mainpage > .section { scroll-snap-align: start; }
+/* Where fullPage hands scrolling back to the browser (touch screens and very small
+   windows; body.fp-responsive), the page still moves one section at a time: each
+   section fills the screen and scrolling snaps to the next one. A section taller than
+   the screen (the projects grid on a phone) scrolls through first, then snaps on. */
+html:has(body.fp-responsive) { scroll-snap-type: y mandatory; }
+body.fp-responsive #mainpage > .section { scroll-snap-align: start; scroll-snap-stop: always; min-height: 100vh; min-height: 100svh; }
+@media (hover: none) and (pointer: coarse), (max-width: 600px) {
   /* Sections fade their content in only once fullPage marks them active, which can lag
      behind native scrolling on a tall screen; show it as soon as it scrolls into view. */
   body.fp-responsive #mainpage .section .anim :is(.anim-1, .anim-2, .anim-3, .anim-4, .zoomout-1, .fade-1, .fade-2, .fade-3, .fade-4),
@@ -20,7 +21,7 @@
   body.fp-responsive #mainpage .section[data-section="projects"] .last-updated-banner { display: none; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) and (hover: none) and (pointer: coarse), (max-width: 600px) {
   /* Fixed social row and "Think" mark sat over the content while scrolling;
      the same links are in the Contact section. */
   body.fp-responsive .page-footer .footer-left,
@@ -78,7 +79,7 @@
   #mainpage .section[data-section="art-intro"] .title-desc p { text-align: left !important; }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 900px) and (hover: none) and (pointer: coarse) {
   .hm-steps { grid-template-columns: 1fr 1fr; column-gap: 2rem; }
   .hm-phases { grid-template-columns: 1fr 1fr; }
   #mainpage .section[data-section="projects"] .container > .row label { font-size: 13px; }
