@@ -1,0 +1,74 @@
+/* Emoi: phone layout (hand-written .cs-mcustom blocks + tweaks). Applies below 900px only. */
+@media (max-width: 900px) {
+  .cs-em .cs-mcustom.em-m { color: #fcfcfc; font-size: 15.5px; line-height: 1.55; }
+  .cs-em .em-m p, .cs-em .em-m ul { opacity: 1; }
+  .cs-em .em-m p { margin: 0 0 1rem; color: #fcfcfc; font-size: 15.5px; line-height: 1.55; }
+  .cs-em .em-m img { max-width: 100%; height: auto; }
+
+  /* Problem space: the grey "flaws" disc, then the four flaws with their figure */
+  .cs-em .em-m p.em-hub { display: flex; align-items: center; justify-content: center; width: 150px; height: 150px;
+    margin: 1.75rem auto 1.75rem; border-radius: 50%; background: #5f5f5f; color: #fdfdfd; font-size: 15px;
+    line-height: 1.45; text-align: center; }
+  .cs-em .em-item { display: grid; grid-template-columns: 58px 1fr; gap: 14px; align-items: start; margin-bottom: 1.5rem; }
+  .cs-em .em-item:last-child { margin-bottom: 0; }
+  .cs-em .em-item .em-ic { display: flex; justify-content: center; padding-top: 4px; }
+  .cs-em .em-item img { display: block; }
+  .cs-em .em-item img[src$="s4-g1.png"] { width: 56px; }
+  .cs-em .em-item img[src$="s4-g2.png"] { width: 26px; }
+  .cs-em .em-item img[src$="s4-g4.png"] { width: 46px; }
+  .cs-em .em-item .em-think { position: relative; width: 45px; margin: 0 auto; padding-top: 0; top: 4px; isolation: isolate; }
+  .cs-em .em-item .em-think::before { content: ""; position: absolute; z-index: -1; left: 32.1%; top: 2.3%; width: 38.7%;
+    aspect-ratio: 1; border-radius: 50%; background: #808080; }
+  .cs-em .em-item .em-think img { width: 100%; }
+  .cs-em .em-m p.em-h { margin: 0 0 .3rem; color: #fafafa; font-size: 16px; letter-spacing: .02em; }
+  .cs-em .em-item p:last-child { margin-bottom: 0; }
+
+  /* So what if..: each question beside its face */
+  .cs-em .em-wi { display: flex; align-items: center; gap: 16px; }
+  .cs-em .em-wi + .em-wi { margin-top: 1.5rem; }
+  .cs-em .em-wi p { flex: 1 1 auto; min-width: 0; margin: 0; }
+  .cs-em .em-wi img.em-face { flex: 0 0 auto; width: 64px; display: block; }
+  .cs-em .em-happy { flex: 0 0 auto; margin: 0; }
+  .cs-em .em-happy figcaption { margin: 0 0 4px; color: #9c9c9c; font-size: 15px; line-height: 1.3; white-space: nowrap; }
+  .cs-em .em-happy img.em-face { width: 70px; }
+
+  /* Capture / Process / Visualize */
+  .cs-em .em-m ul.em-steps { display: grid; grid-template-columns: repeat(3, 1fr); align-items: end; gap: 12px;
+    margin: 0; padding: 0; text-align: center; }
+  .cs-em .em-steps li { list-style: none; margin: 0; color: #fefefe; font-size: 15px; line-height: 1.3; }
+  .cs-em .em-steps img { display: block; width: auto; max-height: 46px; margin: 0 auto 10px; }
+  .cs-em .em-steps img[src$="s6-g3.png"] { max-height: 33px; }
+
+  /* CAPTURE: panel as the automatic PROCESS / VISUALIZE ones, two prototypes */
+  .cs-em .em-m p.em-tag { width: 147px; height: 47px; margin: 0 auto 1.2rem; padding-left: 33px; background: #3b3b3b;
+    color: #fff; font-size: 18.5px; line-height: 47px; }
+  .cs-em .em-proto { display: flex; align-items: center; gap: 16px; margin-top: 1.5rem; }
+  .cs-em .em-m .em-proto p { margin: 0; font-size: 19px; line-height: 1.45; color: #fefefe; }
+  .cs-em .em-proto img { display: block; width: 56px; flex: 0 0 auto; }
+  .cs-em .em-proto-r { justify-content: flex-end; }
+  .cs-em .em-m .em-proto-r p { text-align: right; }
+  .cs-em .em-proto-r img { width: 96px; }
+
+  /* Circumplex model of affect: the slide's own art cropped to the circle, labels enlarged,
+     the horizontal axis ends set along the sides */
+  .cs-em .em-cm { margin: 1.75rem 0 0; }
+  .cs-em .em-m p.em-ax { margin: 0; color: #f0f0f0; font-size: 13px; line-height: 1.3; text-align: center; white-space: nowrap; }
+  .cs-em .em-cm-row { display: grid; grid-template-columns: 18px minmax(0, 1fr) 18px; gap: 8px; align-items: center;
+    max-width: 440px; margin: 10px auto 12px; }
+  .cs-em .em-m p.em-ax-l { writing-mode: vertical-rl; transform: rotate(180deg); justify-self: center; }
+  .cs-em .em-m p.em-ax-r { writing-mode: vertical-rl; justify-self: center; }
+  .cs-em .em-circ { position: relative; aspect-ratio: 463 / 416; }
+  .cs-em .em-circ-in { position: absolute; left: -116.631%; top: -66.346%; width: 323.974%; aspect-ratio: 1500 / 713;
+    container-type: inline-size; pointer-events: none; }
+  .cs-em .em-circ-in img { max-width: none; height: auto; }
+  .cs-em .em-cl { position: absolute; white-space: nowrap; transform: scale(1.35); transform-origin: 50% 50%;
+    background: #000; box-shadow: 0 0 0 .15em #000; }
+  .cs-em .em-cm figcaption { margin-top: .6rem; color: #989898; font-size: 13px; line-height: 1.3; text-align: center; }
+
+  /* Applications: icon + name, then the description */
+  .cs-em .em-app + .em-app { margin-top: 1.75rem; }
+  .cs-em .em-m p.em-app-h { display: flex; align-items: center; gap: 12px; margin: 0 0 .6rem; color: #f9f9f9;
+    font-size: 16.5px; line-height: 1.35; }
+  .cs-em .em-m .em-app-h img { display: block; flex: 0 0 auto; width: 50px; height: 40px; object-fit: contain; object-position: left center; }
+  .cs-em .em-app p:last-child { margin: 0; }
+}
