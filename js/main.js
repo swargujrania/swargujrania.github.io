@@ -166,8 +166,13 @@ $(document).on('ready', function () {
 	var scrollOverflow = true;
 	var css3 = true;
 	
+	// Phones, tablets and other touch-only screens scroll natively, one section after
+	// another (css/m/home.css adds a gentle snap). fullPage's touch handling skipped
+	// over the content of tall sections there. Desktop keeps the full-page scrolling.
+	var touchOnly = window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+	var responsiveWidth = touchOnly ? 100000 : 901;
 	// disable scroll overflow on small device
-	if (contextWindow.width() < 601) {
+	if (contextWindow.width() < 901 || touchOnly) {
 		scrollOverflow = false;
 		css3 = false;
 	}
@@ -193,7 +198,7 @@ $(document).on('ready', function () {
 				verticalCentered: false,
 				css3: css3,
 				navigation: true,
-				responsiveWidth: 601,
+				responsiveWidth: responsiveWidth,
 				responsiveHeight: 480,
 				scrollOverflow: scrollOverflow,
 				scrollOverflowOptions: {
