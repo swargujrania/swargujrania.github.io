@@ -1182,7 +1182,7 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
    ========================================================================== */
 .cs-rr .cs-slides, .cs-hg .cs-slides, .cs-hl .cs-slides, .cs-ps .cs-slides, .cs-em .cs-slides, .cs-dr .cs-slides, .cs-fl .cs-slides, .cs-wc .cs-slides, .cs-lm .cs-slides { margin: 1.5rem 0 4rem; }
 .cs-rr .cs-slides .cs-slide, .cs-hg .cs-slides .cs-slide, .cs-hl .cs-slides .cs-slide, .cs-ps .cs-slides .cs-slide, .cs-em .cs-slides .cs-slide, .cs-dr .cs-slides .cs-slide, .cs-fl .cs-slides .cs-slide, .cs-wc .cs-slides .cs-slide, .cs-lm .cs-slides .cs-slide { margin-bottom: 1rem; }
-.cs-rr > h1, .cs-hg > h1, .cs-hl > h1, .cs-ps > h1, .cs-em > h1, .cs-dr > h1, .cs-fl > h1, .cs-wc > h1, .cs-lm > h1 { scroll-margin-top: 80px; }
+.cs-rr > h1, .cs-hg > h1, .cs-hl > h1, .cs-ps > h1, .cs-em > h1, .cs-dr > h1, .cs-fl > h1, .cs-wc > h1, .cs-lm > h1, .cs-iv > h1 { scroll-margin-top: 80px; }
 /* Poison: the heading circles are cut by the slide edge, as in the original */
 .cs-ps .cs-slide { overflow: hidden; }
 .cs-em .cs-slide { overflow: hidden; }
@@ -1219,3 +1219,7 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 
 /* Hashtag Guru: phone prototype keeps its original fixed height */
 .cs-embed.is-phone { aspect-ratio: auto; height: 542px; }
+
+/* InfoViz: slides stack edge to edge with the animated charts between them, as in the original */
+.cs-iv .cs-slides .cs-slide { margin: 0; }
+.cs-iv .cs-slide .cs-t .cs-ul { text-decoration-color: #f59a1b; text-decoration-thickness: .1em; text-underline-offset: .38em; }
