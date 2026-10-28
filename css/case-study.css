@@ -1229,11 +1229,11 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
    (.cs-mflow) below 900px and hides the positioned original. Nothing here
    applies on wider screens.
    ========================================================================== */
-.cs-mflow { display: none; }
+.cs-mflow, .cs-mcustom { display: none; }
 .cs-measuring > * { translate: none !important; transition: none !important; }
 @media (max-width: 900px) {
-  .cs .cs-slide.has-mflow { display: none; }
-  .cs .cs-mflow { display: block; margin: 0 0 1.75rem; }
+  .cs .cs-slide.has-mflow, .cs .cs-slide[data-m="custom"] { display: none; }
+  .cs .cs-mflow, .cs .cs-mcustom { display: block; margin: 0 0 1.75rem; }
   .cs-mflow .cs-mstack > * { margin-top: 0; }
   .cs-mflow .cs-mgrid { display: grid; gap: 22px 18px; align-items: start; }
   .cs .cs-mflow p.cs-mt { opacity: 1; margin: 0; white-space: normal; line-height: 1.55; overflow-wrap: break-word; }

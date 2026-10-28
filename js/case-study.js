@@ -125,9 +125,11 @@
     var P = { el: slide, oy: (sr.top - or.top) * k, H: sr.height * k, idx: slide.csIdx };
     var pic = [];
     Array.prototype.forEach.call(slide.children, function (el) {
+      if (el.getAttribute('data-m') === 'drop') return;     // left out of the phone layout
       if (el.tagName.toLowerCase() === 'svg') {
         var vy = el.viewBox && el.viewBox.baseVal ? el.viewBox.baseVal.y : 0;
         Array.prototype.forEach.call(el.children, function (c) {
+          if (c.getAttribute('data-m') === 'drop') return;
           var bb = c.getBBox(), sw = (parseFloat(c.getAttribute('stroke-width')) || 0) / 2;
           (slide.getAttribute('data-m') === 'pic' ? pic : items).push({ t: 'v', el: c, svg: el, p: P, b: [bb.x - sw, bb.y - vy - sw + P.oy, bb.x + bb.width + sw, bb.y - vy + bb.height + sw + P.oy] });
         });
@@ -607,6 +609,13 @@
     document.querySelectorAll('.cs-mflow').forEach(function (f) { f.parentNode.removeChild(f); });
     var slides = Array.prototype.slice.call(document.querySelectorAll('.cs .cs-slide:not(.cs-minner)'));
     slides.forEach(function (s, i) { s.csIdx = i; s.classList.remove('has-mflow'); s.classList.add('cs-measuring'); });
+    // data-m="skip": the slide stays as on desktop (scaled to the column).
+    // data-m="custom": the slide is replaced by the hand-written .cs-mcustom block after it.
+    slides = slides.filter(function (s) {
+      var m = s.getAttribute('data-m');
+      if (m === 'custom') s.classList.add('has-mflow');
+      return m !== 'skip' && m !== 'custom';
+    });
     var runs = [];
     slides.forEach(function (s) {
       var prev = s.previousElementSibling, last = runs[runs.length - 1];
