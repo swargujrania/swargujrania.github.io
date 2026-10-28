@@ -1,0 +1,41 @@
+/* Poison: phone layout (hand-written .cs-mcustom blocks). Applies below 900px only. */
+@media (max-width: 900px) {
+  .cs-ps .cs-mcustom.ps-m { color: #fefefe; font-size: 15px; line-height: 1.6; margin-bottom: 2.75rem; }
+  .cs-ps .ps-m p { margin: 0 0 1rem; opacity: 1; color: #fefefe; font-size: 15px; line-height: 1.6; }
+  .cs-ps .ps-m .ps-pk, .cs-ps .ps-m .ps-pk2 { color: #f0848f; }
+  .cs-ps .ps-m .ps-big { font-size: 1.22em; line-height: 1; }
+
+  /* Section heading: text over a red circle half cut by the column edge */
+  .cs-ps .ps-m p.ps-h { position: relative; display: flex; align-items: center; min-height: 56px;
+    margin: 0 0 1.25rem; padding-left: 6px; font-size: 20px; line-height: 1.3; color: #fefdfe;
+    clip-path: inset(-10px -100vw -10px 0); }
+  .cs-ps .ps-m p.ps-h::before { content: ""; position: absolute; z-index: -1; left: -24px; top: 50%;
+    width: 56px; height: 56px; margin-top: -28px; border-radius: 50%; background: #9d333d; }
+  .cs-ps .ps-m p.ps-h { isolation: isolate; }
+
+  /* Inline icons sitting in the text, as on the slides */
+  .cs-ps .ps-m img.ps-ic { display: inline-block; height: 1.45em; width: auto; vertical-align: -0.35em; margin: 0 .15em; }
+  .cs-ps .ps-m img.ps-dot { height: 1.15em; vertical-align: -0.2em; }
+
+  .cs-ps .ps-m img { max-width: 100%; }
+  .cs-ps .ps-m img.ps-logo { display: block; width: 46%; max-width: 220px; margin: 1.5rem auto 0; }
+  .cs-ps .ps-m .ps-two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 1.25rem; }
+  .cs-ps .ps-m .ps-two img { display: block; width: 100%; height: auto; }
+
+  .cs-ps .ps-m figure.ps-fig { margin: 1.25rem 0 0; }
+  .cs-ps .ps-m figure.ps-fig img { display: block; width: 100%; height: auto; }
+  .cs-ps .ps-m figure.ps-fig figcaption { margin-top: .75rem; color: #fefefe; font-size: 14px; line-height: 1.55; text-align: center; }
+  .cs-ps .ps-m figure.ps-fig figcaption.ps-capl { font-size: 18px; }
+  .cs-ps .ps-m figure.ps-fig + figure.ps-fig { margin-top: 1.75rem; }
+
+  /* Palette swatches rebuilt from the slide's shapes (same colours and proportions) */
+  .cs-ps .ps-m .ps-pal { display: flex; height: 120px; }
+  .cs-ps .ps-m .ps-pal span { flex: 1 1 0; }
+  .cs-ps .ps-m .ps-pal i { flex: 0 0 46.8%; margin-left: 6.3%; }
+
+  .cs-ps .ps-m img.ps-store { display: block; width: 100%; height: auto; margin-top: 1.5rem; }
+
+  /* Tablets: keep pictures at a reading size, centred like the phone layout */
+  .cs-ps .ps-m .ps-two { max-width: 480px; margin-left: auto; margin-right: auto; }
+  .cs-ps .ps-m figure.ps-fig, .cs-ps .ps-m img.ps-store { max-width: 600px; margin-left: auto; margin-right: auto; }
+}
