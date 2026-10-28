@@ -1,0 +1,99 @@
+/* Flow: phone / tablet layout (< 900px only). Desktop is untouched. */
+@media (max-width: 900px) {
+  /* hand-written phone blocks (slides marked data-m="custom") */
+  .cs-fl .flm { font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 1.55; color: #fefefe; }
+  .cs-fl .flm p { margin: 0 0 14px; opacity: 1; font-size: 14px; line-height: 1.55; }
+  .cs-fl .flm ul, .cs-fl .flm ol, .cs-fl .flm li { list-style: none; margin: 0; padding: 0; opacity: 1; }
+  .cs-fl .flm img { display: block; max-width: 100%; }
+  .cs-fl .flm .flm-o { color: #d7a348; }
+  .cs-fl .flm .flm-inl { display: inline-block; height: 1.6em; width: auto; vertical-align: middle; margin: -.3em .15em 0; }
+  .cs-fl .flm .flm-inl.flm-pad { height: 1.9em; }
+  .cs-fl .flm .flm-bar { background: #765319; color: #fffffc; font-size: 20px; line-height: 1.4; padding: 12px 14px; margin: 26px 0 16px; }
+  .cs-fl .flm > .flm-bar:first-child { margin-top: 0; }
+  .cs-fl .flm .flm-gh { font-size: 15px; color: #f0f0f0; margin: 0 0 10px; }
+  .cs-fl .flm .flm-cap { color: #909090; text-align: center; margin-top: 4px; }
+
+  /* 0: team */
+  .cs-fl .flm-team p { margin-bottom: 10px; }
+  .cs-fl .flm-team .flm-role { color: #e6b053; }
+
+  /* 1: quote, definition, five traits */
+  .cs-fl .flm-quote { margin: 0 0 22px; color: #a2a2a2; }
+  .cs-fl .flm-quote p { margin: 0; }
+  .cs-fl .flm-quote .flm-by { color: #a0a0a0; font-style: italic; text-align: right; }
+  .cs-fl .flm-def { overflow: hidden; }
+  .cs-fl .flm .flm-def img { display: block; width: auto; }
+  .cs-fl .flm .flm-def-a { height: 44px; margin: 0 auto 10px; }
+  .cs-fl .flm .flm-def-b { float: right; height: 52px; margin: 2px 0 6px 12px; }
+  .cs-fl .flm-traits { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px 0; margin: 20px 0 6px !important; }
+  .cs-fl .flm-traits li { flex: 0 0 50%; display: flex; flex-direction: column; align-items: center; text-align: center; color: #f5f5f5; }
+  .cs-fl .flm .flm-traits img { height: 42px; width: auto; margin-bottom: 8px; }
+
+  /* 3: why + measures box */
+  .cs-fl .flm .flm-h2 { display: flex; align-items: center; justify-content: space-between; font-size: 22px; line-height: 1.4; color: #fff; }
+  .cs-fl .flm .flm-h2 img { height: 34px; width: auto; }
+  .cs-fl .flm-box { border: 1.5px dashed #d1994a; padding: 16px 12px 18px; margin-top: 6px; }
+  .cs-fl .flm-box-top { display: flex; gap: 10px; }
+  .cs-fl .flm-box-top .flm-grp { flex: 1 1 0; text-align: center; }
+  .cs-fl .flm-box-top .flm-grp + .flm-grp { flex-grow: 2; }
+  .cs-fl .flm-icons { display: flex; justify-content: space-around; gap: 8px; }
+  .cs-fl .flm-icons li { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; font-size: 13px; line-height: 1.35; color: #ececec; }
+  .cs-fl .flm .flm-icons img { height: 30px; width: auto; }
+  .cs-fl .flm-box-sep { height: 5px; margin: 18px 4px; border-top: 1px dashed #959595; border-bottom: 1px dashed #959595; }
+  .cs-fl .flm .flm-box-bot img { height: 34px; }
+
+  /* 5: experiment design as a vertical timeline */
+  .cs-fl .flm-tl { position: relative; margin: 6px 0 14px !important; }
+  .cs-fl .flm-tl::before { content: ""; position: absolute; left: 39px; top: 12px; bottom: 12px; width: 1px; background: #969696; }
+  .cs-fl .flm-tl li { position: relative; display: flex; align-items: center; gap: 14px; min-height: 30px; margin-bottom: 12px; color: #f2f2f2; }
+  .cs-fl .flm-tl-mk { flex: 0 0 80px; display: flex; justify-content: center; }
+  .cs-fl .flm-tl-dot .flm-tl-mk::before { content: ""; width: 13px; height: 13px; border-radius: 50%; background: #36a9be; }
+  .cs-fl .flm-tl-dot.is-red .flm-tl-mk::before { background: #fe4251; }
+  .cs-fl .flm-tl-circ { width: 80px; height: 80px; border-radius: 50%; background: #f1a931; color: #160200; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 13px; line-height: 1.4; }
+  .cs-fl .flm-tl-rec, .cs-fl .flm-tl-q { display: flex; align-items: center; gap: 8px; color: #e7e7e7; }
+  .cs-fl .flm .flm-tl-rec img { height: 26px; width: auto; }
+  .cs-fl .flm .flm-tl-q img { height: 26px; width: auto; }
+  .cs-fl .flm-tl-rec span { margin-left: 4px; }
+
+  /* 6: game design + physiological data */
+  .cs-fl .flm .flm-shot { width: 100%; height: auto; margin: 4px 0 6px; }
+  .cs-fl .flm-meas { margin-top: 18px; }
+  .cs-fl .flm-meas-row { display: flex; align-items: center; gap: 16px; }
+  .cs-fl .flm-meas-row p { margin: 0; flex: 1 1 auto; }
+  .cs-fl .flm .flm-meas-ic { flex: 0 0 72px; width: 72px; height: auto; }
+  .cs-fl .flm-gaze { position: relative; display: block; aspect-ratio: 164 / 115; }
+  .cs-fl .flm .flm-gaze img { position: absolute; max-width: none; }
+
+  /* 8: questionnaire table as one card per factor */
+  .cs-fl .flm-qs { border-top: 1px solid rgba(255, 255, 255, .16); }
+  .cs-fl .flm-q { padding: 16px 0 6px; border-bottom: 1px solid rgba(255, 255, 255, .16); color: #e8e8e8; }
+  .cs-fl .flm p.flm-q-k, .cs-fl .flm span.flm-q-k { display: table; background: #765319; color: #fff; font-size: 13px; font-weight: 600; line-height: 1.5; padding: 1px 8px; margin: 0 0 6px; }
+  .cs-fl .flm p.flm-q-f { color: #d7a348; font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+  .cs-fl .flm-q-qs { margin: 0 0 12px !important; }
+  .cs-fl .flm-q-qs li { color: inherit; font-size: 14px; line-height: 1.55; }
+  .cs-fl .flm-q-qs li + li { margin-top: 6px; }
+  .cs-fl .flm p.flm-q-c { margin-bottom: 12px; }
+
+  /* 13: conclusion */
+  .cs-fl .flm-reasons { margin: 0 0 18px !important; }
+  .cs-fl .flm-reasons li { margin-bottom: 8px; }
+  .cs-fl .flm-reasons .flm-inl { height: 1.9em; }
+
+  /* generated layout tweaks */
+  /* 11: keep "1. More experienced ... than less experienced ones." on one run of text */
+  .cs-fl .cs-mflow p.cs-mt > span[style*="display: block"]:has(> span + span) { display: inline !important; }
+  .cs-fl .cs-mflow p.cs-mt > span[style*="display: block"]:has(> span + span)::before { content: ""; display: block; }
+  .cs-fl .cs-mflow p.cs-mt > span[style*="display: block"]:has(> span + span)::after { content: " "; }
+  /* 9 + 11: heat maps and k-means plots shown full column width so they can be read */
+  .cs-fl .cs-mflow .cs-mgrid:has(a[href*="s7-position"]) { grid-template-columns: 1fr !important; gap: 18px; }
+  .cs-fl .cs-mflow .cs-mimg:has(a[href*="s7-"], a[href*="s8-cluster"]) { width: 100% !important; height: auto !important; }
+  .cs-fl .cs-mflow .cs-mimg:has(a[href*="s7-"], a[href*="s8-cluster"]) figure,
+  .cs-fl .cs-mflow .cs-mimg:has(a[href*="s7-"], a[href*="s8-cluster"]) img { height: auto !important; }
+  .cs-fl .cs-mflow .cs-mimg:has(a[href*="s8-cluster"]) { max-width: 340px; }
+
+  /* tablets */
+  @media (min-width: 600px) {
+    .cs-fl .flm-traits li { flex-basis: 33.333%; }
+    .cs-fl .flm .flm-shot { max-width: 560px; margin-left: auto; margin-right: auto; }
+  }
+}
