@@ -1258,3 +1258,8 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
   .cs-mflow .cs-mraw tr:first-child td { font-size: 13px !important; }
   .cs-mflow .cs-mraw .cs-wc-foot { font-size: 12px !important; margin-top: .5rem; }
 }
+@media (max-width: 900px) {
+  .cs-mflow .cs-mrow { display: flex; align-items: center; gap: 14px; }
+  .cs-mflow .cs-mrow > .cs-mimg, .cs-mflow .cs-mrow > .cs-mview { margin: 0; }
+  .cs-mflow .cs-mrow p.cs-mt { text-align: left !important; }
+}

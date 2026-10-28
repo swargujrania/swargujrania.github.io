@@ -95,7 +95,8 @@
   var MOBILE = '(max-width: 900px)';
   var REF = 840;          // column width (px) the slides were tuned for
   var U = REF / 1500;     // slide units -> desktop px
-  var GAP = 6;            // slide units between items that counts as a gap
+  var GAP = 6;
+  var MAXH = 440;         // px: tall photos and screens stop growing here            // slide units between items that counts as a gap
 
   function deskPx(fs) {   // font-size "1.59cqw" -> px at the desktop column width
     var v = parseFloat(fs) || 0;
@@ -139,7 +140,8 @@
       var it = { t: t, el: el, p: P, b: [(r.left - or.left) * k, (r.top - or.top) * k, (r.right - or.left) * k, (r.bottom - or.top) * k] };
       if (t === 't') it.fs = deskPx(el.style.fontSize);
       if (t === 's') it.round = /50%/.test(el.style.borderRadius);
-      (slide.getAttribute('data-m') === 'pic' ? pic : items).push(it);
+      // a picture keeps its labels; paragraphs beside it still reflow
+      (slide.getAttribute('data-m') === 'pic' && !(t === 't' && el.textContent.trim().length > 60) ? pic : items).push(it);
     });
     // data-m="pic": a diagram that only reads as a picture, kept whole
     if (pic.length) items.push({ t: 'c', pic: true, parts: pic, b: ext(pic) });
@@ -172,17 +174,19 @@
       var g = groups[k];
       // a diagram keeps the short labels sitting next to it
       if (g.some(function (i) { return i.t === 'v' || (i.t === 's' && i.round); })) {
-        var e = ext(g);
+        var e = ext(g), big = size({ b: e }) > 200;
         rest = rest.filter(function (t) {
           if (t.t !== 't' || t.el.textContent.trim().length > 30) return true;
           var o = inter(e, t.b);
-          if (o[0] > -40 && o[1] > -40) { g.push(t); return false; }
+          // big diagrams keep the labels around them; badges keep the digit inside them
+          if (big ? (o[0] > -40 && o[1] > -40) : centerIn(t, { b: e })) { g.push(t); return false; }
           return true;
         });
       }
       rest.push(g.length === 1 ? g[0] : { t: 'c', parts: g, b: ext(g) });
     });
-    return rest;
+    // stray bullets and specks cut out of the slide
+    return rest.filter(function (i) { return !(i.t === 'g' && size(i) < 16); });
   }
   function flat(items) {
     var out = [];
@@ -191,12 +195,13 @@
   }
 
   // Split along one axis wherever nothing crosses a gap
-  function split(items, ax) {
+  function split(items, ax, minGap) {
+    var G = minGap === undefined ? GAP : minGap;
     var s = items.slice().sort(function (a, b) { return a.b[ax] - b.b[ax]; });
     var groups = [[s[0]]], gaps = [], end = s[0].b[ax + 2], best = 0;
     for (var i = 1; i < s.length; i++) {
       var g = s[i].b[ax] - end;
-      if (g > GAP) { groups.push([s[i]]); gaps.push(g); best = Math.max(best, g); }
+      if (g > G) { groups.push([s[i]]); gaps.push(g); best = Math.max(best, g); }
       else groups[groups.length - 1].push(s[i]);
       end = Math.max(end, s[i].b[ax + 2]);
     }
@@ -215,12 +220,17 @@
         // a row of drawings followed by rows of captions in the same columns is
         // one block: split it into columns so each drawing keeps its caption
         var b = bands(y.groups);
-        if (b.length > 1) {
+        if (b.length === 1 && x.groups.length > 1) y = { groups: [items], best: -1 };   // one block of columns
+        else {
           var gaps = [];
           for (var i = 1; i < b.length; i++) gaps.push(ext(b[i])[1] - ext(b[i - 1])[3]);
           return { type: 'rows', gaps: gaps, kids: b.map(function (g) { return { b: ext(g), n: tree(g) }; }) };
         }
-        if (x.groups.length > 1) y = { groups: [items], best: -1 };
+      }
+      // nothing apart by a clear gap: take any gap between rows (a label just above its icon row)
+      if (y.groups.length < 2 && x.groups.length < 2) {
+        var yt = split(items, 1, 0);
+        if (yt.groups.length > 1) y = yt;
       }
       if (y.groups.length > 1 || x.groups.length > 1) {
         var rows = y.groups.length > 1 && (x.groups.length < 2 || y.best >= x.best);
@@ -236,12 +246,17 @@
     var isText = function (i) { return i.t === 't'; };
     var cols = function (g) { return g.length > 1 ? split(g, 0).groups.length : 1; };
     var out = [], i = 0;
+    var short = function (q) { return q.t === 't' && q.el.textContent.trim().length <= 40; };
     while (i < groups.length) {
       var g = groups[i];
+      // column headings above a row with the same columns head those columns
+      if (i + 1 < groups.length && g.length > 1 && g.every(short) && cols(g) >= 2 && cols(groups[i + 1]) === cols(g)) {
+        out.push(g.concat(groups[i + 1])); i += 2; continue;
+      }
       if (cols(g) >= 2 && !g.some(isText)) {
         var j = i + 1, acc = g.slice();
         while (j < groups.length && (groups[j].every(isText) || !groups[j].some(isText)) && cols(groups[j]) >= 2) {
-          if (!groups[j].some(isText) && !groups[j - 1].some(isText)) break;
+          if (!groups[j].some(isText) && !groups[j - 1].some(isText) && cols(groups[j]) !== cols(g)) break;
           acc = acc.concat(groups[j]); j++;
         }
         if (j > i + 1) { out.push(acc); i = j; continue; }
@@ -251,7 +266,60 @@
     return out;
   }
 
+  function size(i) { return Math.max(i.b[2] - i.b[0], i.b[3] - i.b[1]); }
+  function boxArea(i) { return (i.b[2] - i.b[0]) * (i.b[3] - i.b[1]); }
+  function centerIn(i, P) {
+    var cx = (i.b[0] + i.b[2]) / 2, cy = (i.b[1] + i.b[3]) / 2;
+    return cx > P.b[0] && cx < P.b[2] && cy > P.b[1] && cy < P.b[3];
+  }
+
+  function groupRest(rest) {
+    if (rest.length === 1) return [{ b: rest[0].b, n: leaf(rest) }];
+    var t = tree(rest);
+    return t && t.type === 'rows' ? t.kids : [{ b: ext(rest), n: t }];
+  }
+
   function leaf(items) {
+    // corner pieces and stray bullets cut out of the slide mean nothing on their own
+    if (items.length > 1) {
+      var thin = function (q) { return Math.min(q.b[2] - q.b[0], q.b[3] - q.b[1]) < 14; };
+      var kept = items.filter(function (i) {
+        if (i.t === 'g' && size(i) < 16) return false;
+        if ((i.t === 'c' && !i.pic && i.parts.every(function (q) { return q.t === 'g' && thin(q); })) || (i.t === 'g' && thin(i) && size(i) > 200)) return false;
+        return true;
+      });
+      if (kept.length && kept.length < items.length) items = kept;
+    }
+    // every flat panel (or card image) that holds text keeps that text inside it
+    var holders = items.filter(function (i) {
+      return i.t === 's' && !i.round &&
+        items.some(function (t) { return t.t === 't' && centerIn(t, i); });
+    }).sort(function (a, b) { return boxArea(a) - boxArea(b); });
+    if (holders.length && items.length > 2) {
+      var taken = [], panels = [];
+      holders.forEach(function (P) {
+        if (taken.indexOf(P) >= 0) return;
+        var inner = items.filter(function (i) { return i !== P && taken.indexOf(i) < 0 && centerIn(i, P) && boxArea(i) < boxArea(P); });
+        if (!inner.some(function (i) { return i.t === 't'; })) return;
+        taken.push(P); taken.push.apply(taken, inner);
+        panels.push({ b: P.b.slice(), n: { type: 'panel', P: P, n: inner.length > 1 ? tree(inner) : leaf(inner) } });
+      });
+      if (panels.length && (panels.length > 1 || taken.length < items.length)) {
+        var rest = items.filter(function (i) {
+          if (taken.indexOf(i) >= 0) return false;
+          // a shadow or border drawn around a card goes with the card
+          var art = i.t === 'g' || (i.t === 'c' && !i.pic && i.parts.every(function (q) { return q.t === 'g' || q.t === 's'; }));
+          return !(art && panels.some(function (pn) {
+            var o = inter(i.b, pn.b);
+            return o[0] > 0.9 * (pn.b[2] - pn.b[0]) && o[1] > 0.9 * (pn.b[3] - pn.b[1]) && boxArea(i) > 1.2 * boxArea(pn);
+          }));
+        });
+        var kids = panels.concat(rest.length ? groupRest(rest) : []);
+        kids.sort(function (a, b) { return a.b[1] - b.b[1] || a.b[0] - b.b[0]; });
+        return { type: 'rows', gaps: kids.slice(1).map(function (k, i) { return k.b[1] - kids[i].b[3]; }), kids: kids };
+      }
+      if (panels.length) return panels[0].n;
+    }
     if (items.length === 1) {
       var it = items[0];
       if (it.t === 'v') {
@@ -339,6 +407,7 @@
     var al = st.textAlign === 'center' || /translateX\(-50%\)/.test(st.transform) ? 'center' :
       st.textAlign === 'right' ? 'right' : 'left';
     var fs = Math.max(14, Math.min(it.fs || 14, 30));
+    if (/^\s*•/.test(src.textContent)) al = 'left';   // bullet lists read left-aligned
     p.removeAttribute('style');
     p.className = 'cs-t cs-mt';
     p.style.cssText = 'font-size:' + fs.toFixed(1) + 'px;font-weight:' + (st.fontWeight || 400) + ';color:' + st.color +
@@ -369,7 +438,7 @@
   }
 
   function imgEl(it, cw) {
-    var w = (it.b[2] - it.b[0]) * U, h = (it.b[3] - it.b[1]) * U, rw = Math.min(w, cw);
+    var w = (it.b[2] - it.b[0]) * U, h = (it.b[3] - it.b[1]) * U, rw = Math.min(w, cw, MAXH * w / h);
     var box = el('div', 'cs-mimg', 'width:' + rw.toFixed(1) + 'px;height:' + (rw * h / w).toFixed(1) + 'px;');
     var c = it.el.cloneNode(true);
     c.style.cssText = 'display:block;width:100%;height:100%;margin:0;';
@@ -394,7 +463,7 @@
     b = [Math.max(0, b[0] - pad), Math.max(0, b[1] - P.oy - pad), Math.min(1500, b[2] + pad), Math.min(P.H, b[3] - P.oy + pad)];
     var lw = b[2] - b[0], lh = b[3] - b[1];
     if (lw <= 0 || lh <= 0) return null;
-    var target = lw * U, rw = Math.min(target, cw);
+    var target = lw * U, rw = Math.min(target, cw, MAXH * lw / lh);
     var fonts = items.filter(function (i) { return i.t === 't'; }).map(function (i) { return i.fs || 14; });
     if (fonts.length) rw = Math.min(target, Math.max(cw, 9.5 * target / Math.min.apply(null, fonts)));
     var s = rw / lw;                                 // px per slide unit
@@ -450,6 +519,47 @@
     }
     // rows and columns
     var kids = n.kids;
+    // a small icon beside its label stays a row: icon left, text right
+    if (n.type === 'cols') {
+      var icon = function (k) { return k && k.n && /^(img|mini)$/.test(k.n.type) && k.b[2] - k.b[0] < 200 && k.b[3] - k.b[1] < 200; };
+      var label = function (k) { return k && k.n && textLen(k.n) > 0 && textLen(k.n) <= 140 && isTextOnly(k.n); };
+      // each icon takes the nearer label beside it (labels sit left or right of their icon)
+      var mate = kids.map(function () { return -1; }), paired = 0;
+      kids.forEach(function (k, q) {
+        if (!icon(k)) return;
+        var L = q > 0 && mate[q - 1] < 0 && label(kids[q - 1]) ? k.b[0] - kids[q - 1].b[2] : Infinity;
+        var R = q + 1 < kids.length && label(kids[q + 1]) ? kids[q + 1].b[0] - k.b[2] : Infinity;
+        if (L === Infinity && R === Infinity) return;
+        var o = L < R ? q - 1 : q + 1;
+        mate[q] = o; mate[o] = q; paired++;
+      });
+      var units = [];
+      kids.forEach(function (k, q) {
+        if (mate[q] < 0) { units.push(k); return; }
+        if (mate[q] < q) return;
+        var a = icon(k) ? k : kids[mate[q]], t = icon(k) ? kids[mate[q]] : k;
+        units.push({ b: ext([a, t]), pair: [a, t] });
+      });
+      if (paired) {
+        var mkRow = function (u, w) {
+          var iw = Math.min(56, (u.pair[0].b[2] - u.pair[0].b[0]) * U);
+          var row = el('div', 'cs-mrow');
+          var ic = render(u.pair[0].n, iw, slide, M), tx = render(u.pair[1].n, w - iw - 14, slide, M);
+          if (ic) { ic.style.flex = '0 0 ' + iw.toFixed(0) + 'px'; row.appendChild(ic); }
+          if (tx) { tx.style.flex = '1 1 auto'; tx.style.minWidth = '0'; row.appendChild(tx); }
+          return row;
+        };
+        if (units.length === 1) return mkRow(units[0], cw);
+        var st2 = el('div', 'cs-mstack');
+        units.forEach(function (u) {
+          var r = u.pair ? mkRow(u, cw) : render(u.n, cw, slide, M);
+          if (!r) return;
+          if (st2.firstChild) r.style.marginTop = '14px';
+          st2.appendChild(r);
+        });
+        return st2;
+      }
+    }
     if (n.type === 'cols' && kids.length > 1 && kids.every(function (k) { return k.b[2] - k.b[0] < 0.5 * 1500; })) {
       var chars = 0;
       kids.forEach(function (k) { chars = Math.max(chars, k.n ? textLen(k.n) : 0); });
@@ -468,10 +578,22 @@
       if (stack.firstChild) {
         var g = n.type === 'rows' ? (n.gaps[i - 1] || 20) * U : 30;
         r.style.marginTop = Math.round(Math.max(10, Math.min(40, g * 0.5))) + 'px';
+        // lines of one phrase set apart only by weight read as one block
+        var prev = stack.lastChild;
+        if (n.type === 'rows' && g < 16 && /cs-mt/.test(prev.className) && /cs-mt/.test(r.className)) {
+          r.style.marginTop = '0';
+          if (prev.style.textAlign === 'center' || r.style.textAlign === 'center') prev.style.textAlign = r.style.textAlign = 'center';
+        }
       }
       stack.appendChild(r);
     });
     return stack;
+  }
+  function isTextOnly(n) {
+    if (!n) return true;
+    if (n.type === 'text') return true;
+    if (n.kids) return n.kids.every(function (k) { return isTextOnly(k.n); });
+    return false;
   }
   function textLen(n) {
     if (!n) return 0;
