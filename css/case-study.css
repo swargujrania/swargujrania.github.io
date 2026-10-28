@@ -1223,3 +1223,38 @@ html:not(.cs-js) .cs-tabs [role="tabpanel"] { display: block; margin-bottom: 2.5
 /* InfoViz: slides stack edge to edge with the animated charts between them, as in the original */
 .cs-iv .cs-slides .cs-slide { margin: 0; }
 .cs-iv .cs-slide .cs-t .cs-ul { text-decoration-color: #f59a1b; text-decoration-thickness: .1em; text-underline-offset: .38em; }
+
+/* ==========================================================================
+   Phones and tablets: js/case-study.js builds a stacked copy of each slide
+   (.cs-mflow) below 900px and hides the positioned original. Nothing here
+   applies on wider screens.
+   ========================================================================== */
+.cs-mflow { display: none; }
+.cs-measuring > * { translate: none !important; transition: none !important; }
+@media (max-width: 900px) {
+  .cs .cs-slide.has-mflow { display: none; }
+  .cs .cs-mflow { display: block; margin: 0 0 1.75rem; }
+  .cs-mflow .cs-mstack > * { margin-top: 0; }
+  .cs-mflow .cs-mgrid { display: grid; gap: 22px 18px; align-items: start; }
+  .cs .cs-mflow p.cs-mt { opacity: 1; margin: 0; white-space: normal; line-height: 1.55; overflow-wrap: break-word; }
+  .cs-mflow p.cs-mt[style*="text-align:right"] { font-size: 13px !important; }
+  .cs-mflow .cs-t b { font-weight: 700; color: inherit; }
+  .cs-mflow .cs-t .cs-ul { text-decoration: underline; text-decoration-color: #a92219; text-decoration-thickness: .12em; text-underline-offset: .3em; }
+  .cs-iv .cs-mflow .cs-t .cs-ul { text-decoration-color: #f59a1b; }
+  .cs-mflow .cs-mpanel { padding: 14px; }
+  .cs-mflow .cs-mpanel > * { position: relative; }
+  .cs-mflow .cs-mimg { max-width: 100%; margin: 0 auto; }
+  .cs-mflow .cs-mimg > * { position: static !important; }
+  .cs-mflow .cs-mimg img { width: 100%; height: 100%; object-fit: contain; }
+  .cs-mflow .cs-mview { position: relative; overflow: hidden; margin: 0 auto; }
+  .cs-mflow .cs-minner { position: absolute; margin: 0; aspect-ratio: auto !important; container-type: inline-size; }
+  .cs-mflow .cs-mscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cs-mflow .cs-mscroll > .cs-mview { margin: 0; }
+  .cs .cs-mflow p.cs-mhint { margin: .4rem 0 0; font-size: 12px; color: #8f8f8f; opacity: 1; text-align: center; }
+  /* tables rebuilt from slides: readable type, scroll sideways when wide */
+  .cs-mflow .cs-mraw { position: static; width: auto; height: auto; }
+  .cs-mflow .cs-mraw table { height: auto; min-width: 520px; font-size: 12.5px !important; }
+  .cs-mflow .cs-mraw td { padding: 6px 8px !important; font-size: inherit !important; }
+  .cs-mflow .cs-mraw tr:first-child td { font-size: 13px !important; }
+  .cs-mflow .cs-mraw .cs-wc-foot { font-size: 12px !important; margin-top: .5rem; }
+}
