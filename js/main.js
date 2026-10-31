@@ -420,6 +420,9 @@ $(document).on('ready', function () {
 		}
 	}
 
+	// The tabs only exist on the home page; project pages load this script too
+	if (tabbedContent.some(function(tc) { return !tc["label"] || !tc["content"]; })) return;
+
 	for(let [idx, tc] of tabbedContent.entries()) {
 		tc["label"].onclick = function(ev){
 			toogleContent(idx);
