@@ -53,8 +53,7 @@ $(document).on('ready', function () {
 		});
 	}
 	catch (error) {
-		// Clock error : clock is unavailable
-		console.log("clock disabled/unavailable");
+		// No countdown clock on this site
 	}
 
 	// 3. Show/hide menu when icon is clicked
@@ -407,7 +406,6 @@ $(document).on('ready', function () {
 	];
 
 	function toogleContent(idx) {
-		console.log('toggling', idx);
 		for(let [indx, val] of tabbedContent.entries()) {
 			if(indx === idx) {
 				val["content"].style.display = "block";
