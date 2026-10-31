@@ -1,0 +1,41 @@
+<!doctype html><html><head><link rel="stylesheet" href="base.css"><style>
+body{display:grid;grid-template-columns:1fr 1fr;position:relative}
+.day{background:#f5f1ea;color:#16161a;padding:64px 72px;display:flex;flex-direction:column}
+.night{background:#0a0a0c;color:#f2ede4;padding:64px 72px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.night:before{content:"";position:absolute;inset:-20%;background:radial-gradient(ellipse at 70% 60%,rgba(209,51,91,.35),transparent 55%),radial-gradient(ellipse at 20% 20%,rgba(255,218,46,.08),transparent 50%);filter:blur(30px)}
+.night>*{position:relative}
+h1{font-weight:300;font-size:92px;line-height:.95;letter-spacing:-.01em;margin:40px 0 20px}
+.day h1 b{font-weight:600}
+.night h1{font-family:'Cormorant Garamond';font-weight:300;font-style:italic;font-size:104px}
+.sub{font-size:18px;max-width:440px;line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:auto}
+.grid .thumb{aspect-ratio:4/3;border:1px solid #d9d3c8;border-radius:4px}
+.grid p{font-size:12px;margin-top:6px;color:#4a4a52}
+.seam{position:absolute;left:50%;top:0;bottom:0;width:0;border-left:1px dashed rgba(120,120,130,.5)}
+.toggle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:linear-gradient(90deg,#f5f1ea 50%,#0a0a0c 50%);border:2px solid #d1335b;box-shadow:0 0 0 10px rgba(209,51,91,.12)}
+.ink{margin-top:auto;font-family:'EB Garamond';font-style:italic;font-size:22px;line-height:1.5;max-width:420px;color:#e9dfd2}
+.ink small{display:block;font-family:Inter;font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-top:14px;color:#d1335b}
+.strip{display:flex;gap:10px;margin-top:28px}
+.strip div{flex:1;height:120px;border-radius:3px;background:linear-gradient(160deg,#2a1a22,#0f0f12);border:1px solid #2c2228;position:relative}
+.strip div:after{content:attr(data-l);position:absolute;left:10px;bottom:8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#bfa9a9}
+.nav{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+</style></head><body>
+<section class="day">
+ <div class="nav"><span>Swar Gujrania</span><span>By day — Work · Process · About</span></div>
+ <h1>Product<br><b>Designer</b><br>& Researcher</h1>
+ <p class="sub">Currently at Microsoft. Evidence-led UX for complex, multi-stakeholder systems. Previously Anrok, Mastercard, Honeywell, Georgia Tech.</p>
+ <div class="grid">
+  <div><div class="thumb" style="background-image:url(../img/Honeywell/h0.jpg)"></div><p>Hierarchical Alarms · Honeywell</p></div>
+  <div><div class="thumb" style="background-image:url(../img/parqr/parqr1.jpg)"></div><p>PARQR · Human-AI interaction</p></div>
+  <div><div class="thumb" style="background-image:url(../img/aso/aso0.jpg)"></div><p>Audience's Voice · ASO</p></div>
+ </div>
+</section>
+<section class="night">
+ <div class="nav"><span style="color:#d1335b">When the sun goes down</span><span>By night — Dance · Sketch · Ink</span></div>
+ <h1>Dancer,<br>sketcher,<br>poet.</h1>
+ <p class="sub" style="color:#cfc6ba">Bharatanatyam taught me Abhinaya — storytelling through empathy. It is the same muscle I bring to research.</p>
+ <div class="strip"><div data-l="On stage"></div><div data-l="Sketchbook"></div><div data-l="LuminAI"></div></div>
+ <p class="ink">“I write for me, to satiate my creative hunger,<br>though people have told me it helps them too.”<small>Latest poem · read</small></p>
+</section>
+<div class="seam"></div><div class="toggle"></div>
+</body></html>

@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.7}
+.thumb{background-size:cover;background-position:center}

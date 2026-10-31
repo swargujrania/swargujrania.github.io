@@ -1,0 +1,42 @@
+<!doctype html><html><head><link rel="stylesheet" href="base.css"><style>
+body{background:#e8e4dc;color:#1c1b19;padding:48px 64px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px}
+h1{font-family:'Cormorant Garamond';font-weight:400;font-size:64px;line-height:1;letter-spacing:-.01em}
+h1 small{display:block;font-family:Inter;font-size:14px;letter-spacing:.02em;color:#5f5b54;margin-top:10px;font-weight:400}
+.chips{display:flex;gap:8px}
+.chips span{font-size:12px;letter-spacing:.08em;padding:8px 14px;border:1px solid #1c1b19;border-radius:999px}
+.chips span.on{background:#1c1b19;color:#fff}
+.chips span.a{border-color:#d1335b;color:#d1335b}
+.wall{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:118px;gap:14px}
+.card{background:#fff;border-radius:3px;box-shadow:0 8px 24px rgba(40,30,20,.12);position:relative;overflow:hidden;padding:14px}
+.card .l{position:absolute;left:14px;bottom:12px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6a655d}
+.card .l b{display:block;font-size:14px;letter-spacing:0;text-transform:none;color:#1c1b19;font-weight:500;margin-bottom:3px}
+.c1{grid-column:span 2;grid-row:span 3;padding:0}.c1 .thumb{position:absolute;inset:0}
+.c2{grid-column:span 2;grid-row:span 2;background:#141416;color:#f1ebe0;transform:rotate(-.6deg)}
+.c2 p{font-family:'EB Garamond';font-style:italic;font-size:20px;line-height:1.45;padding-right:20px}
+.c2 .l{color:#a79c92}.c2 .l b{color:#f1ebe0}
+.c3{grid-column:span 1;grid-row:span 2;background:repeating-linear-gradient(45deg,#f7f5f1 0 6px,#ecebe6 6px 7px);transform:rotate(1.1deg)}
+.c4{grid-column:span 1;grid-row:span 2;padding:0}.c4 .thumb{position:absolute;inset:0}
+.c5{grid-column:span 2;grid-row:span 3;background:radial-gradient(circle at 50% 35%,#5a1d2c,#120a0e 70%)}
+.c5 .fig{position:absolute;left:50%;top:50%;width:150px;height:150px;transform:translate(-50%,-62%);border:1px solid rgba(255,255,255,.25);border-radius:50%}
+.c5 .fig:after{content:"";position:absolute;left:50%;top:-10px;width:1px;height:170px;background:linear-gradient(#d1335b,transparent);transform:rotate(28deg);transform-origin:top}
+.c5 .l{color:#b9a7a7}.c5 .l b{color:#fff}
+.c6{grid-column:span 2;grid-row:span 1;padding:0}.c6 .thumb{position:absolute;inset:0}
+.c7{grid-column:span 2;grid-row:span 1;background:#fff}
+.c7 p{font-size:13px;line-height:1.5;color:#3d3a35}
+.pin{position:absolute;top:8px;left:50%;width:10px;height:10px;border-radius:50%;background:#d1335b;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+</style></head><body>
+<div class="top"><h1>The studio wall<small>Everything I make, pinned in one place. Filter by lens, not by job title.</small></h1>
+<div class="chips"><span class="on">All</span><span>Research</span><span>Design</span><span>R&amp;D</span><span class="a">Dance</span><span class="a">Sketch</span><span class="a">Ink</span></div></div>
+<div class="wall">
+ <div class="card c1"><div class="thumb" style="background-image:url(../img/Honeywell/h0.jpg)"></div><div class="l" style="color:#ddd"><b style="color:#fff">Hierarchical Alarms</b>Case study · Honeywell</div></div>
+ <div class="card c2"><span class="pin"></span><p>And when the paint dries out,<br>I turn to ink.</p><div class="l"><b>Untitled, 2026</b>Poem · Ink</div></div>
+ <div class="card c3"><span class="pin"></span><div class="l"><b>Study no. 14</b>Sketch · pencil</div></div>
+ <div class="card c4"><div class="thumb" style="background-image:url(../img/Emoi/e0.png)"></div><div class="l" style="color:#ccc"><b style="color:#fff">Emoi</b>Research</div></div>
+ <div class="card c5"><div class="fig"></div><div class="l"><b>Varnam, Margam 2025</b>Dance · Bharatanatyam</div></div>
+ <div class="card c6"><div class="thumb" style="background-image:url(../img/Luminai/l0.png)"></div><div class="l" style="color:#ddd"><b style="color:#fff">LuminAI</b>R&amp;D · Dance</div></div>
+ <div class="card c7"><p><b>Abhinaya →</b> empathy → inclusive research. A short note on why the dancer and the researcher are the same person.</p><div class="l">Essay</div></div>
+ <div class="card c4" style="grid-column:span 1"><div class="thumb" style="background-image:url(../img/aso/aso0.jpg)"></div><div class="l" style="color:#ccc"><b style="color:#fff">ASO</b>Service design</div></div>
+ <div class="card c3" style="transform:rotate(-.8deg)"><span class="pin"></span><div class="l"><b>Mudra series</b>Sketch · ink</div></div>
+</div>
+</body></html>
