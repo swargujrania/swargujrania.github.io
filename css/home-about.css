@@ -1,0 +1,147 @@
+/* About: the process diagram, set as text over the layout of the image it replaces
+   (img/process-about-copy.png, 6400 x 3772). The box keeps the image's proportions and
+   everything is placed in cqw, so it scales with the column as the image did.
+   Phones and touch tablets get a stacked layout instead (css/m/home.css). */
+
+@media not ((max-width: 600px) or ((max-width: 900px) and (hover: none) and (pointer: coarse))) {
+  /* Fill the section's column (capped by its max-width) as the 6400px-wide image did */
+  #mainpage .section[data-section="about"] .section-content { width: 100%; }
+  .hm-about {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 6400 / 3772;
+    min-height: 0; /* keep the ratio: the static wrappers inside must not stretch it */
+    container-type: inline-size;
+    contain-intrinsic-width: 6400px;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.219cqw;
+    letter-spacing: -0.023em;
+    line-height: 1;
+    text-align: left;
+  }
+  .hm-about p, .hm-about h4, .hm-about ul, .hm-about li, .hm-about small, .hm-about img { margin: 0; padding: 0; }
+  .hm-about ul { list-style: none; }
+  /* Only the placed pieces take room: the wrappers around them collapse */
+  .hm-about .hm-phase, .hm-about .hm-steps, .hm-about .hm-step, .hm-about .hm-step ul, .hm-about .hm-step li { height: 0; }
+  .hm-about > p,
+  .hm-about .hm-phase-title,
+  .hm-about .hm-phase::before,
+  .hm-about .hm-step h4,
+  .hm-about li > img,
+  .hm-about li > span,
+  .hm-about .hm-methods { position: absolute; white-space: nowrap; }
+
+  /* Intro */
+  .hm-about p { opacity: 1; }
+  .hm-about > p { color: #fff; }
+
+  /* Stage headings with their red bars */
+  .hm-about .hm-step h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.406cqw;
+    font-weight: 600;
+    letter-spacing: 0.074em;
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #fff;
+  }
+  .hm-about .hm-step h4 em { display: none; }
+  .hm-about .hm-step h4::before { content: ""; position: absolute; width: 10.938cqw; height: 0.5cqw; background: #d03a46; }
+
+  /* Methods and their icons */
+  .hm-about li > img { height: auto; max-width: none; }
+  .hm-about li > span { font-size: 1.219cqw; line-height: 1; color: #fff; }
+  .hm-about .hm-methods { font-size: 0.969cqw; font-weight: 300; }
+  .hm-about .hm-methods span { display: block; }
+  .hm-about .hm-methods span::before { content: "\2022\00a0"; }
+
+  /* Phase brackets and boxes along the bottom */
+  .hm-about .hm-phase::before {
+    content: "";
+    top: 50.438cqw;
+    height: 0.781cqw;
+    box-sizing: border-box;
+    border: solid #fff;
+    border-width: 0 0.094cqw 0.125cqw;
+  }
+  .hm-about .hm-p1::before { left: 0; width: 39.563cqw; }
+  .hm-about .hm-p2::before { left: 40.313cqw; width: 59.609cqw; }
+  .hm-about .hm-phase-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    top: 51.781cqw;
+    height: 6.047cqw;
+    background: rgba(170, 170, 170, 0.2);
+    font-size: 1.383cqw;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #fff;
+  }
+  .hm-about .hm-p1 .hm-phase-title { left: 0.031cqw; width: 39.484cqw; padding-right: 1.031cqw; }
+  .hm-about .hm-p2 .hm-phase-title { left: 40.281cqw; width: 59.688cqw; }
+
+  /* Positions measured from the image */
+  .hm-about > p { left: 0.003cqw; top: 1.958cqw; font-size: 1.703cqw; line-height: 1.395; letter-spacing: 0.034em; font-weight: 400; }
+  .hm-step.hs-1 h4 { left: 1.637cqw; top: 17.788cqw; }
+  .hm-step.hs-1 h4::before { left: -0.262cqw; top: -1.350cqw; }
+  .hm-step.hs-2 h4 { left: 22.450cqw; top: 17.805cqw; }
+  .hm-step.hs-2 h4::before { left: -0.262cqw; top: -1.367cqw; }
+  .hm-step.hs-3 h4 { left: 44.138cqw; top: 17.791cqw; }
+  .hm-step.hs-3 h4::before { left: -0.263cqw; top: -1.353cqw; }
+  .hm-step.hs-4 h4 { left: 65.325cqw; top: 17.773cqw; }
+  .hm-step.hs-4 h4::before { left: -0.263cqw; top: -1.336cqw; }
+  .hm-step.hs-5 h4 { left: 84.405cqw; top: 17.773cqw; }
+  .hm-step.hs-5 h4::before { left: -0.280cqw; top: -1.336cqw; }
+  .hm-about .hi-discover-research > img { left: 1.859cqw; top: 24.625cqw; width: 2.656cqw; }
+  .hm-about .hi-discover-research > span { left: 5.359cqw; top: 24.795cqw; }
+  .hm-about .hi-discover-secondary > img { left: 1.672cqw; top: 41.359cqw; width: 3.031cqw; }
+  .hm-about .hi-discover-secondary > span { left: 5.377cqw; top: 41.982cqw; }
+  .hm-about .hi-del-affinity > img { left: 22.562cqw; top: 23.938cqw; width: 2.125cqw; }
+  .hm-about .hi-del-affinity > span { left: 25.703cqw; top: 24.479cqw; word-spacing: 0.152em; }
+  .hm-about .hi-del-empathy > img { left: 22.531cqw; top: 27.906cqw; width: 2.188cqw; }
+  .hm-about .hi-del-empathy > span { left: 25.687cqw; top: 28.420cqw; word-spacing: 0.034em; }
+  .hm-about .hi-del-personas > img { left: 22.656cqw; top: 31.656cqw; width: 1.938cqw; }
+  .hm-about .hi-del-personas > span { left: 25.687cqw; top: 32.043cqw; }
+  .hm-about .hi-del-ecosystem > img { left: 22.750cqw; top: 35.688cqw; width: 1.750cqw; }
+  .hm-about .hi-del-ecosystem > span { left: 25.687cqw; top: 35.645cqw; word-spacing: 0.035em; }
+  .hm-about .hi-del-behavioral > img { left: 22.438cqw; top: 39.516cqw; width: 2.156cqw; }
+  .hm-about .hi-del-behavioral > span { left: 25.687cqw; top: 39.482cqw; }
+  .hm-about .hi-del-pressures > img { left: 22.438cqw; top: 42.781cqw; width: 2.375cqw; }
+  .hm-about .hi-del-pressures > span { left: 25.687cqw; top: 43.295cqw; }
+  .hm-about .hi-def-problem > img { left: 44.344cqw; top: 24.094cqw; width: 2.438cqw; }
+  .hm-about .hi-def-problem > span { left: 47.750cqw; top: 23.968cqw; word-spacing: 0.125em; line-height: 1.433; }
+  .hm-about .hi-def-goals > img { left: 44.328cqw; top: 29.391cqw; width: 2.219cqw; }
+  .hm-about .hi-def-goals > span { left: 47.750cqw; top: 29.336cqw; word-spacing: 0.121em; line-height: 1.439; }
+  .hm-about .hi-def-usecase > img { left: 44.375cqw; top: 34.688cqw; width: 2.359cqw; }
+  .hm-about .hi-def-usecase > span { left: 47.734cqw; top: 35.645cqw; }
+  .hm-about .hi-def-journeys > img { left: 44.250cqw; top: 39.516cqw; width: 2.375cqw; }
+  .hm-about .hi-def-journeys > span { left: 47.737cqw; top: 39.968cqw; font-size: 1.359cqw; }
+  .hm-about .hi-def-ux > img { left: 44.125cqw; top: 44.250cqw; width: 2.141cqw; }
+  .hm-about .hi-def-ux > span { left: 47.737cqw; top: 43.384cqw; font-size: 1.359cqw; word-spacing: 0.225em; line-height: 1.307; }
+  .hm-about .hi-des-ia > img { left: 65.328cqw; top: 23.953cqw; width: 2.375cqw; }
+  .hm-about .hi-des-ia > span { left: 68.812cqw; top: 24.024cqw; line-height: 1.234; }
+  .hm-about .hi-des-sketching > img { left: 65.359cqw; top: 29.016cqw; width: 2.406cqw; }
+  .hm-about .hi-des-sketching > span { left: 68.814cqw; top: 29.357cqw; }
+  .hm-about .hi-des-mockups > img { left: 65.312cqw; top: 33.156cqw; width: 2.406cqw; }
+  .hm-about .hi-des-mockups > span { left: 68.812cqw; top: 32.750cqw; word-spacing: 0.238em; line-height: 1.382; }
+  .hm-about .hi-des-visual > img { left: 65.609cqw; top: 38.047cqw; width: 1.812cqw; }
+  .hm-about .hi-des-visual > span { left: 68.828cqw; top: 38.357cqw; word-spacing: 0.156em; }
+  .hm-about .hi-des-handoff > img { left: 65.219cqw; top: 41.875cqw; width: 2.625cqw; }
+  .hm-about .hi-des-handoff > span { left: 68.812cqw; top: 42.416cqw; word-spacing: 0.094em; }
+  .hm-about .hi-test-value > img { left: 84.391cqw; top: 23.953cqw; width: 2.469cqw; }
+  .hm-about .hi-test-value > span { left: 87.547cqw; top: 24.607cqw; word-spacing: 0.109em; }
+  .hm-about .hi-test-usability > img { left: 84.500cqw; top: 27.953cqw; width: 2.203cqw; }
+  .hm-about .hi-test-usability > span { left: 87.484cqw; top: 28.357cqw; word-spacing: 0.126em; }
+  .hm-about .hi-test-heuristic > img { left: 84.625cqw; top: 31.688cqw; width: 1.984cqw; }
+  .hm-about .hi-test-heuristic > span { left: 87.500cqw; top: 32.607cqw; word-spacing: 0.078em; }
+  .hm-about .hi-test-usage > img { left: 84.703cqw; top: 36.250cqw; width: 1.844cqw; }
+  .hm-about .hi-test-usage > span { left: 87.484cqw; top: 36.482cqw; word-spacing: 0.061em; }
+  .hm-about .hm-methods { left: 5.347cqw; top: 26.596cqw; font-size: 0.969cqw; line-height: 1.868; letter-spacing: -0.018em; }
+  .hm-about .hm-p1 .hm-phase-title { word-spacing: 0.059em; }
+  .hm-about .hm-p2 .hm-phase-title { word-spacing: 0.042em; }
+}
