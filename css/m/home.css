@@ -36,10 +36,10 @@ body.fp-responsive #mainpage > .section { scroll-snap-align: start; scroll-snap-
   #mainpage .section-home .section-wrapper { min-height: calc(100svh - 32px) !important; }
   #mainpage .section-home .section-wrapper { display: flex; flex-direction: column; justify-content: center; }
   #mainpage .section-home .section-content .row { justify-content: center; margin: 0; }
-  #mainpage .section-home img.center-title { width: 92%; max-width: 640px; margin: 0 auto; }
+  #mainpage .section-home .center-title { width: 92%; max-width: 640px; margin: 0 auto; }
   #mainpage .section-home .section-content br { display: none; }
   #mainpage .section-home .section-content .row ~ .row { margin-top: 3rem; }
-  #mainpage .section-home .section-content .row ~ .row img.center-title { width: 100%; }
+  #mainpage .section-home .section-content .row ~ .row .center-title { width: 100%; }
 
   /* The "last updated" note shows once, at the top of About */
   #mainpage .section[data-section="projects"] .last-updated-banner { display: none; }

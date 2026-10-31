@@ -51,6 +51,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS style -->
   <link rel="stylesheet" href="./css/pageloader.css">
@@ -63,7 +64,8 @@
 
   <!-- Main CSS files -->
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/m/home.css?v=3">
+  <link rel="stylesheet" href="./css/home-hero.css?v=1">
+  <link rel="stylesheet" href="./css/m/home.css?v=4">
 
   <!-- add alt layout here -->
 
@@ -198,7 +200,14 @@
         <!-- content -->
         <div class="section-content anim">
           <div class="row">
-            <img class="center-title" src="./img/title3B.png" width="100%">
+            <!-- Name and tagline, set as text (was img/title3B.png); styles in css/home-hero.css -->
+            <h1 class="center-title hero-name">
+              <span class="hn-first"><span style="left:-0.192cqw">S</span><span style="left:6.897cqw">W</span><span style="left:16.547cqw">A</span><span style="left:25.263cqw">R</span></span>
+              <span class="hn-rule" aria-hidden="true"></span>
+              <span class="hn-last"><span style="left:39.024cqw">G</span><span style="left:47.724cqw">U</span><span style="left:56.802cqw">J</span><span style="left:62.502cqw">R</span><span style="left:71.174cqw">A</span><span style="left:79.678cqw">N</span><span style="left:88.700cqw">I</span><span style="left:94.864cqw">A</span></span>
+              <span class="hn-dot" aria-hidden="true"></span>
+              <span class="hn-tag">Think . Design . Create</span>
+            </h1>
           </div>
           <br>
           <br>
@@ -207,7 +216,19 @@
           <br>
           <br>
           <div class="row">
-            <img class="center-title" src="./img/title-3C.png" width="60%">
+            <!-- Current and past employers (was img/title-3C.png) -->
+            <div class="center-title hero-now">
+              <p class="hw-now">Currently designing delightful experiences for</p>
+              <img class="hw-logo hw-microsoft" src="./img/home/hero-microsoft.png" alt="Microsoft">
+              <p class="hw-past">Past experiences:</p>
+              <img class="hw-logo hw-anrok" src="./img/home/hero-anrok.png" alt="Anrok">
+              <span class="hw-sep hw-sep1" aria-hidden="true"></span>
+              <img class="hw-logo hw-mastercard" src="./img/home/hero-mastercard.png" alt="Mastercard">
+              <span class="hw-sep hw-sep2" aria-hidden="true"></span>
+              <img class="hw-logo hw-honeywell" src="./img/home/hero-honeywell.png" alt="Honeywell">
+              <span class="hw-sep hw-sep3" aria-hidden="true"></span>
+              <img class="hw-logo hw-gatech" src="./img/home/hero-gatech.png" alt="Georgia Tech">
+            </div>
           </div>
         </div>
 
