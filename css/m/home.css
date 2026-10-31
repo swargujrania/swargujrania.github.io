@@ -65,6 +65,9 @@ body.fp-responsive #mainpage > .section { scroll-snap-align: start; scroll-snap-
   .hm-step li small { grid-column: 2; display: block; font-size: 11.5px; color: #a8a8a8; line-height: 1.4; margin-top: .2rem; }
   .hm-step li small span:not(:last-child)::after { content: ","; }
 
+  /* Contact: the three link icons in one row */
+  #mainpage .section-contact ul.social .big-icon { padding: 24px 22px; }
+
   /* Projects: tabs in one row, no empty placeholder cards */
   #mainpage .section[data-section="projects"] .container > .row { flex-wrap: nowrap; margin: 0; justify-content: space-between; }
   #mainpage .section[data-section="projects"] .container > .row > [class*="col-"] { flex: 1 1 0; max-width: none; padding: 0 2px; text-align: center; }

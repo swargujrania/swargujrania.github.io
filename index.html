@@ -63,7 +63,8 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/home-hero.css?v=1">
   <link rel="stylesheet" href="./css/home-about.css?v=1">
-  <link rel="stylesheet" href="./css/m/home.css?v=5">
+  <link rel="stylesheet" href="./css/social-morph.css?v=1">
+  <link rel="stylesheet" href="./css/m/home.css?v=6">
 
   <!-- add alt layout here -->
 
@@ -851,28 +852,18 @@
 
                       <ul class="social">
                         <li class="inline">
-                          <a href="mailto:swar.gujrania@gmail.com">
+                          <a data-social="email" href="mailto:swar.gujrania@gmail.com" aria-label="Email">
                             <i class="big-icon fa fa-envelope"></i>
                           </a>
                         </li>
                         <li class="inline">
-                          <a href="https://www.linkedin.com/in/swargujrania/">
+                          <a data-social="linkedin" href="https://www.linkedin.com/in/swargujrania/" aria-label="LinkedIn">
                             <i class="big-icon fa fa-linkedin"></i>
                           </a>
                         </li>
                         <li class="inline">
-                          <a href="https://www.swargujrania.com">
-                            <i class="big-icon fa fa-globe"></i>
-                          </a>
-                        </li>
-                        <li class="inline">
-                          <a href="https://www.facebook.com/swar.gujrania">
-                            <i class="big-icon fa fa-facebook"></i>
-                          </a>
-                        </li>
-                        <li class="inline">
-                          <a href="https://www.instagram.com/the.void.view/">
-                            <i class="big-icon fa fa-instagram"></i>
+                          <a data-social="x" href="https://x.com/thevoidview" aria-label="X (Twitter)">
+                            <i class="big-icon icon-x"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></i>
                           </a>
                         </li>
                       </ul>
@@ -918,25 +909,21 @@
 
     <!-- Right content -->
     <div class="footer-right">
+      <!-- Contact links; they move into the Contact section's row while it shows (js/social-morph.js) -->
       <ul class="social">
         <li>
+          <a data-social="email" href="mailto:swar.gujrania@gmail.com" aria-label="Email">
+            <i class="icon fa fa-envelope icon-highlight"></i>
+          </a>
+        </li>
         <li>
-          <a href="https://www.linkedin.com/in/swargujrania/">
+          <a data-social="linkedin" href="https://www.linkedin.com/in/swargujrania/" aria-label="LinkedIn">
             <i class="icon fa fa-linkedin icon-highlight"></i>
           </a>
         </li>
-        <a href="https://www.facebook.com/swar.gujrania">
-          <i class="icon fa fa-facebook icon-highlight"></i>
-        </a>
-        </li>
         <li>
-          <a href="https://twitter.com/thevoidview">
-            <i class="icon fa fa-twitter icon-highlight"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/the.void.view/">
-            <i class="icon fa fa-instagram icon-highlight"></i>
+          <a data-social="x" href="https://x.com/thevoidview" aria-label="X (Twitter)">
+            <i class="icon icon-x icon-highlight"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></i>
           </a>
         </li>
       </ul>
@@ -960,7 +947,8 @@
   <script src="./js/form_script.js"></script>
 
   <!-- Javascript main files -->
-  <script src="./js/main.js?v=5"></script>
+  <script src="./js/social-morph.js?v=1"></script>
+  <script src="./js/main.js?v=6"></script>
 
 
 

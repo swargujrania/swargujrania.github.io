@@ -1,0 +1,16 @@
+/* Contact links: the footer row (bottom right) and the Contact section's big icons.
+   On desktop the footer links move into the Contact row while it shows (js/social-morph.js);
+   the Contact section's own row stays hidden underneath. */
+
+/* X logo, drawn to sit like the Font Awesome icons beside it */
+.icon-x { display: inline-block; line-height: 1; }
+.icon-x svg { display: inline-block; width: 0.86em; height: 0.86em; vertical-align: -0.09em; }
+
+.page-footer .footer-right .social li { transition: transform 0.7s ease; }
+.page-footer .footer-right .social .icon { transition: color 0.7s ease, opacity 0.7s ease; }
+
+body.social-morph .section[data-section="contact"] ul.social { visibility: hidden; }
+
+/* In the Contact section they take the big icons' look */
+body.social-morphed .page-footer .footer-right .social .icon { color: #fff; opacity: 1; }
+body.social-morphed .page-footer .footer-right .social a:hover .icon { color: #fe4252; transition-duration: 0.2s; }

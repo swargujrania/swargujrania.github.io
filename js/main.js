@@ -253,9 +253,13 @@ $(document).on('ready', function () {
 					pageElem.addClass('transition');
 					slideElem.removeClass('transition');
 					pageElem.removeClass('transition');
+					// footer contact links move with the scroll (js/social-morph.js)
+					if (window.socialMorph) window.socialMorph.toSection(pageAnchors[nextIndex - 1]);
 				},
 				afterLoad: function (anchorLink, index) {
 					// Behavior after a full page is loaded
+					// covers loading straight into #contact, and resizes across fullPage modes
+					if (window.socialMorph) window.socialMorph.toSection(anchorLink, false);
 					// hide or show clock
 					if ($('.section.active').hasClass('hide-clock')) {
 						headerContainer.addClass('gone');
