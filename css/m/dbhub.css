@@ -1,0 +1,239 @@
+/* Database Hub - built from the 750px-wide Figma frame "DB Hub in Fabric - Final".
+   On desktop every size is a multiple of --u (one design pixel), so the
+   layout keeps the Figma proportions at any column width. Phones restack it. */
+
+.cs-dbh {
+  --dbh-muted: #b9b9b9;
+  --dbh-purple: #a972e3;
+  --dbh-link: #cfa3ff;
+  font-family: "Avenir Next", "Open Sans", "Segoe UI", sans-serif;
+  color: #fff;
+}
+/* .cs-dbh is the size container, so cqw only means its width on its children */
+.cs-dbh > * {
+  --u: calc(100cqw / 750);
+  font-size: calc(12 * var(--u));
+  line-height: 1.366;
+  letter-spacing: calc(.5 * var(--u));
+}
+.cs-dbh > :first-child { margin-top: calc(30 * var(--u)); }
+.cs-dbh > :last-child { margin-bottom: calc(200 * var(--u)); }
+/* main.css hides every <section> for the home page tabs */
+.cs-dbh section { display: block; margin: 0; padding: 0; border: 0; }
+.cs-dbh p { margin: 0; color: #fff; opacity: 1; font-size: inherit; line-height: inherit; }
+.cs-dbh b { font-weight: 700; color: inherit; }
+.cs-dbh ul, .cs-dbh ol { list-style: none; margin: 0; padding: 0; }
+.cs-dbh li { list-style: none; margin: 0; color: #fff; opacity: 1; font-size: inherit; }
+.cs-dbh li::before, .cs-dbh li::marker { content: none; }
+.cs-dbh figure { margin: 0; }
+.cs-dbh img { display: block; max-width: none; }
+
+.cs-dbh .dbh-h {
+  font-family: inherit;
+  font-size: calc(18 * var(--u));
+  font-weight: 400;
+  line-height: 1.366;
+  letter-spacing: calc(.6429 * var(--u));
+  text-transform: none;
+  color: #fff;
+  margin: 0;
+  scroll-margin-top: 80px;
+}
+
+/* ---------- Summary ---------- */
+.dbh-summary {
+  position: relative;
+  height: calc(242 * var(--u));
+}
+.dbh-summary-text { width: calc(352 * var(--u)); }
+.cs-dbh .dbh-summary-text p {
+  margin: calc(11 * var(--u)) 0 0 calc(4 * var(--u));
+  line-height: calc(16 * var(--u));
+  letter-spacing: calc(.4286 * var(--u));
+}
+.cs-dbh .dbh-announce {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: calc(5 * var(--u));
+  margin: calc(8 * var(--u)) 0 0 calc(4 * var(--u));
+  color: var(--dbh-link);
+  font-weight: 500;
+  letter-spacing: calc(.5 * var(--u));
+  text-decoration: none;
+}
+.dbh-announce img { width: calc(23 * var(--u)); height: auto; }
+.dbh-announce span { padding-top: calc(4 * var(--u)); text-decoration: underline; }
+.dbh-announce:hover span { color: #fff; }
+.dbh-venn {
+  position: absolute;
+  left: calc(432 * var(--u));
+  top: calc(-14 * var(--u));
+  width: calc(283 * var(--u));
+  height: auto;
+}
+
+/* ---------- Role ---------- */
+.dbh-role { margin-top: calc(16 * var(--u)) !important; }
+.cs-dbh .dbh-sub {
+  font-size: calc(16 * var(--u));
+  font-weight: 600;
+}
+.dbh-hats {
+  display: flex;
+  width: calc(558 * var(--u));
+  margin: calc(24 * var(--u)) auto 0;
+}
+.dbh-hat {
+  display: flex;
+  gap: calc(16 * var(--u));
+  width: calc(324 * var(--u));
+}
+.dbh-hat + .dbh-hat { width: auto; }
+.dbh-hat img { width: calc(88 * var(--u)); height: auto; flex: none; }
+.cs-dbh .dbh-hat li {
+  font-size: calc(14 * var(--u));
+  line-height: calc(23 * var(--u));
+  white-space: nowrap;
+}
+
+/* ---------- Flows (customer problem + design highlights) ---------- */
+.dbh-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cs-dbh .dbh-steps {
+  display: flex;
+  align-items: center;
+}
+.cs-dbh .dbh-steps li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: calc(103 * var(--u));
+  height: calc(103 * var(--u));
+  padding: 0 calc(14 * var(--u));
+  text-align: center;
+}
+.cs-dbh .dbh-steps li:nth-child(3) { width: calc(104 * var(--u)); }
+/* Arrow between steps */
+.cs-dbh .dbh-steps li + li { margin-left: calc(46 * var(--u)); position: relative; }
+.cs-dbh .dbh-steps li + li::before {
+  content: "→";
+  position: absolute;
+  right: 100%;
+  width: calc(46 * var(--u));
+  text-align: center;
+  font-size: calc(24 * var(--u));
+  font-weight: 600;
+  line-height: 1.366;
+}
+.dbh-steps-round li { border-radius: 50%; background: rgba(85, 190, 255, .3); }
+.cs-dbh .dbh-steps-round li.dbh-money { font-size: calc(24 * var(--u)); font-weight: 700; }
+.dbh-steps-square li { background: rgba(96, 199, 175, .3); border: 1px solid #000; }
+.cs-dbh .dbh-flow figcaption {
+  font-size: calc(10 * var(--u));
+  color: var(--dbh-muted);
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* ---------- Customer problem ---------- */
+.dbh-problem { margin-top: calc(52 * var(--u)) !important; }
+.cs-dbh .dbh-problem > p:first-of-type { margin-top: calc(8 * var(--u)); }
+.dbh-problem .dbh-flow { margin: calc(24 * var(--u)) 0; }
+.dbh-problem .dbh-flow figcaption { margin-top: calc(16 * var(--u)); }
+.cs-dbh .dbh-problem > p + p { margin-top: calc(8 * var(--u)); }
+
+/* ---------- Design highlights ---------- */
+.dbh-highlights { margin-top: calc(50 * var(--u)) !important; }
+.cs-dbh .dbh-lead {
+  margin: calc(8 * var(--u)) 0 0 calc(3 * var(--u));
+  font-size: calc(16 * var(--u));
+}
+.dbh-flow-loop { margin-top: calc(24 * var(--u)) !important; }
+.dbh-loop-wrap {
+  position: relative;
+  width: calc(551 * var(--u));
+  height: calc(133 * var(--u));
+  margin-left: calc(2 * var(--u));
+}
+.dbh-loop-wrap .dbh-steps { justify-content: center; }
+.dbh-loop {
+  position: absolute;
+  left: calc(49.3 * var(--u));
+  top: calc(112 * var(--u));
+  width: calc(457.2 * var(--u));
+  height: calc(21 * var(--u));
+}
+.dbh-flow-loop figcaption { margin: calc(14 * var(--u)) 0 0 calc(24 * var(--u)); }
+
+/* ---------- The experience focused on ---------- */
+.dbh-focus { margin-top: calc(36 * var(--u)) !important; }
+.cs-dbh .dbh-focus-h {
+  font-family: inherit;
+  font-size: calc(16 * var(--u));
+  font-weight: 600;
+  line-height: 1.366;
+  letter-spacing: calc(.6429 * var(--u));
+  text-transform: none;
+  color: #fff;
+  margin: 0;
+}
+.dbh-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: calc(43 * var(--u));
+  row-gap: calc(40 * var(--u));
+  width: calc(621 * var(--u));
+  margin: calc(24 * var(--u)) auto 0;
+}
+.dbh-card {
+  border-left: calc(4 * var(--u)) solid var(--dbh-purple);
+  border-radius: calc(8 * var(--u));
+  padding: calc(8 * var(--u)) calc(14 * var(--u));
+}
+.dbh-card b { display: block; font-weight: 600; }
+.cs-dbh .dbh-card b.dbh-bold { font-weight: 700; }
+.dbh-card-center { display: flex; flex-direction: column; justify-content: center; }
+
+/* ---------- Contact banner ---------- */
+.cs-dbh .dbh-banner {
+  margin-top: calc(40 * var(--u));
+  padding: calc(8 * var(--u)) 0;
+  text-align: center;
+  font-weight: 500;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),
+    linear-gradient(90deg, rgba(169, 114, 227, 0) 0%, rgba(120, 61, 183, .7) 48.558%, rgba(169, 114, 227, 0) 98.077%);
+}
+
+/* ---------- Phones: stack everything at a readable size ---------- */
+@container cs (max-width: 600px) {
+  .cs-dbh > * { --u: 1px; font-size: 14px; letter-spacing: .02em; }
+  .cs-dbh > :last-child { margin-bottom: 40px; }
+  .cs-dbh .dbh-h { font-size: 22px; }
+  .cs-dbh .dbh-summary { height: auto; display: flex; flex-direction: column-reverse; gap: 8px; }
+  .dbh-summary-text { width: auto; }
+  .cs-dbh .dbh-summary-text p { margin-left: 0; line-height: 1.5; }
+  .cs-dbh .dbh-announce { margin-left: 0; }
+  .dbh-venn { position: static; width: min(283px, 80%); margin: 0 auto; }
+  .dbh-role, .dbh-problem, .dbh-highlights, .dbh-focus { margin-top: 48px !important; }
+  .dbh-hats { width: auto; flex-direction: column; gap: 24px; }
+  .dbh-hat, .dbh-hat + .dbh-hat { width: auto; }
+  .dbh-hat img { width: 72px; }
+  .cs-dbh .dbh-hat li { font-size: 14px; line-height: 23px; }
+  .cs-dbh .dbh-steps { flex-direction: column; }
+  .cs-dbh .dbh-steps li, .cs-dbh .dbh-steps li:nth-child(3) { width: 120px; height: 120px; }
+  .cs-dbh .dbh-steps li + li { margin: 40px 0 0; }
+  .cs-dbh .dbh-steps li + li::before { right: auto; bottom: 100%; width: 100%; height: 40px; line-height: 40px; transform: none; content: "↓"; }
+  .cs-dbh .dbh-flow figcaption { white-space: normal; font-size: 12px; margin-left: 0; }
+  .dbh-loop-wrap { width: auto; height: auto; margin: 0; }
+  .cs-dbh .dbh-loop { display: none; }
+  .cs-dbh .dbh-lead { margin-left: 0; font-size: 16px; }
+  .cs-dbh .dbh-focus-h { font-size: 16px; }
+  .dbh-cards { grid-template-columns: 1fr; width: auto; row-gap: 20px; }
+  .dbh-card { border-left-width: 4px; }
+  .cs-dbh .dbh-banner { font-size: 12px; padding: 8px 12px; }
+}
